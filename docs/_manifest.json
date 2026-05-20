@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-05-20T08:35:00Z",
-  "count": 13,
+  "scraped_at": "2026-05-20T16:57:45Z",
+  "count": 10,
   "tutorials": [
     {
       "path": "frxxks/beginner-resources",
@@ -18,20 +18,6 @@
       "url": "https://sbox.game/learn/frxxks/beginner-resources"
     },
     {
-      "path": "shadb/jiggle-101",
-      "title": "Setting up jigglebones for cosmetics",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Text",
-      "tags": [
-        "bones",
-        "cosmetics",
-        "jiggle"
-      ],
-      "author": "ShadowBrain Games",
-      "url": "https://sbox.game/learn/shadb/jiggle-101"
-    },
-    {
       "path": "titanovsky/cc-bton",
       "title": "👽 How to make button",
       "difficulty": "Beginner",
@@ -45,21 +31,6 @@
       ],
       "author": "Titanovsky",
       "url": "https://sbox.game/learn/titanovsky/cc-bton"
-    },
-    {
-      "path": "tesa/ui-buildhash",
-      "title": "Understanding the Razor's Reactivity",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": null,
-      "tags": [
-        "hud",
-        "panel",
-        "razor",
-        "ui"
-      ],
-      "author": "Tea Sanctuary",
-      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "brax/ide-setup",
@@ -132,20 +103,6 @@
       "url": "https://sbox.game/learn/mensch/networkig-101"
     },
     {
-      "path": "gibbard/networked-variable-ui",
-      "title": "Displaying networked variables in UI",
-      "difficulty": "Beginner",
-      "topic": "Networking",
-      "content_type": "Text",
-      "tags": [
-        "beginner",
-        "networking",
-        "ui"
-      ],
-      "author": "Gibbard",
-      "url": "https://sbox.game/learn/gibbard/networked-variable-ui"
-    },
-    {
       "path": "brax/resource-files",
       "title": "Resource Files",
       "difficulty": null,
@@ -185,5 +142,33 @@
       "author": "Titanovsky",
       "url": "https://sbox.game/learn/titanovsky/sync_ava_cosm"
     }
-  ]
+  ],
+  "defender": {
+    "active": true,
+    "scanned": 13,
+    "passed": 10,
+    "blocked": [
+      {
+        "source": "shadb/jiggle-101",
+        "riskLevel": "high",
+        "tier2Score": 0.7534886161878043,
+        "detections": [],
+        "patternsByField": {}
+      },
+      {
+        "source": "tesa/ui-buildhash",
+        "riskLevel": "high",
+        "tier2Score": 0.9487394395018108,
+        "detections": [],
+        "patternsByField": {}
+      },
+      {
+        "source": "gibbard/networked-variable-ui",
+        "riskLevel": "high",
+        "tier2Score": 0.7881126803453051,
+        "detections": [],
+        "patternsByField": {}
+      }
+    ]
+  }
 }

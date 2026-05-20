@@ -9,13 +9,13 @@ topic: Editor
 content_type: Video
 tags: [beginner, collection, compilation, first]
 rating: 4
-views: 377
+views: 418
 upvotes: 14
 downvotes: 0
-updated: Updated yesterday
+updated: Updated 2 days ago
 summary: A comprehensive beginners resource collection helping you getting started
   with game development in s&box.
-scraped_at: '2026-05-20T08:35:00Z'
+scraped_at: '2026-05-20T16:57:45Z'
 ---
 
 # 🎓 Freaks Beginner Resources
@@ -184,7 +184,7 @@ public partial class MyCustomComponent : Component
 
   Join the Unofficial s&box Linux Community Discord Server!
 
-  Check out the Unofficial s&box Linux Community community on Discord - hang out with 165 other members and enjoy free voice and text chat.](https://discord.gg/haZt7xbmBT)
+  Check out the Unofficial s&box Linux Community community on Discord - hang out with 166 other members and enjoy free voice and text chat.](https://discord.gg/haZt7xbmBT)
 
 [![](https://cdn.sbox.game/upload/b/b419bcfb/f196/4044/b198/15cb7ada1ae3.png)](https://cdn.sbox.game/upload/b/b419bcfb/f196/4044/b198/15cb7ada1ae3.png)
 

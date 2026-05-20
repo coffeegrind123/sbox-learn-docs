@@ -7,12 +7,12 @@ author_slug: softsplit
 topic: Capable
 tags: [hammer, mapping, porting, source]
 rating: 3
-views: 158
+views: 180
 upvotes: 3
 downvotes: 0
 updated: Updated 2 days ago
 summary: Step-by-step guide on how to port maps from any Source engine game
-scraped_at: '2026-05-20T08:35:00Z'
+scraped_at: '2026-05-20T16:57:45Z'
 ---
 
 # Porting Source maps
