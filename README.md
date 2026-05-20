@@ -2,7 +2,7 @@
 
 Automated daily mirror of community tutorials from [sbox.game/learn](https://sbox.game/learn), converted to YAML-fronted Markdown files committed to `docs/`.
 
-Consumed by the [claude-sbox](https://github.com/coffeegrind123/claude-sbox) addon's `learn_search` / `learn_get` / `learn_list` / `learn_refresh` MCP tools — the addon downloads this repo as a tarball, walks the `docs/` tree, and builds a BM25 index over title + tags + body.
+Consumed by the [claude-sbox](https://sbox.game/ghage/claude-sbox) addon's `learn_search` / `learn_get` / `learn_list` / `learn_refresh` MCP tools — the addon downloads this repo as a tarball, walks the `docs/` tree, and builds a BM25 index over title + tags + body.
 
 ## Why this exists
 
