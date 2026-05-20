@@ -7,11 +7,11 @@ author_slug: brax
 topic: Coding
 content_type: Text
 rating: 4
-views: 221
+views: 222
 upvotes: 7
 downvotes: 0
 updated: Updated 2 days ago
-scraped_at: '2026-05-20T16:57:45Z'
+scraped_at: '2026-05-20T17:07:21Z'
 ---
 
 # IDE Setup

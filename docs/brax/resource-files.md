@@ -7,11 +7,11 @@ author_slug: brax
 topic: Platform
 content_type: Text
 rating: 2
-views: 96
+views: 97
 upvotes: 2
 downvotes: 0
 updated: Updated 2 days ago
-scraped_at: '2026-05-20T16:57:45Z'
+scraped_at: '2026-05-20T17:07:21Z'
 ---
 
 # Resource Files
