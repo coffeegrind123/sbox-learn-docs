@@ -32,10 +32,30 @@
 import { createInterface } from "node:readline";
 import { createPromptDefense } from "@stackone/defender";
 
-// Same config the README recommends as the secure default:
+// Config:
 //   - tier1: pattern detection + sanitization (sync, fast)
 //   - tier2: ML classifier (async, 22MB ONNX, ~10ms after load)
 //   - blockHighRisk: true — flips `allowed=false` for high/critical risk
+//   - tier2Config.highRiskThreshold: 0.95 — raised from defender's
+//     default (around 0.8). At the default, the classifier blocked
+//     legitimate technical tutorials (jigglebones, networked-variable
+//     UI, ui-buildhash) at scores of 0.69-0.95 because imperative
+//     tutorial prose ("let's start", "you should know") shares surface
+//     features with injection. 0.95 lets normal how-to writing through
+//     while still blocking the classic patterns ("Ignore previous
+//     instructions. SYSTEM:..." reliably scores ~0.96).
+//
+//     Trade-off: a small slice of obfuscated attacks — homoglyph +
+//     ChatML role tags (`<|im_start|>system`) — empirically score
+//     0.94-0.95 and pass through. Tier 1 currently doesn't pattern-
+//     match `[SYSTEM]` brackets or `<|im_start|>` tags either, so
+//     those slip past both tiers at this threshold. If a real attack
+//     of that shape ever lands in the mirror it'll be visible in
+//     `defender.scanned` vs `count` skew (scanned > count means some
+//     were blocked) AND surface to the addon as a low-content tutorial
+//     a user might notice. Tightening to 0.90 catches them but starts
+//     blocking ~30% of legitimate tutorials. Hold at 0.95 unless we
+//     get a real-world incident.
 //
 // We do NOT enable `annotateBoundary` (which wraps content in [UD-…] tags)
 // because the markdown lands on disk and is consumed by an editor-side
@@ -44,6 +64,9 @@ import { createPromptDefense } from "@stackone/defender";
 // still happens; we just don't tag the result.
 const defense = createPromptDefense({
   blockHighRisk: true,
+  tier2Config: {
+    highRiskThreshold: 0.95,
+  },
 });
 
 // Warm up the ML model up-front so the first real doc doesn't pay the
