@@ -44,6 +44,20 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r backend/requirements.txt
 
+      # Node + @stackone/defender drive the prompt-injection scanner that
+      # filters tutorial bodies before they land in docs/. Without this
+      # step the scrape still works but no scanning happens (the bridge
+      # logs a warning and the manifest's defender.active is false),
+      # which we treat as a CI failure further down by checking the
+      # manifest after the scrape.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install defender (Node)
+        working-directory: backend
+        run: npm install --omit=dev --no-audit --no-fund
+
       - name: Link camoufox binary to pip cache
         run: |
           CACHE_DIR=$(python -c "from platformdirs import user_cache_dir; print(user_cache_dir('camoufox'))")
@@ -54,6 +68,22 @@ jobs:
         working-directory: backend/src
         run: python scrape.py 2>&1 | tail -200
         timeout-minutes: 15
+
+      # Hard guard: fail the build if the manifest shows the defender
+      # bridge was NOT active. Catches a regression where Node setup or
+      # `npm install` quietly failed and the scrape proceeded unscanned.
+      - name: Verify defender ran
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          mf = json.load(open("docs/_manifest.json"))
+          d = mf.get("defender", {})
+          if not d.get("active"):
+              print("::error::defender did not run for this scrape — manifest defender.active is false")
+              print("Check the 'Run scraper' step above for the bridge-startup warning.")
+              sys.exit(1)
+          print(f"defender ok: scanned={d['scanned']} passed={d['passed']} blocked={len(d.get('blocked', []))}")
+          PY
 
       - name: Commit and push results
         run: |

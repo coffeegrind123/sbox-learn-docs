@@ -1,0 +1,14 @@
+{
+  "name": "sbox-learn-docs-defender-bridge",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Node host for @stackone/defender, piped from scrape.py to filter prompt-injection-laden community tutorials before they land in docs/.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@stackone/defender": "^0.7.0",
+    "@huggingface/transformers": "^3.0.0"
+  }
+}

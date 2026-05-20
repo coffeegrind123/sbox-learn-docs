@@ -51,6 +51,8 @@ import asyncio
 import json
 import os
 import re
+import shutil
+import subprocess
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
@@ -105,6 +107,192 @@ BRIX_ATTR_RX = re.compile(r' b-[a-z0-9]+=""')
 
 def log(msg: str) -> None:
     print(f"[scrape] {msg}", file=sys.stderr, flush=True)
+
+
+# ─────────────────────────── Defender bridge ───────────────────────────
+#
+# @stackone/defender is a TypeScript/Node package that detects indirect
+# prompt-injection attacks in arbitrary text (role markers, instruction-
+# override patterns, unicode homoglyph attacks, base64-encoded payloads,
+# etc.) using a two-tier pipeline: pattern detection + a fine-tuned ML
+# classifier (22MB ONNX model). We pipe each tutorial's rendered markdown
+# body through it before writing to disk so an attacker who lands a
+# malicious tutorial on sbox.game can't leak instructions into a Claude
+# Code session via the learn_* MCP tools the addon exposes.
+#
+# We spawn the Node bridge once per scrape run (cold-start: ~200-400ms
+# for ONNX model load) and JSONL-pipe each tutorial through it. The
+# bridge process exits cleanly when we close its stdin at scrape end.
+#
+# Failure modes:
+#   - Bridge fails to start (Node missing, defender not installed):
+#     scrape continues with `defender_active=False` and a loud warning;
+#     every tutorial is treated as if it passed the scan but the manifest
+#     records `defender: unavailable` so consumers can tell.
+#   - Bridge crashes mid-run: scrape aborts. We never silently let
+#     unscanned docs through after the bridge has been seen to work
+#     once — that would be a security regression.
+#   - A single tutorial fails to scan (timeout, malformed response):
+#     skip-with-log; don't write the file. Same posture as a hard block.
+class DefenderBridge:
+    BRIDGE_SCRIPT = SCRIPT_DIR / "defender_bridge.mjs"
+
+    def __init__(self) -> None:
+        self.proc: subprocess.Popen | None = None
+        self.active: bool = False
+        self.fatal: bool = False
+        self.blocked: list[dict] = []   # populated as scanners reject docs
+        self.scanned: int = 0
+        self.passed: int = 0
+        self._next_id: int = 0
+
+    def start(self) -> bool:
+        """Spawn the Node bridge subprocess + wait for its `ready` line.
+        Returns True if the bridge is live, False if Node or defender is
+        unavailable (scrape continues with no scanning, loudly flagged)."""
+        node = shutil.which("node")
+        if not node:
+            log("WARN: `node` not found on PATH — defender scan will be SKIPPED.")
+            log("WARN: install Node 20+ and run `npm install` in backend/ to enable filtering.")
+            return False
+        if not self.BRIDGE_SCRIPT.exists():
+            log(f"WARN: bridge script missing at {self.BRIDGE_SCRIPT} — defender scan SKIPPED.")
+            return False
+        try:
+            self.proc = subprocess.Popen(
+                [node, str(self.BRIDGE_SCRIPT)],
+                cwd=BACKEND_DIR,
+                stdin=subprocess.PIPE,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                bufsize=1,
+                text=True,
+                encoding="utf-8",
+            )
+        except Exception as e:
+            log(f"WARN: failed to spawn defender bridge: {e} — scan SKIPPED.")
+            return False
+
+        # Drain stderr in the background so a chatty Node process doesn't
+        # block on a full pipe. We surface stderr lines to our own log
+        # so warmup warnings are visible.
+        import threading
+
+        def _drain_stderr():
+            assert self.proc and self.proc.stderr
+            for line in self.proc.stderr:
+                log(f"  defender(stderr): {line.rstrip()}")
+
+        threading.Thread(target=_drain_stderr, daemon=True).start()
+
+        # Wait for the readiness line. The bridge prints {"ready": true, ...}
+        # before reading stdin so we don't race the first send.
+        assert self.proc.stdout
+        ready_line = self.proc.stdout.readline()
+        if not ready_line:
+            log("WARN: defender bridge exited before emitting ready line — scan SKIPPED.")
+            self.proc = None
+            return False
+        try:
+            ready = json.loads(ready_line.strip())
+        except Exception as e:
+            log(f"WARN: bridge sent malformed ready line ({e!r}): {ready_line!r} — scan SKIPPED.")
+            self.proc = None
+            return False
+        if not ready.get("ready"):
+            log(f"WARN: bridge readiness line was unexpected: {ready_line!r} — scan SKIPPED.")
+            self.proc = None
+            return False
+        self.active = True
+        log(f"defender bridge ready (modelLoaded={ready.get('modelLoaded')})")
+        return True
+
+    def scan(self, md: str, source: str) -> tuple[bool, dict | None]:
+        """Send one tutorial's markdown for scanning. Returns
+        (allowed, result_dict). When the bridge is inactive returns
+        (True, None) — never-scanned docs pass by default *only* if
+        defender wasn't running in the first place; once start()
+        succeeded, a scan error returns (False, …) so the doc gets
+        skipped rather than silently letting an unknown-state body
+        through."""
+        if not self.active or not self.proc or not self.proc.stdin or not self.proc.stdout:
+            return (True, None)
+        if self.fatal:
+            # Once we've seen the bridge die, refuse every subsequent
+            # scan instead of silently passing. Caller will skip the doc.
+            return (False, {"error": "bridge previously failed", "fatal": True})
+
+        self._next_id += 1
+        req = {"id": self._next_id, "md": md, "source": source}
+        try:
+            self.proc.stdin.write(json.dumps(req, ensure_ascii=False) + "\n")
+            self.proc.stdin.flush()
+            line = self.proc.stdout.readline()
+        except BrokenPipeError as e:
+            log(f"  defender bridge pipe broken: {e}")
+            self.fatal = True
+            return (False, {"error": str(e), "fatal": True})
+
+        if not line:
+            log("  defender bridge closed stdout unexpectedly")
+            self.fatal = True
+            return (False, {"error": "bridge eof", "fatal": True})
+
+        try:
+            result = json.loads(line.strip())
+        except Exception as e:
+            log(f"  defender bridge sent malformed json: {line!r} ({e})")
+            self.fatal = True
+            return (False, {"error": f"malformed json: {e}", "fatal": True})
+
+        # Fatal-bridge-error response — bridge will exit, fail all
+        # subsequent scans.
+        if result.get("fatal"):
+            log(f"  defender FATAL: {result.get('error')}")
+            self.fatal = True
+            return (False, result)
+
+        if "error" in result:
+            # Per-doc error (not fatal). Treat as "could not scan, skip".
+            log(f"  defender scan error for {source}: {result['error']}")
+            return (False, result)
+
+        self.scanned += 1
+        allowed = bool(result.get("allowed", False))
+        if allowed:
+            self.passed += 1
+        else:
+            self.blocked.append({
+                "source": source,
+                "riskLevel": result.get("riskLevel"),
+                "tier2Score": result.get("tier2Score"),
+                "detections": result.get("detections", []),
+                "patternsByField": result.get("patternsByField", {}),
+            })
+            log(
+                f"  defender BLOCKED {source}: "
+                f"risk={result.get('riskLevel')} "
+                f"score={result.get('tier2Score')} "
+                f"detections={result.get('detections')}"
+            )
+        return (allowed, result)
+
+    def close(self, timeout: float = 5.0) -> None:
+        """Send EOF and wait for the bridge to exit. Idempotent."""
+        if not self.proc:
+            return
+        try:
+            if self.proc.stdin:
+                self.proc.stdin.close()
+        except Exception:
+            pass
+        try:
+            self.proc.wait(timeout=timeout)
+        except subprocess.TimeoutExpired:
+            log("  defender bridge didn't exit on stdin close; killing")
+            self.proc.kill()
+            self.proc.wait(timeout=2.0)
+        self.proc = None
 
 
 def parse_proxy_url(proxy_url: str) -> dict | None:
@@ -365,6 +553,14 @@ async def scrape_all(output_dir: Path, limit: int | None, single: str | None) ->
     if proxy_config:
         kwargs["proxy"] = proxy_config
 
+    # Spin up the prompt-injection defender BEFORE the browser so a setup
+    # failure surfaces fast and doesn't waste a Camoufox session. If the
+    # bridge is unavailable (no Node, no defender install) we proceed with
+    # `defender.active=False` — every doc passes through and the manifest
+    # records the unavailability so consumers can tell.
+    defender = DefenderBridge()
+    defender.start()
+
     written = 0
     index_rows: list[dict] = []
 
@@ -416,6 +612,22 @@ async def scrape_all(output_dir: Path, limit: int | None, single: str | None) ->
                 continue
 
             body_md = html_to_markdown(detail["html"])
+
+            # Scan the rendered body for prompt-injection patterns BEFORE
+            # writing. The body is what reaches an LLM via the addon's
+            # learn_search / learn_get tools, so it's the attack surface
+            # we care about. Title/summary/tags also pass through but
+            # they're short and structured; scanning the body covers the
+            # interesting payload.
+            allowed, scan = defender.scan(body_md, fm["slug"])
+            if not allowed:
+                # Either the doc was actively blocked (high/critical
+                # risk + blockHighRisk:true) or the bridge failed to
+                # scan it. In both cases we skip the write — never let
+                # an unverified body land on disk where the addon's
+                # tarball consumer will pull it into Claude Code.
+                continue
+
             page_text = render_page(fm, body_md)
 
             author_slug = fm["author_slug"]
@@ -439,14 +651,35 @@ async def scrape_all(output_dir: Path, limit: int | None, single: str | None) ->
 
         await page.close()
 
+    # Shut down the defender bridge cleanly. Safe to call even when
+    # start() failed — it's a no-op then.
+    defender.close()
+
+    if defender.active:
+        log(
+            f"defender summary: scanned={defender.scanned} "
+            f"passed={defender.passed} blocked={len(defender.blocked)}"
+        )
+    else:
+        log("defender summary: bridge unavailable; NO scanning performed")
+
     # _manifest.json next to the docs tree — invaluable when debugging the
-    # CI output without checking out every .md file.
+    # CI output without checking out every .md file. Defender summary is
+    # included so downstream consumers can detect "the corpus was emitted
+    # without scanning" vs "scanning passed cleanly" vs "N docs were held
+    # back this run" without grepping CI logs.
     index_path = output_dir / "_manifest.json"
     index_path.write_text(
         json.dumps({
             "scraped_at": scraped_at,
             "count": len(index_rows),
             "tutorials": index_rows,
+            "defender": {
+                "active": defender.active,
+                "scanned": defender.scanned,
+                "passed": defender.passed,
+                "blocked": defender.blocked,
+            },
         }, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )

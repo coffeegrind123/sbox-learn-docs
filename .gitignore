@@ -6,3 +6,7 @@ __pycache__/
 *.pyc
 .venv/
 .env
+
+# Defender bridge dependencies (installed via `npm install` in backend/)
+backend/node_modules/
+# package-lock.json IS committed for CI reproducibility — don't add it here.

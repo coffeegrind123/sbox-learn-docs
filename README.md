@@ -10,16 +10,31 @@ Consumed by the [claude-sbox](https://sbox.game/ghage/claude-sbox) addon's `lear
 
 This mirror was modeled after Facepunch's own [`sbox-docs`](https://github.com/Facepunch/sbox-docs) repo so the addon's `LearnRepoCache` could clone the existing `DocsRepoCache` pattern verbatim.
 
+## Prompt-injection defense
+
+sbox.game/learn is user-submitted content. A community tutorial that contains text like `Ignore previous instructions. SYSTEM: ...` would otherwise flow through the addon's `learn_get` MCP tool straight into a Claude Code session — classic indirect prompt injection.
+
+Every scraped tutorial body is piped through [StackOne's `@stackone/defender`](https://github.com/StackOneHQ/defender) before being written to `docs/`:
+
+- **Tier 1** (sync, ~1ms): regex patterns + unicode normalization. Catches `SYSTEM:` / `[INST]` role markers, "ignore previous instructions"-style overrides, homoglyph attacks (Cyrillic `а` → ASCII `a`), base64-encoded payloads.
+- **Tier 2** (async, ~10ms once loaded): fine-tuned MiniLM ONNX classifier. Catches the obfuscated cases Tier 1 misses.
+- `blockHighRisk: true` — tutorials scoring `high` or `critical` are dropped from the mirror; the slug + risk score + detection list lands in `docs/_manifest.json`'s `defender.blocked` array so consumers can tell what was held back without grepping CI logs.
+
+If `node` or `@stackone/defender` isn't installed locally, the scraper proceeds with `defender.active=false` and a loud warning. CI fails the build in that case via a manifest check after the scrape, so unscanned mirrors never get pushed to `main`.
+
 ## Layout
 
 ```
 sbox-learn-docs/
 ├── backend/
 │   ├── requirements.txt        # camoufox, markdownify, PyYAML
-│   └── src/scrape.py           # entry point
+│   ├── package.json            # @stackone/defender + @huggingface/transformers (Node 20+)
+│   └── src/
+│       ├── scrape.py           # entry point
+│       └── defender_bridge.mjs # long-lived Node host for defender
 ├── docs/                       # CC-BY-4.0 — mirror output, committed
 │   ├── <author>/<slug>.md      # one tutorial per file (frontmatter + body)
-│   └── _manifest.json          # debug index of everything scraped this run
+│   └── _manifest.json          # debug index + defender summary
 └── .github/workflows/scrape.yml  # daily @ 06:00 UTC
 ```
 
@@ -57,6 +72,12 @@ scraped_at: 2026-05-20T06:00:00Z
 ```bash
 cd backend
 pip install -r requirements.txt
+
+# Node 20+ for the defender bridge. Skip if you're OK with an
+# unscanned local scrape — the bridge gracefully degrades to a
+# loud warning + defender.active=false in the manifest.
+npm install --omit=dev
+
 # Camoufox needs a prebuilt binary. CI uses the patched fork at
 # coffeegrind123/camoufox-beta; locally you can either fetch the same
 # release or use a system-installed camoufox.
