@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-05-20T17:07:21Z",
-  "count": 13,
+  "scraped_at": "2026-05-21T09:45:41Z",
+  "count": 15,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -47,21 +47,6 @@
       "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
-      "path": "titanovsky/cc-bton",
-      "title": "👽 How to make button",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": null,
-      "tags": [
-        "button",
-        "razor",
-        "scss",
-        "ui"
-      ],
-      "author": "Titanovsky",
-      "url": "https://sbox.game/learn/titanovsky/cc-bton"
-    },
-    {
       "path": "brax/ide-setup",
       "title": "IDE Setup",
       "difficulty": null,
@@ -87,6 +72,20 @@
       "url": "https://sbox.game/learn/carsonk/shader_quality_settings"
     },
     {
+      "path": "gibbard/networked-variable-ui",
+      "title": "Displaying networked variables in UI",
+      "difficulty": "Beginner",
+      "topic": "Networking",
+      "content_type": "Text",
+      "tags": [
+        "beginner",
+        "networking",
+        "ui"
+      ],
+      "author": "Gibbard",
+      "url": "https://sbox.game/learn/gibbard/networked-variable-ui"
+    },
+    {
       "path": "cseliot/sbox-resources",
       "title": "SBox Resources, An Open-Source \"Subway Map\" for all things S&Box",
       "difficulty": "Beginner",
@@ -102,18 +101,19 @@
       "url": "https://sbox.game/learn/cseliot/sbox-resources"
     },
     {
-      "path": "gibbard/networked-variable-ui",
-      "title": "Displaying networked variables in UI",
+      "path": "titanovsky/cc-bton",
+      "title": "👽 How to make button",
       "difficulty": "Beginner",
-      "topic": "Networking",
-      "content_type": "Text",
+      "topic": "UI",
+      "content_type": null,
       "tags": [
-        "beginner",
-        "networking",
+        "button",
+        "razor",
+        "scss",
         "ui"
       ],
-      "author": "Gibbard",
-      "url": "https://sbox.game/learn/gibbard/networked-variable-ui"
+      "author": "Titanovsky",
+      "url": "https://sbox.game/learn/titanovsky/cc-bton"
     },
     {
       "path": "softsplit/porting-maps",
@@ -146,6 +146,36 @@
       "url": "https://sbox.game/learn/mensch/networkig-101"
     },
     {
+      "path": "titanovsky/sync_ava_cosm",
+      "title": "👗 Sync avatar's cosmetics",
+      "difficulty": "Beginner",
+      "topic": "Networking",
+      "content_type": "Text",
+      "tags": [
+        "dress",
+        "dresser",
+        "rpc",
+        "sync"
+      ],
+      "author": "Titanovsky",
+      "url": "https://sbox.game/learn/titanovsky/sync_ava_cosm"
+    },
+    {
+      "path": "bobmac/sboxcustompmguide",
+      "title": "Bob’s Guides : S&box Custom Playermodel Guide",
+      "difficulty": "Beginner",
+      "topic": "Modelling",
+      "content_type": "Text",
+      "tags": [
+        "beginnerfriendly",
+        "custompm",
+        "easy",
+        "sboxpm"
+      ],
+      "author": "Bobmac",
+      "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
+    },
+    {
       "path": "brax/resource-files",
       "title": "Resource Files",
       "difficulty": null,
@@ -171,25 +201,25 @@
       "url": "https://sbox.game/learn/titanovsky/useful_links_mapping"
     },
     {
-      "path": "titanovsky/sync_ava_cosm",
-      "title": "👗 Sync avatar's cosmetics",
-      "difficulty": "Beginner",
-      "topic": "Networking",
+      "path": "ghage/claude-sbox-integration",
+      "title": "Claude Code (and any MCP client) inside sbox-dev",
+      "difficulty": null,
+      "topic": "Expert",
       "content_type": "Text",
       "tags": [
-        "dress",
-        "dresser",
-        "rpc",
-        "sync"
+        "agent",
+        "ai",
+        "automation",
+        "claude"
       ],
-      "author": "Titanovsky",
-      "url": "https://sbox.game/learn/titanovsky/sync_ava_cosm"
+      "author": "ghage",
+      "url": "https://sbox.game/learn/ghage/claude-sbox-integration"
     }
   ],
   "defender": {
     "active": true,
-    "scanned": 13,
-    "passed": 13,
+    "scanned": 15,
+    "passed": 15,
     "blocked": []
   }
 }

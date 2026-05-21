@@ -8,13 +8,13 @@ difficulty: Beginner
 topic: Networking
 content_type: Text
 tags: [dress, dresser, rpc, sync]
-rating: 1
-views: 138
-upvotes: 3
+rating: 2
+views: 210
+upvotes: 5
 downvotes: 3
-updated: Updated 2 days ago
+updated: Updated 3 days ago
 summary: It's time for everyone to show off your clothing
-scraped_at: '2026-05-20T17:07:21Z'
+scraped_at: '2026-05-21T09:45:41Z'
 ---
 
 # 👗 Sync avatar's cosmetics
