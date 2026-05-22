@@ -4,17 +4,21 @@ slug: brax/resource-files
 url: https://sbox.game/learn/brax/resource-files
 author: Braxnet
 author_slug: brax
+difficulty: Beginner
 topic: Platform
 content_type: Text
 rating: 2
-views: 149
+views: 198
 upvotes: 2
 downvotes: 0
-updated: Updated 3 days ago
-scraped_at: '2026-05-21T09:45:41Z'
+updated: Updated today
+summary: If your published game has missing images, check this out
+scraped_at: '2026-05-22T09:30:24Z'
 ---
 
 # Resource Files
+
+> If your published game has missing images, check this out
 
 When you publish a game, compiled resources will automatically be included in the build. However, things like image files (PNG, JPG, etc.), sound files (WAV, MP3, etc.), and other non-compiled assets need to be explicitly added to “Resource Files” in your project settings to be included in the final build.
 

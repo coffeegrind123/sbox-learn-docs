@@ -8,13 +8,13 @@ difficulty: Beginner
 topic: Mapping
 content_type: Text
 tags: [face, hammer, links, map]
-rating: 2
-views: 245
+rating: 1
+views: 301
 upvotes: 3
-downvotes: 2
-updated: Updated 3 days ago
+downvotes: 3
+updated: Updated 4 days ago
 summary: just some useful links and guides
-scraped_at: '2026-05-21T09:45:41Z'
+scraped_at: '2026-05-22T09:30:24Z'
 ---
 
 # 🏛️ Useful links / Полезные ссылки (Mapping)

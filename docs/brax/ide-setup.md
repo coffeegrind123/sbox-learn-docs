@@ -4,17 +4,21 @@ slug: brax/ide-setup
 url: https://sbox.game/learn/brax/ide-setup
 author: Braxnet
 author_slug: brax
+difficulty: Beginner
 topic: Coding
 content_type: Text
 rating: 4
-views: 369
+views: 521
 upvotes: 9
 downvotes: 0
-updated: Updated 3 days ago
-scraped_at: '2026-05-21T09:45:41Z'
+updated: Updated today
+summary: How to set up your IDE so Intellisense/lookups work
+scraped_at: '2026-05-22T09:30:24Z'
 ---
 
 # IDE Setup
+
+> How to set up your IDE so Intellisense/lookups work
 
 If you don’t set up your IDE (like Visual Studio or JetBrains Rider) correctly, you might run into issues like missing IntelliSense and missing references. Here’s how to set it up properly.
 

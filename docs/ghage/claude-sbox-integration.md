@@ -8,13 +8,13 @@ topic: Expert
 content_type: Text
 tags: [agent, ai, automation, claude]
 rating: 2
-views: 150
-upvotes: 2
+views: 269
+upvotes: 3
 downvotes: 1
-updated: Updated today
+updated: Updated yesterday
 summary: Wire a coding agent into the live editor — drive the scene, query the API,
   write C#, all over a localhost MCP server.
-scraped_at: '2026-05-21T09:45:41Z'
+scraped_at: '2026-05-22T09:30:24Z'
 ---
 
 # Claude Code (and any MCP client) inside sbox-dev
@@ -43,8 +43,7 @@ Two things land in the editor once the addon mounts:
 
 # What the agent can do
 
-~597 tools surface across these areas. The complete inventory with arg shapes lives in the setup repo at [skill/references/mcp-tools.md](https://github.com/coffeegrind123/claude-sbox-setup/blob/main/skill/references/mcp-to
-  ols.md) — short version:  
+~597 tools surface across these areas. The complete inventory with arg shapes lives in the setup repo at <https://github.com/coffeegrind123/claude-sbox-setup/blob/main/skill/references/mcp-tools.md> — short version:  
   
 - **Scene + inspector** — `get_active_scene`, `list_gameobjects`, `set_selection`, `set_property`, `instantiate_prefab`, `batch_transform`, full GameObject lifecycle (`_create`, `_destroy`, `_set_parent`, `_add_component`, etc).  
 - **Hammer** — list/select mapnodes, drive `mapview_get_camera` / `_set_camera` per viewport, swap entity classnames, inspect entity-class schemas (Variables/Inputs/Outputs/Tags), validate entity-I/O wiring before you commit it.  

@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-05-21T09:45:41Z",
-  "count": 15,
+  "scraped_at": "2026-05-22T09:30:24Z",
+  "count": 20,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -32,31 +32,6 @@
       "url": "https://sbox.game/learn/frxxks/beginner-resources"
     },
     {
-      "path": "tesa/ui-buildhash",
-      "title": "Understanding the Razor's Reactivity",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": null,
-      "tags": [
-        "hud",
-        "panel",
-        "razor",
-        "ui"
-      ],
-      "author": "Tea Sanctuary",
-      "url": "https://sbox.game/learn/tesa/ui-buildhash"
-    },
-    {
-      "path": "brax/ide-setup",
-      "title": "IDE Setup",
-      "difficulty": null,
-      "topic": "Coding",
-      "content_type": "Text",
-      "tags": [],
-      "author": "Braxnet",
-      "url": "https://sbox.game/learn/brax/ide-setup"
-    },
-    {
       "path": "carsonk/shader_quality_settings",
       "title": "Writing shaders that respond to Quality Settings",
       "difficulty": null,
@@ -70,6 +45,31 @@
       ],
       "author": "Carson Kompon",
       "url": "https://sbox.game/learn/carsonk/shader_quality_settings"
+    },
+    {
+      "path": "brax/ide-setup",
+      "title": "IDE Setup",
+      "difficulty": "Beginner",
+      "topic": "Coding",
+      "content_type": "Text",
+      "tags": [],
+      "author": "Braxnet",
+      "url": "https://sbox.game/learn/brax/ide-setup"
+    },
+    {
+      "path": "tesa/ui-buildhash",
+      "title": "Understanding the Razor's Reactivity",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": null,
+      "tags": [
+        "hud",
+        "panel",
+        "razor",
+        "ui"
+      ],
+      "author": "Tea Sanctuary",
+      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "gibbard/networked-variable-ui",
@@ -101,6 +101,50 @@
       "url": "https://sbox.game/learn/cseliot/sbox-resources"
     },
     {
+      "path": "facepunch/creating-a-door",
+      "title": "Creating a Door",
+      "difficulty": "Beginner",
+      "topic": "Mapping",
+      "content_type": "Text",
+      "tags": [
+        "door",
+        "map",
+        "mapping"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-a-door"
+    },
+    {
+      "path": "facepunch/map-publish",
+      "title": "Map Publishing",
+      "difficulty": "Beginner",
+      "topic": "Mapping",
+      "content_type": "Text",
+      "tags": [
+        "map",
+        "mapping",
+        "publish",
+        "scene"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/map-publish"
+    },
+    {
+      "path": "facepunch/map-project",
+      "title": "Creating a Map Project",
+      "difficulty": "Beginner",
+      "topic": "Mapping",
+      "content_type": "Text",
+      "tags": [
+        "game",
+        "map",
+        "mapping",
+        "project"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/map-project"
+    },
+    {
       "path": "titanovsky/cc-bton",
       "title": "👽 How to make button",
       "difficulty": "Beginner",
@@ -120,7 +164,7 @@
       "title": "Porting Source maps",
       "difficulty": null,
       "topic": "Capable",
-      "content_type": null,
+      "content_type": "Text",
       "tags": [
         "hammer",
         "mapping",
@@ -131,34 +175,19 @@
       "url": "https://sbox.game/learn/softsplit/porting-maps"
     },
     {
-      "path": "mensch/networkig-101",
-      "title": "Simple Multiplayer Game",
-      "difficulty": null,
-      "topic": "Networking",
-      "content_type": null,
-      "tags": [
-        "basics",
-        "beginner",
-        "networking",
-        "simple"
-      ],
-      "author": "Menschlich",
-      "url": "https://sbox.game/learn/mensch/networkig-101"
-    },
-    {
-      "path": "titanovsky/sync_ava_cosm",
-      "title": "👗 Sync avatar's cosmetics",
+      "path": "facepunch/creating-an-entity-for-sandbox",
+      "title": "Creating an Entity for Sandbox",
       "difficulty": "Beginner",
-      "topic": "Networking",
+      "topic": "Coding",
       "content_type": "Text",
       "tags": [
-        "dress",
-        "dresser",
-        "rpc",
-        "sync"
+        "code",
+        "entity",
+        "game",
+        "sandbox"
       ],
-      "author": "Titanovsky",
-      "url": "https://sbox.game/learn/titanovsky/sync_ava_cosm"
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-an-entity-for-sandbox"
     },
     {
       "path": "bobmac/sboxcustompmguide",
@@ -178,7 +207,7 @@
     {
       "path": "brax/resource-files",
       "title": "Resource Files",
-      "difficulty": null,
+      "difficulty": "Beginner",
       "topic": "Platform",
       "content_type": "Text",
       "tags": [],
@@ -186,19 +215,47 @@
       "url": "https://sbox.game/learn/brax/resource-files"
     },
     {
-      "path": "titanovsky/useful_links_mapping",
-      "title": "🏛️ Useful links / Полезные ссылки (Mapping)",
+      "path": "facepunch/creating-a-room",
+      "title": "Creating Your First Room",
       "difficulty": "Beginner",
       "topic": "Mapping",
       "content_type": "Text",
       "tags": [
-        "face",
-        "hammer",
-        "links",
-        "map"
+        "map",
+        "mapping"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-a-room"
+    },
+    {
+      "path": "titanovsky/sync_ava_cosm",
+      "title": "👗 Sync avatar's cosmetics",
+      "difficulty": "Beginner",
+      "topic": "Networking",
+      "content_type": "Text",
+      "tags": [
+        "dress",
+        "dresser",
+        "rpc",
+        "sync"
       ],
       "author": "Titanovsky",
-      "url": "https://sbox.game/learn/titanovsky/useful_links_mapping"
+      "url": "https://sbox.game/learn/titanovsky/sync_ava_cosm"
+    },
+    {
+      "path": "mensch/networkig-101",
+      "title": "Simple Multiplayer Game",
+      "difficulty": null,
+      "topic": "Networking",
+      "content_type": null,
+      "tags": [
+        "basics",
+        "beginner",
+        "networking",
+        "simple"
+      ],
+      "author": "Menschlich",
+      "url": "https://sbox.game/learn/mensch/networkig-101"
     },
     {
       "path": "ghage/claude-sbox-integration",
@@ -214,12 +271,27 @@
       ],
       "author": "ghage",
       "url": "https://sbox.game/learn/ghage/claude-sbox-integration"
+    },
+    {
+      "path": "titanovsky/useful_links_mapping",
+      "title": "🏛️ Useful links / Полезные ссылки (Mapping)",
+      "difficulty": "Beginner",
+      "topic": "Mapping",
+      "content_type": "Text",
+      "tags": [
+        "face",
+        "hammer",
+        "links",
+        "map"
+      ],
+      "author": "Titanovsky",
+      "url": "https://sbox.game/learn/titanovsky/useful_links_mapping"
     }
   ],
   "defender": {
     "active": true,
-    "scanned": 15,
-    "passed": 15,
+    "scanned": 20,
+    "passed": 20,
     "blocked": []
   }
 }

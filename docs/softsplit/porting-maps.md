@@ -5,14 +5,15 @@ url: https://sbox.game/learn/softsplit/porting-maps
 author: Softsplit
 author_slug: softsplit
 topic: Capable
+content_type: Text
 tags: [hammer, mapping, porting, source]
 rating: 3
-views: 258
+views: 333
 upvotes: 3
 downvotes: 0
-updated: Updated 3 days ago
+updated: Updated today
 summary: Step-by-step guide on how to port maps from any Source engine game
-scraped_at: '2026-05-21T09:45:41Z'
+scraped_at: '2026-05-22T09:30:24Z'
 ---
 
 # Porting Source maps
