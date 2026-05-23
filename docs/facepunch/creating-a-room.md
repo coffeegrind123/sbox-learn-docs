@@ -8,13 +8,13 @@ difficulty: Beginner
 topic: Mapping
 content_type: Text
 tags: [map, mapping]
-rating: 2
-views: 97
-upvotes: 2
+rating: 3
+views: 159
+upvotes: 3
 downvotes: 0
-updated: Updated today
+updated: Updated yesterday
 summary: Build your first playable room in s&box using the Mapping tools.
-scraped_at: '2026-05-22T09:30:24Z'
+scraped_at: '2026-05-23T08:22:57Z'
 ---
 
 # Creating Your First Room
