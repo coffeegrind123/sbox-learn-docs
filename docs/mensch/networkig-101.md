@@ -7,12 +7,12 @@ author_slug: mensch
 topic: Networking
 tags: [basics, beginner, networking, simple]
 rating: 2
-views: 425
-upvotes: 5
+views: 468
+upvotes: 6
 downvotes: 3
-updated: Updated 5 days ago
+updated: Updated 6 days ago
 summary: Networking basics in just 4 steps.
-scraped_at: '2026-05-23T08:22:57Z'
+scraped_at: '2026-05-24T08:32:29Z'
 ---
 
 # Simple Multiplayer Game
@@ -23,6 +23,7 @@ scraped_at: '2026-05-23T08:22:57Z'
 
 1. Create a Player Controller in the Scene Hierarchy  
 2. Right Click onto your controller game object => Create Prefab  
-2. Create a Network Helper  
-3. Move your player controller prefab into the Network Helper inspector field  
-4. Delete your player controller from your **scene hierachy.**Now if you hit play, you can join via second instance and have a basic functioning multiplayer!
+3. Create an empty GameObject  
+4. Add Component "Network Helper"  
+5. Move your player controller prefab into the Network Helper inspector field  
+6. Delete your player controller from your **scene hierachy.**Now if you hit play, you can join via second instance via the networking icon in the top right and have a basic functioning multiplayer!

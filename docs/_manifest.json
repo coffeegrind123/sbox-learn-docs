@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-05-23T08:22:57Z",
-  "count": 20,
+  "scraped_at": "2026-05-24T08:32:29Z",
+  "count": 21,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -72,6 +72,20 @@
       "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
+      "path": "facepunch/creating-a-door",
+      "title": "Creating a Door",
+      "difficulty": "Beginner",
+      "topic": "Mapping",
+      "content_type": "Text",
+      "tags": [
+        "door",
+        "map",
+        "mapping"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-a-door"
+    },
+    {
       "path": "gibbard/networked-variable-ui",
       "title": "Displaying networked variables in UI",
       "difficulty": "Beginner",
@@ -86,18 +100,19 @@
       "url": "https://sbox.game/learn/gibbard/networked-variable-ui"
     },
     {
-      "path": "facepunch/creating-a-door",
-      "title": "Creating a Door",
+      "path": "bobmac/sboxcustompmguide",
+      "title": "Bob’s Guides : S&box Custom Playermodel Guide",
       "difficulty": "Beginner",
-      "topic": "Mapping",
+      "topic": "Modelling",
       "content_type": "Text",
       "tags": [
-        "door",
-        "map",
-        "mapping"
+        "beginnerfriendly",
+        "custompm",
+        "easy",
+        "sboxpm"
       ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/creating-a-door"
+      "author": "Bobmac",
+      "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
     },
     {
       "path": "cseliot/sbox-resources",
@@ -160,21 +175,6 @@
       "url": "https://sbox.game/learn/facepunch/map-project"
     },
     {
-      "path": "bobmac/sboxcustompmguide",
-      "title": "Bob’s Guides : S&box Custom Playermodel Guide",
-      "difficulty": "Beginner",
-      "topic": "Modelling",
-      "content_type": "Text",
-      "tags": [
-        "beginnerfriendly",
-        "custompm",
-        "easy",
-        "sboxpm"
-      ],
-      "author": "Bobmac",
-      "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
-    },
-    {
       "path": "softsplit/porting-maps",
       "title": "Porting Source maps",
       "difficulty": null,
@@ -218,6 +218,21 @@
       "url": "https://sbox.game/learn/facepunch/creating-an-entity-for-sandbox"
     },
     {
+      "path": "mensch/networkig-101",
+      "title": "Simple Multiplayer Game",
+      "difficulty": null,
+      "topic": "Networking",
+      "content_type": null,
+      "tags": [
+        "basics",
+        "beginner",
+        "networking",
+        "simple"
+      ],
+      "author": "Menschlich",
+      "url": "https://sbox.game/learn/mensch/networkig-101"
+    },
+    {
       "path": "titanovsky/sync_ava_cosm",
       "title": "👗 Sync avatar's cosmetics",
       "difficulty": "Beginner",
@@ -241,21 +256,6 @@
       "tags": [],
       "author": "Braxnet",
       "url": "https://sbox.game/learn/brax/resource-files"
-    },
-    {
-      "path": "mensch/networkig-101",
-      "title": "Simple Multiplayer Game",
-      "difficulty": null,
-      "topic": "Networking",
-      "content_type": null,
-      "tags": [
-        "basics",
-        "beginner",
-        "networking",
-        "simple"
-      ],
-      "author": "Menschlich",
-      "url": "https://sbox.game/learn/mensch/networkig-101"
     },
     {
       "path": "ghage/claude-sbox-integration",
@@ -286,12 +286,26 @@
       ],
       "author": "Titanovsky",
       "url": "https://sbox.game/learn/titanovsky/useful_links_mapping"
+    },
+    {
+      "path": "aqua/node-editor-01",
+      "title": "🔩 Node Editor Introduction",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [
+        "editor",
+        "node",
+        "tool"
+      ],
+      "author": "The Aquarium",
+      "url": "https://sbox.game/learn/aqua/node-editor-01"
     }
   ],
   "defender": {
     "active": true,
-    "scanned": 20,
-    "passed": 20,
+    "scanned": 21,
+    "passed": 21,
     "blocked": []
   }
 }

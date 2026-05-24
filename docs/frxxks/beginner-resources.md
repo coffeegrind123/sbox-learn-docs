@@ -9,13 +9,13 @@ topic: Editor
 content_type: Video
 tags: [beginner, collection, compilation, first]
 rating: 5
-views: 1332
+views: 1518
 upvotes: 20
 downvotes: 0
-updated: Updated 5 days ago
+updated: Updated 6 days ago
 summary: A comprehensive beginners resource collection helping you getting started
   with game development in s&box.
-scraped_at: '2026-05-23T08:22:57Z'
+scraped_at: '2026-05-24T08:32:29Z'
 ---
 
 # 🎓 Freaks Beginner Resources
@@ -37,7 +37,7 @@ Furthermore, [as of April 2026, the S&Box Docs have been made officially open so
   
 I will make heavy use of links in this guide that directly brings you to the relevant docs sections.
 
-# Other Beginner resources:
+## Other Beginner resources:
 
 - [Expansive Beginner Resources Github Page](https://github.com/CSEliot/sbox-resources)  
   (Thanks @cseliot)
@@ -60,27 +60,27 @@ After clicking the **"+ New Project..."** button, you will be greeted by a new w
   
 Currently there are 5 types of projects:
 
-**Game - Empty**
+## **Game - Empty**
 
 - Use this if you want to create a **Game** for s&box.
 - This is your full "Game" Editor tools, very similar to Unity and Godot.
 
-**Game - Player Controller**
+## **Game - Player Controller**
 
 - Contains prefabs for various PlayerController such as: First Person, Third Person and Top Down.
 
-**Addon**
+## **Addon**
 
 - Use this if you just want to make a general purpose **Map** or a **Model** and upload it into the s&box cloud.
 - These can then be accessed by game developers via the cloud asset browser or by people in the Sandbox Mode's spawn menu.
 - [Addon Projects](https://sbox.game/dev/doc/getting-started/project-types/addon-project) cannot contain code yet, however [Actiongraph](https://sbox.game/dev/doc/editor/actiongraph/intro-to-actiongraphs/) is available for them.
 
-**Map**
+## **Map**
 
 - Use this if you want to make a **Map** for any  Game.
 - Perfect for when you just want to make a generic map that can then be used by developers or as a map in Sandbox.
 
-**Sandbox Game Addon**
+## **Sandbox Game Addon**
 
 - Use this if you want to make a **Custom Scripted Entity** specifically for the **Sandbox Mode**.
 - Contains example Scripted Entities for Sandbox.
@@ -88,29 +88,35 @@ Currently there are 5 types of projects:
 
 This guide is assuming you're using the **"Game - Empty"** project type, since all other project types share the same editor environment as "Game - Minimal" but only differ in their restrictions on what type of features you can use.
 
-# Setup your IDE
+# Code Tips
+
+## **Setup your IDE**
 
 Make sure you have an [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) installed.  
 There are currently 3 officially supported IDE's available: [Visual Studio](https://visualstudio.microsoft.com/), Visual Studio Code and [Rider](https://www.jetbrains.com/rider/). You can change the selected compatibility from the "Edit > Preferences" Menu.  
   
-**However** if you know how, you can still set up any IDE of your choice to code for s&box, but you might run into issues. [As you can read in this handy guide](https://sbox.game/learn/brax/ide-setup) ( thanks @braxen ) , there may be further setup needed for the IDE of your choice. Make sure to follow these instructions to get the best experience.  
-  
-**Learn "C#"**
+**However** if you know how, you can still set up any IDE of your choice to code for s&box, but you might run into issues. [As you can read in this handy guide](https://sbox.game/learn/brax/ide-setup) ( thanks @braxen ) , there may be further setup needed for the IDE of your choice. Make sure to follow these instructions to get the best experience.
+
+## **Learn "C#"**
 
 - [Microsoft's Learning Center C# Course](https://dotnet.microsoft.com/en-us/learn/csharp)
 - [W3schools C# Tutorial](https://www.w3schools.com/cs/index.php)
 
-**s&box API reference**
+## **s&box API reference**
 
 - [API reference site](https://sbox.game/api)
 
-**Other helpful API documentation**
+## **Other helpful API documentation**
 
 - [HideInGame bool flag](https://sbox.game/api/Sandbox.MeshComponent/HideInGame)
 
-**Components**
+# **Components**
 
-- How to set up a Custom Component:
+## **Property Attributes**
+
+- [Property Attributes (Custom Inspector Elements)](https://sbox.game/dev/doc/editor/property-attributes)
+
+## How to set up a Custom Component
 
 ```
 /// <summary>
@@ -128,20 +134,20 @@ public partial class MyCustomComponent : Component
 }
 ```
 
-**Property Attributes**  
-  
-[Property Attributes (Custom Inspector Elements)](https://sbox.game/dev/doc/editor/property-attributes)  
-  
-**Buttons in the Inspector**
+## **Buttons in the Inspector**
 
 ```
-[Button] public Class ButtonCode 
+[Button, Title("Press Me!"), Description("This text appears when you hover the button")]
+public void TestButton()
 {
-// Code to execute when Button is pressed
+  Log.Info( "Button Pressed!" );
+  // Put the code for what the button should do here.
 }
 ```
 
-# **Notable Doc Pages**
+# Helpful Documentation Links
+
+## **Notable Doc Pages**
 
 - [s&box C# Cheat Sheet](https://sbox.game/dev/doc/code/code-basics/cheat-sheet)
 - [Property Attributes (Custom Inspector Elements)](https://sbox.game/dev/doc/editor/property-attributes)
@@ -150,23 +156,23 @@ public partial class MyCustomComponent : Component
 - [Events](https://sbox.game/dev/doc/scene/components/events/)
 - [Custom Assets / Game Resources](https://sbox.game/dev/doc/assets/resources/custom-assets)
 
-# **Learn Razor**
+## **Learn Razor**
 
 - [Microsoft Docs Razor Page](https://learn.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start)
 - [W3schools Razor Tutorial](https://www.w3schools.com/Asp/webpages_razor.asp)
 - [Cool cheat sheet by Braxen](https://sboxtricks.dongers.net/sbox/2025/11/20/razor-component-aliases.html)
 
-# **Learn Flexbox**
+## **Learn Flexbox**
 
 - [Flexbox Froggy Interactive Tutorial](https://flexboxfroggy.com/)
 
-# **Other Helpful Links**
+## **Other Helpful Links**
 
 - [Icons Reference for use in the editor](https://fonts.google.com/icons?selected=Material+Icons)
 - [250GB of sound fx files already extracted](https://huggingface.co/buckets/lu2000luk/sfx)   
   (Thanks @lu2000luk)
 
-# **Helpful Open Source S&Box Github Projects**
+## **Helpful Open Source S&Box Github Projects**
 
 - [Sandbox - by Facepunch](https://github.com/Facepunch/sandbox)
 - [Nicked - by Facepunch](https://github.com/Facepunch/sbox-hc1)
@@ -178,19 +184,19 @@ public partial class MyCustomComponent : Component
 - [Voxel-Party](https://github.com/DrakeFruit/Voxel-Party)
 - [DarkRP Sandbox Edition](https://github.com/sousou63/DarkRP)
 
-# **Linux**
+## **Linux**
 
 - [s&box Linux Discord](https://discord.gg/haZt7xbmBT)[Discord
 
   Join the Unofficial s&box Linux Community Discord Server!
 
-  Check out the Unofficial s&box Linux Community community on Discord - hang out with 166 other members and enjoy free voice and text chat.](https://discord.gg/haZt7xbmBT)
+  Check out the Unofficial s&box Linux Community community on Discord - hang out with 168 other members and enjoy free voice and text chat.](https://discord.gg/haZt7xbmBT)
 
 [![](https://cdn.sbox.game/upload/b/b419bcfb/f196/4044/b198/15cb7ada1ae3.png)](https://cdn.sbox.game/upload/b/b419bcfb/f196/4044/b198/15cb7ada1ae3.png)
 
 # **New Beginner Tutorials: (04-2026)**
 
-**Starter Video:****Sandkings Tutorial Series:**
+## **Tutorial Series by Sandking**
 
 - [#1: Up to date complete beginner Video Tutorial ( 28th of April 2026 )](https://youtu.be/PmB5ADahw-Y?is=gWxKR3pSXLhe2i9y)
 - [#2: Learn the Editor](https://youtu.be/35bO0PpZ0Ro)
@@ -204,7 +210,7 @@ public partial class MyCustomComponent : Component
    ( thanks @Sandking for all of the above)
 - [Scene Mapping feature overview](https://youtu.be/5EF7eQBur7w)
 
-# **Older Helpful beginner videos (may be out of date)**
+## **Older Helpful beginner videos (may be out of date)**
 
 - [Fish School Beginner Playlist](https://www.youtube.com/watch?v=g-ZJFnWPawY&list=PLIcPBTNc7_9oFEEoHSCuPrdGQnU27yLuj)  
   ( thanks @ubre )
@@ -220,7 +226,7 @@ public partial class MyCustomComponent : Component
 - [Async Tasks Tutorial](https://www.youtube.com/watch?v=sZPA6Bj_k9g)  
   ( thanks @derrikcreates )
 
-# **Other helpful channels**
+## **Other helpful YouTube channels**
 
 - [Brackey Youtube Channel](https://www.youtube.com/@Brackeys) - Learn to Code for various game engines
 - [Spaderdabomb Youtube Channel](https://www.youtube.com/@spaderdabomb) - Some good Coding tutorials
