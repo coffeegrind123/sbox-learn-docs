@@ -8,12 +8,12 @@ topic: Capable
 content_type: Text
 tags: [hammer, mapping, porting, source]
 rating: 3
-views: 433
+views: 499
 upvotes: 3
 downvotes: 0
-updated: Updated 3 days ago
+updated: Updated 4 days ago
 summary: Step-by-step guide on how to port maps from any Source engine game
-scraped_at: '2026-05-24T08:32:29Z'
+scraped_at: '2026-05-25T10:11:49Z'
 ---
 
 # Porting Source maps
@@ -379,7 +379,7 @@ The short version is that you are using Half-Life: Alyx as the conversion bridge
 
 Once the map is in s&box, treat it like a real s&box map instead of a finished port. Rebuild broken materials, check model collision, separate the 3D skybox, redo lighting and probes, replace Source entity logic, then test it in-game until the map feels intentional again.
 
-Although it isn't a good example, you're free to use my existing Big City port as a reference which I have linked below:[![](https://opengraph.githubassets.com/2134178f6bf56b031e7832d22ea122e19126970cfbbc5736f71d4de1b2f97206/Softsplit/softsplit.big_city)
+Although it isn't a good example, you're free to use my existing Big City port as a reference which I have linked below:[![](https://opengraph.githubassets.com/29fc8a92f11e5641695ce6f628913ba1a9000972d10a7d4ead215a0f42c4dc80/Softsplit/softsplit.big_city)
 
 GitHub
 

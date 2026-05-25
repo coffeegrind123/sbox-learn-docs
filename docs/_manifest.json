@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-05-24T08:32:29Z",
-  "count": 21,
+  "scraped_at": "2026-05-25T10:11:49Z",
+  "count": 20,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -55,21 +55,6 @@
       ],
       "author": "Carson Kompon",
       "url": "https://sbox.game/learn/carsonk/shader_quality_settings"
-    },
-    {
-      "path": "tesa/ui-buildhash",
-      "title": "Understanding the Razor's Reactivity",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": null,
-      "tags": [
-        "hud",
-        "panel",
-        "razor",
-        "ui"
-      ],
-      "author": "Tea Sanctuary",
-      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "facepunch/creating-a-door",
@@ -305,7 +290,15 @@
   "defender": {
     "active": true,
     "scanned": 21,
-    "passed": 21,
-    "blocked": []
+    "passed": 20,
+    "blocked": [
+      {
+        "source": "tesa/ui-buildhash",
+        "riskLevel": "high",
+        "tier2Score": 0.955236100951207,
+        "detections": [],
+        "patternsByField": {}
+      }
+    ]
   }
 }
