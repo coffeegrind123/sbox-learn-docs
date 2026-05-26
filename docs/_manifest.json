@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-05-25T10:11:49Z",
-  "count": 20,
+  "scraped_at": "2026-05-26T10:00:29Z",
+  "count": 21,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -57,18 +57,34 @@
       "url": "https://sbox.game/learn/carsonk/shader_quality_settings"
     },
     {
-      "path": "facepunch/creating-a-door",
-      "title": "Creating a Door",
+      "path": "tesa/ui-buildhash",
+      "title": "Understanding the Razor's Reactivity",
       "difficulty": "Beginner",
-      "topic": "Mapping",
+      "topic": "UI",
+      "content_type": null,
+      "tags": [
+        "hud",
+        "panel",
+        "razor",
+        "ui"
+      ],
+      "author": "Tea Sanctuary",
+      "url": "https://sbox.game/learn/tesa/ui-buildhash"
+    },
+    {
+      "path": "bobmac/sboxcustompmguide",
+      "title": "Bob’s Guides : S&box Custom Playermodel Guide",
+      "difficulty": "Beginner",
+      "topic": "Modelling",
       "content_type": "Text",
       "tags": [
-        "door",
-        "map",
-        "mapping"
+        "beginnerfriendly",
+        "custompm",
+        "easy",
+        "sboxpm"
       ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/creating-a-door"
+      "author": "Bobmac",
+      "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
     },
     {
       "path": "gibbard/networked-variable-ui",
@@ -85,19 +101,18 @@
       "url": "https://sbox.game/learn/gibbard/networked-variable-ui"
     },
     {
-      "path": "bobmac/sboxcustompmguide",
-      "title": "Bob’s Guides : S&box Custom Playermodel Guide",
+      "path": "facepunch/creating-a-door",
+      "title": "Creating a Door",
       "difficulty": "Beginner",
-      "topic": "Modelling",
+      "topic": "Mapping",
       "content_type": "Text",
       "tags": [
-        "beginnerfriendly",
-        "custompm",
-        "easy",
-        "sboxpm"
+        "door",
+        "map",
+        "mapping"
       ],
-      "author": "Bobmac",
-      "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-a-door"
     },
     {
       "path": "cseliot/sbox-resources",
@@ -290,15 +305,7 @@
   "defender": {
     "active": true,
     "scanned": 21,
-    "passed": 20,
-    "blocked": [
-      {
-        "source": "tesa/ui-buildhash",
-        "riskLevel": "high",
-        "tier2Score": 0.955236100951207,
-        "detections": [],
-        "patternsByField": {}
-      }
-    ]
+    "passed": 21,
+    "blocked": []
   }
 }
