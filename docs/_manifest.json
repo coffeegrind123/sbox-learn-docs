@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-26T10:00:29Z",
+  "scraped_at": "2026-05-27T09:56:04Z",
   "count": 21,
   "tutorials": [
     {
@@ -57,6 +57,21 @@
       "url": "https://sbox.game/learn/carsonk/shader_quality_settings"
     },
     {
+      "path": "bobmac/sboxcustompmguide",
+      "title": "Bob’s Guides : S&box Custom Playermodel Guide [For your games!]",
+      "difficulty": "Beginner",
+      "topic": "Modelling",
+      "content_type": "Text",
+      "tags": [
+        "beginnerfriendly",
+        "custompm",
+        "easy",
+        "sboxpm"
+      ],
+      "author": "Bobmac",
+      "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
+    },
+    {
       "path": "tesa/ui-buildhash",
       "title": "Understanding the Razor's Reactivity",
       "difficulty": "Beginner",
@@ -70,21 +85,6 @@
       ],
       "author": "Tea Sanctuary",
       "url": "https://sbox.game/learn/tesa/ui-buildhash"
-    },
-    {
-      "path": "bobmac/sboxcustompmguide",
-      "title": "Bob’s Guides : S&box Custom Playermodel Guide",
-      "difficulty": "Beginner",
-      "topic": "Modelling",
-      "content_type": "Text",
-      "tags": [
-        "beginnerfriendly",
-        "custompm",
-        "easy",
-        "sboxpm"
-      ],
-      "author": "Bobmac",
-      "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
     },
     {
       "path": "gibbard/networked-variable-ui",
