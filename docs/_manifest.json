@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-28T10:06:31Z",
+  "scraped_at": "2026-05-29T09:58:02Z",
   "count": 21,
   "tutorials": [
     {
@@ -57,21 +57,6 @@
       "url": "https://sbox.game/learn/carsonk/shader_quality_settings"
     },
     {
-      "path": "tesa/ui-buildhash",
-      "title": "Understanding the Razor's Reactivity",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": null,
-      "tags": [
-        "hud",
-        "panel",
-        "razor",
-        "ui"
-      ],
-      "author": "Tea Sanctuary",
-      "url": "https://sbox.game/learn/tesa/ui-buildhash"
-    },
-    {
       "path": "bobmac/sboxcustompmguide",
       "title": "Bob’s Guides : S&box Custom Playermodel Guide [For your games!]",
       "difficulty": "Beginner",
@@ -85,6 +70,21 @@
       ],
       "author": "Bobmac",
       "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
+    },
+    {
+      "path": "tesa/ui-buildhash",
+      "title": "Understanding the Razor's Reactivity",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": null,
+      "tags": [
+        "hud",
+        "panel",
+        "razor",
+        "ui"
+      ],
+      "author": "Tea Sanctuary",
+      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "gibbard/networked-variable-ui",
@@ -175,6 +175,16 @@
       "url": "https://sbox.game/learn/facepunch/map-project"
     },
     {
+      "path": "brax/resource-files",
+      "title": "Resource Files",
+      "difficulty": "Beginner",
+      "topic": "Platform",
+      "content_type": "Text",
+      "tags": [],
+      "author": "Braxnet",
+      "url": "https://sbox.game/learn/brax/resource-files"
+    },
+    {
       "path": "softsplit/porting-maps",
       "title": "Porting Source maps",
       "difficulty": null,
@@ -231,16 +241,6 @@
       ],
       "author": "Menschlich",
       "url": "https://sbox.game/learn/mensch/networkig-101"
-    },
-    {
-      "path": "brax/resource-files",
-      "title": "Resource Files",
-      "difficulty": "Beginner",
-      "topic": "Platform",
-      "content_type": "Text",
-      "tags": [],
-      "author": "Braxnet",
-      "url": "https://sbox.game/learn/brax/resource-files"
     },
     {
       "path": "titanovsky/sync_ava_cosm",
