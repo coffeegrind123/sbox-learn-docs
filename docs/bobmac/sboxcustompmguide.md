@@ -9,13 +9,13 @@ topic: Modelling
 content_type: Text
 tags: [beginnerfriendly, custompm, easy, sboxpm]
 rating: 4
-views: 659
+views: 718
 upvotes: 9
 downvotes: 0
-updated: Updated 3 days ago
+updated: Updated 4 days ago
 summary: A guide for porting Custom models & S1 models into S&box as custom player
   models!
-scraped_at: '2026-05-29T09:58:02Z'
+scraped_at: '2026-05-30T08:30:40Z'
 ---
 
 # Bob’s Guides : S&box Custom Playermodel Guide [For your games!]
@@ -468,9 +468,14 @@ Oh boy.. We've been doing this thing for a while. Now, it's time to test it. To 
 
 **• Testing the playermodel**
 
-First, right-click in the scene viewport or in the hierarchy. Hover your cursor on **"Create"** and then click **"Player Controller"**. Name the controller whatever you like, and then the player controller with a sausage guy will be created. Pull the controller until it touches the ground if it's flying. Oh, btw, sausage guy's name is **"Terry"**. But, we don't want **"Terry"**. Instead, we'll use our model.[![](https://cdn.sbox.game/upload/b/95859c18/a1b0/4315/8506/75b41c26674e.png)](https://cdn.sbox.game/upload/b/95859c18/a1b0/4315/8506/75b41c26674e.png)Click the small arrow beside **"Player Controller"** in the hierarchy. You'll see a child component called **"Body"**. Click it and see the inspector. The model is rendered with a **"Model Renderer (skinned)"**, and you'll see that the sausage model is used there.  
+First, right-click in the scene viewport or in the hierarchy. Hover your cursor on **"Create"** and then click **"Player Controller"**. Name the controller whatever you like, and then the player controller with a sausage guy will be created. Pull the controller until it touches the ground if it's flying. Oh, btw, sausage guy's name is **"Terry"**. But, we don't want **"Terry"**. Instead, we'll use our model.[![](https://cdn.sbox.game/upload/b/1f458434/84a3/4135/bff3/06ba3bf24bec.gif)](https://cdn.sbox.game/upload/b/1f458434/84a3/4135/bff3/06ba3bf24bec.gif)  
+Click the small arrow beside **"Player Controller"** in the hierarchy. You'll see a child component called **"Body"**. Click it and see the inspector. The model is rendered with a **"Model Renderer (skinned)"**, and you'll see that the sausage model is used there.  
   
-To use our custom model. Drag our custom model's **"VMDL"** from the **"Asset Browser"** and drop it in the box beside with **"Model"**. Bam. Terry is now gone and will be switched to your custom model.[![](https://cdn.sbox.game/upload/b/bbc4bb03/24ed/4326/9434/7064312edac5.png)](https://cdn.sbox.game/upload/b/bbc4bb03/24ed/4326/9434/7064312edac5.png)To play around with your model and test. Click the green **▶** button at the top. Scene will load, and you'll get to control your custom model. Move around, jump around, Crouch and more to test your model if it's fine or not. It'll be fine as long as you follow the instructions carefully![![](https://cdn.sbox.game/upload/b/c00c1d8e/03fb/4643/864a/594284bae0cb.gif)](https://cdn.sbox.game/upload/b/c00c1d8e/03fb/4643/864a/594284bae0cb.gif)  
+To use our custom model. Drag our custom model's **"VMDL"** from the **"Asset Browser"** and drop it in the box beside with **"Model"**. Bam. Terry is now gone and will be switched to your custom model.[![](https://cdn.sbox.game/upload/b/f86eca99/ff20/4a82/86a8/b6b4098af335.gif)](https://cdn.sbox.game/upload/b/f86eca99/ff20/4a82/86a8/b6b4098af335.gif)  
+After that, we'll remove the "**Dresser"** component from the "**Player Controller"**. Scroll down in the inspector while "**Player Controller"** is selected. You'll see a component called "**Dresser"**. Click three dots from right-upper side of that component and click "**Remove component**". That'll remove the "**Dresser"** component which we don't need and it will add a leg part of citizen model to your model if you don't don't remove it. *Seems like a new bug.*[![](https://cdn.sbox.game/upload/b/7154eb0e/ad53/485e/abbf/4f1d46e66c36.png)](https://cdn.sbox.game/upload/b/7154eb0e/ad53/485e/abbf/4f1d46e66c36.png)
+
+To play around with your model and test. Click the green **▶** button at the top. Scene will load, and you'll get to control your custom model. Move around, jump around, Crouch and more to test your model if it's fine or not. It'll be fine as long as you follow the instructions carefully![![](https://cdn.sbox.game/upload/b/c00c1d8e/03fb/4643/864a/594284bae0cb.gif)](https://cdn.sbox.game/upload/b/c00c1d8e/03fb/4643/864a/594284bae0cb.gif)
+
 [![](https://cdn.sbox.game/upload/b/e4ed2ee8/81f3/4cb9/93c4/02909c6d18e3.gif)](https://cdn.sbox.game/upload/b/e4ed2ee8/81f3/4cb9/93c4/02909c6d18e3.gif)  
 [![](https://cdn.sbox.game/upload/b/b4de25a3/dd9b/420f/a04a/061c9b8d23b0.gif)](https://cdn.sbox.game/upload/b/b4de25a3/dd9b/420f/a04a/061c9b8d23b0.gif)As you can see, mine is working correctly. If it's working correctly. Congrats! You just ported a custom model into **S&box**!. To test the ragdoll physics. Drag and drop your model's **"VMDL"** into the scene and place it anywhere, and click the play button.  
   

@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-05-29T09:58:02Z",
-  "count": 21,
+  "scraped_at": "2026-05-30T08:30:40Z",
+  "count": 23,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -87,20 +87,6 @@
       "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
-      "path": "gibbard/networked-variable-ui",
-      "title": "Displaying networked variables in UI",
-      "difficulty": "Beginner",
-      "topic": "Networking",
-      "content_type": "Text",
-      "tags": [
-        "beginner",
-        "networking",
-        "ui"
-      ],
-      "author": "Gibbard",
-      "url": "https://sbox.game/learn/gibbard/networked-variable-ui"
-    },
-    {
       "path": "facepunch/creating-a-door",
       "title": "Creating a Door",
       "difficulty": "Beginner",
@@ -113,6 +99,20 @@
       ],
       "author": "Facepunch",
       "url": "https://sbox.game/learn/facepunch/creating-a-door"
+    },
+    {
+      "path": "gibbard/networked-variable-ui",
+      "title": "Displaying networked variables in UI",
+      "difficulty": "Beginner",
+      "topic": "Networking",
+      "content_type": "Text",
+      "tags": [
+        "beginner",
+        "networking",
+        "ui"
+      ],
+      "author": "Gibbard",
+      "url": "https://sbox.game/learn/gibbard/networked-variable-ui"
     },
     {
       "path": "titanovsky/cc-bton",
@@ -185,6 +185,21 @@
       "url": "https://sbox.game/learn/brax/resource-files"
     },
     {
+      "path": "mensch/networkig-101",
+      "title": "Simple Multiplayer Game",
+      "difficulty": null,
+      "topic": "Networking",
+      "content_type": null,
+      "tags": [
+        "basics",
+        "beginner",
+        "networking",
+        "simple"
+      ],
+      "author": "Menschlich",
+      "url": "https://sbox.game/learn/mensch/networkig-101"
+    },
+    {
       "path": "softsplit/porting-maps",
       "title": "Porting Source maps",
       "difficulty": null,
@@ -228,21 +243,6 @@
       "url": "https://sbox.game/learn/facepunch/creating-an-entity-for-sandbox"
     },
     {
-      "path": "mensch/networkig-101",
-      "title": "Simple Multiplayer Game",
-      "difficulty": null,
-      "topic": "Networking",
-      "content_type": null,
-      "tags": [
-        "basics",
-        "beginner",
-        "networking",
-        "simple"
-      ],
-      "author": "Menschlich",
-      "url": "https://sbox.game/learn/mensch/networkig-101"
-    },
-    {
       "path": "titanovsky/sync_ava_cosm",
       "title": "👗 Sync avatar's cosmetics",
       "difficulty": "Beginner",
@@ -271,6 +271,36 @@
       ],
       "author": "ghage",
       "url": "https://sbox.game/learn/ghage/claude-sbox-integration"
+    },
+    {
+      "path": "facepunch/creating-first-project",
+      "title": "Creating your First Project",
+      "difficulty": "Beginner",
+      "topic": "Editor",
+      "content_type": "Text",
+      "tags": [
+        "beginner",
+        "editor",
+        "game",
+        "guide"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-first-project"
+    },
+    {
+      "path": "facepunch/making-a-first-person-game",
+      "title": "Making a First Person Game",
+      "difficulty": "Beginner",
+      "topic": "Editor",
+      "content_type": "Text",
+      "tags": [
+        "beginner",
+        "editor",
+        "game",
+        "guide"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/making-a-first-person-game"
     },
     {
       "path": "titanovsky/useful_links_mapping",
@@ -304,8 +334,8 @@
   ],
   "defender": {
     "active": true,
-    "scanned": 21,
-    "passed": 21,
+    "scanned": 23,
+    "passed": 23,
     "blocked": []
   }
 }
