@@ -7,13 +7,13 @@ author_slug: aqua
 topic: Capable
 content_type: Text
 tags: [editor, node, tool]
-rating: 1
-views: 300
-upvotes: 1
+rating: 2
+views: 330
+upvotes: 2
 downvotes: 1
-updated: Updated 7 days ago
+updated: Updated 8 days ago
 summary: An introduction to the built-in node editor framework.
-scraped_at: '2026-05-30T08:30:40Z'
+scraped_at: '2026-05-31T08:48:51Z'
 ---
 
 # 🔩 Node Editor Introduction
