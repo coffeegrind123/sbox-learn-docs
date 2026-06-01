@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-05-31T08:48:51Z",
-  "count": 22,
+  "scraped_at": "2026-06-01T11:39:57Z",
+  "count": 23,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -70,6 +70,21 @@
       ],
       "author": "Bobmac",
       "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
+    },
+    {
+      "path": "tesa/ui-buildhash",
+      "title": "Understanding the Razor's Reactivity",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": null,
+      "tags": [
+        "hud",
+        "panel",
+        "razor",
+        "ui"
+      ],
+      "author": "Tea Sanctuary",
+      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "facepunch/creating-a-door",
@@ -160,6 +175,21 @@
       "url": "https://sbox.game/learn/facepunch/map-project"
     },
     {
+      "path": "facepunch/creating-an-entity-for-sandbox",
+      "title": "Creating an Entity for Sandbox",
+      "difficulty": "Beginner",
+      "topic": "Coding",
+      "content_type": "Text",
+      "tags": [
+        "code",
+        "entity",
+        "game",
+        "sandbox"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-an-entity-for-sandbox"
+    },
+    {
       "path": "mensch/networkig-101",
       "title": "Simple Multiplayer Game",
       "difficulty": null,
@@ -185,19 +215,19 @@
       "url": "https://sbox.game/learn/brax/resource-files"
     },
     {
-      "path": "softsplit/porting-maps",
-      "title": "Porting Source maps",
-      "difficulty": null,
-      "topic": "Capable",
+      "path": "facepunch/making-a-first-person-game",
+      "title": "Making a First Person Game",
+      "difficulty": "Beginner",
+      "topic": "Editor",
       "content_type": "Text",
       "tags": [
-        "hammer",
-        "mapping",
-        "porting",
-        "source"
+        "beginner",
+        "editor",
+        "game",
+        "guide"
       ],
-      "author": "Softsplit",
-      "url": "https://sbox.game/learn/softsplit/porting-maps"
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/making-a-first-person-game"
     },
     {
       "path": "facepunch/creating-a-room",
@@ -213,19 +243,19 @@
       "url": "https://sbox.game/learn/facepunch/creating-a-room"
     },
     {
-      "path": "facepunch/creating-an-entity-for-sandbox",
-      "title": "Creating an Entity for Sandbox",
-      "difficulty": "Beginner",
-      "topic": "Coding",
+      "path": "softsplit/porting-maps",
+      "title": "Porting Source maps",
+      "difficulty": null,
+      "topic": "Capable",
       "content_type": "Text",
       "tags": [
-        "code",
-        "entity",
-        "game",
-        "sandbox"
+        "hammer",
+        "mapping",
+        "porting",
+        "source"
       ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/creating-an-entity-for-sandbox"
+      "author": "Softsplit",
+      "url": "https://sbox.game/learn/softsplit/porting-maps"
     },
     {
       "path": "titanovsky/sync_ava_cosm",
@@ -243,8 +273,8 @@
       "url": "https://sbox.game/learn/titanovsky/sync_ava_cosm"
     },
     {
-      "path": "facepunch/making-a-first-person-game",
-      "title": "Making a First Person Game",
+      "path": "facepunch/creating-first-project",
+      "title": "Creating your First Project",
       "difficulty": "Beginner",
       "topic": "Editor",
       "content_type": "Text",
@@ -255,7 +285,21 @@
         "guide"
       ],
       "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/making-a-first-person-game"
+      "url": "https://sbox.game/learn/facepunch/creating-first-project"
+    },
+    {
+      "path": "aqua/node-editor-01",
+      "title": "🔩 Node Editor Introduction",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [
+        "editor",
+        "node",
+        "tool"
+      ],
+      "author": "The Aquarium",
+      "url": "https://sbox.game/learn/aqua/node-editor-01"
     },
     {
       "path": "ghage/claude-sbox-integration",
@@ -273,21 +317,6 @@
       "url": "https://sbox.game/learn/ghage/claude-sbox-integration"
     },
     {
-      "path": "facepunch/creating-first-project",
-      "title": "Creating your First Project",
-      "difficulty": "Beginner",
-      "topic": "Editor",
-      "content_type": "Text",
-      "tags": [
-        "beginner",
-        "editor",
-        "game",
-        "guide"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/creating-first-project"
-    },
-    {
       "path": "titanovsky/useful_links_mapping",
       "title": "🏛️ Useful links / Полезные ссылки (Mapping)",
       "difficulty": "Beginner",
@@ -301,34 +330,12 @@
       ],
       "author": "Titanovsky",
       "url": "https://sbox.game/learn/titanovsky/useful_links_mapping"
-    },
-    {
-      "path": "aqua/node-editor-01",
-      "title": "🔩 Node Editor Introduction",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Text",
-      "tags": [
-        "editor",
-        "node",
-        "tool"
-      ],
-      "author": "The Aquarium",
-      "url": "https://sbox.game/learn/aqua/node-editor-01"
     }
   ],
   "defender": {
     "active": true,
     "scanned": 23,
-    "passed": 22,
-    "blocked": [
-      {
-        "source": "tesa/ui-buildhash",
-        "riskLevel": "high",
-        "tier2Score": 0.955236100951207,
-        "detections": [],
-        "patternsByField": {}
-      }
-    ]
+    "passed": 23,
+    "blocked": []
   }
 }
