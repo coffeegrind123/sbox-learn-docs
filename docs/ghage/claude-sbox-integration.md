@@ -7,14 +7,14 @@ author_slug: ghage
 topic: Expert
 content_type: Text
 tags: [agent, ai, automation, claude]
-rating: 2
-views: 887
+rating: 1
+views: 924
 upvotes: 3
-downvotes: 2
-updated: Updated 12 days ago
+downvotes: 3
+updated: Updated 13 days ago
 summary: Wire a coding agent into the live editor — drive the scene, query the API,
   write C#, all over a localhost MCP server.
-scraped_at: '2026-06-01T11:39:57Z'
+scraped_at: '2026-06-02T10:28:02Z'
 ---
 
 # Claude Code (and any MCP client) inside sbox-dev

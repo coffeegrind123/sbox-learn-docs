@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-06-01T11:39:57Z",
-  "count": 23,
+  "scraped_at": "2026-06-02T10:28:02Z",
+  "count": 25,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -101,6 +101,21 @@
       "url": "https://sbox.game/learn/facepunch/creating-a-door"
     },
     {
+      "path": "subzerostudios/creating-your-first-map",
+      "title": "Starting From Zero: Creating Your First Map",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [
+        "beginner",
+        "design",
+        "editor",
+        "game"
+      ],
+      "author": "SubZero Studios",
+      "url": "https://sbox.game/learn/subzerostudios/creating-your-first-map"
+    },
+    {
       "path": "gibbard/networked-variable-ui",
       "title": "Displaying networked variables in UI",
       "difficulty": "Beginner",
@@ -143,6 +158,21 @@
       ],
       "author": "cseliot",
       "url": "https://sbox.game/learn/cseliot/sbox-resources"
+    },
+    {
+      "path": "facepunch/making-a-first-person-game",
+      "title": "Making a First Person Game",
+      "difficulty": "Beginner",
+      "topic": "Editor",
+      "content_type": "Text",
+      "tags": [
+        "beginner",
+        "editor",
+        "game",
+        "guide"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/making-a-first-person-game"
     },
     {
       "path": "facepunch/map-publish",
@@ -215,21 +245,6 @@
       "url": "https://sbox.game/learn/brax/resource-files"
     },
     {
-      "path": "facepunch/making-a-first-person-game",
-      "title": "Making a First Person Game",
-      "difficulty": "Beginner",
-      "topic": "Editor",
-      "content_type": "Text",
-      "tags": [
-        "beginner",
-        "editor",
-        "game",
-        "guide"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/making-a-first-person-game"
-    },
-    {
       "path": "facepunch/creating-a-room",
       "title": "Creating Your First Room",
       "difficulty": "Beginner",
@@ -271,6 +286,20 @@
       ],
       "author": "Titanovsky",
       "url": "https://sbox.game/learn/titanovsky/sync_ava_cosm"
+    },
+    {
+      "path": "jogamedev/multiplayer-101",
+      "title": "Multiplayer 101 - Easy as pie!",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [
+        "multiplayer",
+        "network",
+        "synchronize"
+      ],
+      "author": "jogamedev",
+      "url": "https://sbox.game/learn/jogamedev/multiplayer-101"
     },
     {
       "path": "facepunch/creating-first-project",
@@ -334,8 +363,8 @@
   ],
   "defender": {
     "active": true,
-    "scanned": 23,
-    "passed": 23,
+    "scanned": 25,
+    "passed": 25,
     "blocked": []
   }
 }
