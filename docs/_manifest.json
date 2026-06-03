@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-02T10:28:02Z",
+  "scraped_at": "2026-06-03T11:04:02Z",
   "count": 25,
   "tutorials": [
     {
@@ -101,21 +101,6 @@
       "url": "https://sbox.game/learn/facepunch/creating-a-door"
     },
     {
-      "path": "subzerostudios/creating-your-first-map",
-      "title": "Starting From Zero: Creating Your First Map",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Text",
-      "tags": [
-        "beginner",
-        "design",
-        "editor",
-        "game"
-      ],
-      "author": "SubZero Studios",
-      "url": "https://sbox.game/learn/subzerostudios/creating-your-first-map"
-    },
-    {
       "path": "gibbard/networked-variable-ui",
       "title": "Displaying networked variables in UI",
       "difficulty": "Beginner",
@@ -145,6 +130,21 @@
       "url": "https://sbox.game/learn/titanovsky/cc-bton"
     },
     {
+      "path": "facepunch/making-a-first-person-game",
+      "title": "Making a First Person Game",
+      "difficulty": "Beginner",
+      "topic": "Editor",
+      "content_type": "Text",
+      "tags": [
+        "beginner",
+        "editor",
+        "game",
+        "guide"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/making-a-first-person-game"
+    },
+    {
       "path": "cseliot/sbox-resources",
       "title": "SBox Resources, An Open-Source \"Subway Map\" for all things S&Box",
       "difficulty": "Beginner",
@@ -160,19 +160,34 @@
       "url": "https://sbox.game/learn/cseliot/sbox-resources"
     },
     {
-      "path": "facepunch/making-a-first-person-game",
-      "title": "Making a First Person Game",
+      "path": "xaz/goo-101",
+      "title": "the goo quickstart",
       "difficulty": "Beginner",
-      "topic": "Editor",
+      "topic": "UI",
       "content_type": "Text",
       "tags": [
-        "beginner",
-        "editor",
+        "cs",
+        "csharp",
+        "goo",
+        "ui"
+      ],
+      "author": "xazware",
+      "url": "https://sbox.game/learn/xaz/goo-101"
+    },
+    {
+      "path": "facepunch/creating-an-entity-for-sandbox",
+      "title": "Creating an Entity for Sandbox",
+      "difficulty": "Beginner",
+      "topic": "Coding",
+      "content_type": "Text",
+      "tags": [
+        "code",
+        "entity",
         "game",
-        "guide"
+        "sandbox"
       ],
       "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/making-a-first-person-game"
+      "url": "https://sbox.game/learn/facepunch/creating-an-entity-for-sandbox"
     },
     {
       "path": "facepunch/map-publish",
@@ -205,19 +220,42 @@
       "url": "https://sbox.game/learn/facepunch/map-project"
     },
     {
-      "path": "facepunch/creating-an-entity-for-sandbox",
-      "title": "Creating an Entity for Sandbox",
+      "path": "brax/resource-files",
+      "title": "Resource Files",
       "difficulty": "Beginner",
-      "topic": "Coding",
+      "topic": "Platform",
+      "content_type": "Text",
+      "tags": [],
+      "author": "Braxnet",
+      "url": "https://sbox.game/learn/brax/resource-files"
+    },
+    {
+      "path": "softsplit/porting-maps",
+      "title": "Porting Source maps",
+      "difficulty": null,
+      "topic": "Capable",
       "content_type": "Text",
       "tags": [
-        "code",
-        "entity",
-        "game",
-        "sandbox"
+        "hammer",
+        "mapping",
+        "porting",
+        "source"
+      ],
+      "author": "Softsplit",
+      "url": "https://sbox.game/learn/softsplit/porting-maps"
+    },
+    {
+      "path": "facepunch/creating-a-room",
+      "title": "Creating Your First Room",
+      "difficulty": "Beginner",
+      "topic": "Mapping",
+      "content_type": "Text",
+      "tags": [
+        "map",
+        "mapping"
       ],
       "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/creating-an-entity-for-sandbox"
+      "url": "https://sbox.game/learn/facepunch/creating-a-room"
     },
     {
       "path": "mensch/networkig-101",
@@ -235,42 +273,18 @@
       "url": "https://sbox.game/learn/mensch/networkig-101"
     },
     {
-      "path": "brax/resource-files",
-      "title": "Resource Files",
-      "difficulty": "Beginner",
-      "topic": "Platform",
-      "content_type": "Text",
-      "tags": [],
-      "author": "Braxnet",
-      "url": "https://sbox.game/learn/brax/resource-files"
-    },
-    {
-      "path": "facepunch/creating-a-room",
-      "title": "Creating Your First Room",
-      "difficulty": "Beginner",
-      "topic": "Mapping",
-      "content_type": "Text",
-      "tags": [
-        "map",
-        "mapping"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/creating-a-room"
-    },
-    {
-      "path": "softsplit/porting-maps",
-      "title": "Porting Source maps",
+      "path": "aqua/node-editor-01",
+      "title": "🔩 Node Editor Introduction",
       "difficulty": null,
       "topic": "Capable",
       "content_type": "Text",
       "tags": [
-        "hammer",
-        "mapping",
-        "porting",
-        "source"
+        "editor",
+        "node",
+        "tool"
       ],
-      "author": "Softsplit",
-      "url": "https://sbox.game/learn/softsplit/porting-maps"
+      "author": "The Aquarium",
+      "url": "https://sbox.game/learn/aqua/node-editor-01"
     },
     {
       "path": "titanovsky/sync_ava_cosm",
@@ -315,20 +329,6 @@
       ],
       "author": "Facepunch",
       "url": "https://sbox.game/learn/facepunch/creating-first-project"
-    },
-    {
-      "path": "aqua/node-editor-01",
-      "title": "🔩 Node Editor Introduction",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Text",
-      "tags": [
-        "editor",
-        "node",
-        "tool"
-      ],
-      "author": "The Aquarium",
-      "url": "https://sbox.game/learn/aqua/node-editor-01"
     },
     {
       "path": "ghage/claude-sbox-integration",

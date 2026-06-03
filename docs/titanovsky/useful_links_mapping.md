@@ -9,12 +9,14 @@ topic: Mapping
 content_type: Text
 tags: [face, hammer, links, map]
 rating: 1
-views: 677
+views: 704
 upvotes: 3
 downvotes: 4
-updated: Updated 15 days ago
+updated: 'Updated
+
+  16 Days Ago'
 summary: just some useful links and guides
-scraped_at: '2026-06-02T10:28:02Z'
+scraped_at: '2026-06-03T11:04:02Z'
 ---
 
 # 🏛️ Useful links / Полезные ссылки (Mapping)
