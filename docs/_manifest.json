@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-06-03T11:04:02Z",
-  "count": 25,
+  "scraped_at": "2026-06-04T10:02:31Z",
+  "count": 26,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -115,6 +115,21 @@
       "url": "https://sbox.game/learn/gibbard/networked-variable-ui"
     },
     {
+      "path": "xaz/goo-101",
+      "title": "the goo quickstart",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": "Text",
+      "tags": [
+        "cs",
+        "csharp",
+        "goo",
+        "ui"
+      ],
+      "author": "xazware",
+      "url": "https://sbox.game/learn/xaz/goo-101"
+    },
+    {
       "path": "titanovsky/cc-bton",
       "title": "👽 How to make button",
       "difficulty": "Beginner",
@@ -158,21 +173,6 @@
       ],
       "author": "cseliot",
       "url": "https://sbox.game/learn/cseliot/sbox-resources"
-    },
-    {
-      "path": "xaz/goo-101",
-      "title": "the goo quickstart",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": "Text",
-      "tags": [
-        "cs",
-        "csharp",
-        "goo",
-        "ui"
-      ],
-      "author": "xazware",
-      "url": "https://sbox.game/learn/xaz/goo-101"
     },
     {
       "path": "facepunch/creating-an-entity-for-sandbox",
@@ -331,6 +331,21 @@
       "url": "https://sbox.game/learn/facepunch/creating-first-project"
     },
     {
+      "path": "carsonk/how-to-make-ui",
+      "title": "How to make UI in S&box",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": "Video",
+      "tags": [
+        "coding",
+        "css",
+        "razor",
+        "scss"
+      ],
+      "author": "Carson Kompon",
+      "url": "https://sbox.game/learn/carsonk/how-to-make-ui"
+    },
+    {
       "path": "ghage/claude-sbox-integration",
       "title": "Claude Code (and any MCP client) inside sbox-dev",
       "difficulty": null,
@@ -363,8 +378,16 @@
   ],
   "defender": {
     "active": true,
-    "scanned": 25,
-    "passed": 25,
-    "blocked": []
+    "scanned": 27,
+    "passed": 26,
+    "blocked": [
+      {
+        "source": "nite/lowcfg",
+        "riskLevel": "high",
+        "tier2Score": 0.9532728571294113,
+        "detections": [],
+        "patternsByField": {}
+      }
+    ]
   }
 }
