@@ -8,14 +8,14 @@ topic: Capable
 content_type: Text
 tags: [bones, cosmetics, jiggle]
 rating: 5
-views: 1456
+views: 1493
 upvotes: 28
 downvotes: 0
 updated: 'Updated
 
-  18 Days Ago'
+  19 Days Ago'
 summary: A quick how-to for people already familiar with the basics of creating cosmetics.
-scraped_at: '2026-06-05T09:55:10Z'
+scraped_at: '2026-06-06T08:36:28Z'
 ---
 
 # Setting up jigglebones for cosmetics

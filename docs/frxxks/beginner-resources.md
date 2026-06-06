@@ -9,15 +9,15 @@ topic: Editor
 content_type: Video
 tags: [beginner, collection, compilation, first]
 rating: 5
-views: 3017
+views: 3095
 upvotes: 21
 downvotes: 0
 updated: 'Updated
 
-  18 Days Ago'
+  19 Days Ago'
 summary: A comprehensive beginners resource collection helping you getting started
   with game development in s&box.
-scraped_at: '2026-06-05T09:55:10Z'
+scraped_at: '2026-06-06T08:36:28Z'
 ---
 
 # 🎓 Freaks Beginner Resources
@@ -194,7 +194,7 @@ There are currently 3 officially supported IDE's available: [Visual Studio](http
 >
 >   Join the Unofficial s&box Linux Community Discord Server!
 >
->   Check out the Unofficial s&box Linux Community community on Discord - hang out with 172 other members and enjoy free voice and text chat.](https://discord.gg/haZt7xbmBT)
+>   Check out the Unofficial s&box Linux Community community on Discord - hang out with 173 other members and enjoy free voice and text chat.](https://discord.gg/haZt7xbmBT)
 
 [![](https://cdn.sbox.game/upload/b/b419bcfb/f196/4044/b198/15cb7ada1ae3.png)](https://cdn.sbox.game/upload/b/b419bcfb/f196/4044/b198/15cb7ada1ae3.png)
 
