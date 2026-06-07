@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-06T08:36:28Z",
+  "scraped_at": "2026-06-07T09:16:14Z",
   "count": 26,
   "tutorials": [
     {
@@ -175,21 +175,6 @@
       "url": "https://sbox.game/learn/cseliot/sbox-resources"
     },
     {
-      "path": "facepunch/creating-an-entity-for-sandbox",
-      "title": "Creating an Entity for Sandbox",
-      "difficulty": "Beginner",
-      "topic": "Coding",
-      "content_type": "Text",
-      "tags": [
-        "code",
-        "entity",
-        "game",
-        "sandbox"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/creating-an-entity-for-sandbox"
-    },
-    {
       "path": "facepunch/map-publish",
       "title": "Map Publishing",
       "difficulty": "Beginner",
@@ -203,6 +188,21 @@
       ],
       "author": "Facepunch",
       "url": "https://sbox.game/learn/facepunch/map-publish"
+    },
+    {
+      "path": "facepunch/creating-an-entity-for-sandbox",
+      "title": "Creating an Entity for Sandbox",
+      "difficulty": "Beginner",
+      "topic": "Coding",
+      "content_type": "Text",
+      "tags": [
+        "code",
+        "entity",
+        "game",
+        "sandbox"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-an-entity-for-sandbox"
     },
     {
       "path": "facepunch/map-project",

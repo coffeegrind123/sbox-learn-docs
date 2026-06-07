@@ -8,14 +8,14 @@ difficulty: Beginner
 topic: Coding
 content_type: Text
 rating: 4
-views: 1443
-upvotes: 14
+views: 1491
+upvotes: 15
 downvotes: 0
 updated: 'Updated
 
-  15 Days Ago'
+  16 Days Ago'
 summary: How to set up your IDE so Intellisense/lookups work
-scraped_at: '2026-06-06T08:36:28Z'
+scraped_at: '2026-06-07T09:16:14Z'
 ---
 
 # IDE Setup
