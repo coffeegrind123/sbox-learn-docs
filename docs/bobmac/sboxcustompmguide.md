@@ -9,15 +9,15 @@ topic: Modelling
 content_type: Text
 tags: [beginnerfriendly, custompm, easy, sboxpm]
 rating: 4
-views: 1222
+views: 1272
 upvotes: 10
 downvotes: 0
 updated: 'Updated
 
-  12 Days Ago'
+  13 Days Ago'
 summary: A guide for porting Custom models & S1 models into S&box as custom player
   models!
-scraped_at: '2026-06-07T09:16:14Z'
+scraped_at: '2026-06-08T11:00:46Z'
 ---
 
 # Bob’s Guides : S&box Custom Playermodel Guide [For your games!]
@@ -98,7 +98,8 @@ We'll need these tools and software before start porting your model into **S&box
 
 - >  🟠**Blender**: Blender will be mainly used for this guide. No need to worry, we'll only use it for very easy steps. even beginners can do it.        
   > ➜ Steam Link: <https://store.steampowered.com/app/365670/Blender/>  
-  > ➜ Official Link: <https://www.blender.org/>
+  > ➜ Official Link: <https://www.blender.org/>  
+  > **Shouldbe Blender 5.0+!**
 - >  📙**Blender Source Tools (For Source 1 to S&box)**: A Blender add-on to import, export, and work with the **Source 1** formats. You only need it if you're going to port a model from **Source 1/Gmod** into **S&box**.  
   > ➜ **Link**: [http://steamreview.org/BlenderSourceTools/archives/](https://steamcommunity.com/linkfilter/?u=http%3A%2F%2Fsteamreview.org%2FBlenderSourceTools%2Farchives%2F)
 - >  ⚙️**Blender VRM add-on (For VRM only)**: An addon to import the models in VRM format.  
@@ -177,8 +178,9 @@ Let's kick start with the **SMD**. Cuz' that's what you get from decompiling the
   
 A window will pop up. First thing you have to do is to browse to your **SMD/DMX** files. And then, select one of the files. And then, click the **Bone Append** dropdown. Select **Make New Armature**. Untick **Create collections** as it can cause errors. And click **Import....**.[![](https://cdn.sbox.game/upload/b/a5c8ccf5/7e78/44a2/8723/e0bf885b3116.gif)](https://cdn.sbox.game/upload/b/a5c8ccf5/7e78/44a2/8723/e0bf885b3116.gif)One of the meshes will be imported with an armature. We'll import the rest by doing the same steps again, but this time. Select all the other meshes except the **physics.smd**. We'll set **Validate Against Target** this time. So, our meshes will use the imported armature.[![](https://cdn.sbox.game/upload/b/d582afa4/12d6/495b/b5fb/1168e2de6117.png)](https://cdn.sbox.game/upload/b/d582afa4/12d6/495b/b5fb/1168e2de6117.png)For the **DMX** files. You're done with importing here. But for **SMD**. They store shapekeys in a separate file called **VTA**, which is a disadvantage of **SMD** over **DMX**. We'll handle that.
 
-**• Importing VTA (Shapekeys)**
+**• Importing VTA (Shapekeys) - Optional**
 
+Most of the models have shapekeys which are used for **Flexes** which are stored in **VTA**. If your model don't have it after you decompiled the model. **Skip this section.**  
 So, to import the **VTA** correctly. Select the mesh that the shapekeys belong to in Blender. Mostly, the head/face of the model. And then, import the **VTA** file with **Validate Against Target**.[![](https://cdn.sbox.game/upload/b/73d153f3/45a4/484d/90c6/b7d473774ebc.png)](https://cdn.sbox.game/upload/b/73d153f3/45a4/484d/90c6/b7d473774ebc.png)Wait a few seconds, and it'll be imported with an error, and it'll create a thing called **"VTA vertices"**. Ignore the error and delete the **VTA vertices**, and you're done with importing the Source 1 models into Blender.[![](https://cdn.sbox.game/upload/b/89d6465e/9b4f/45a4/8ba5/a7afd9e90fb0.png)](https://cdn.sbox.game/upload/b/89d6465e/9b4f/45a4/8ba5/a7afd9e90fb0.png)  
 [![](https://cdn.sbox.game/upload/b/81da62f4/00d7/4478/b2fb/ee04b6e09141.png)](https://cdn.sbox.game/upload/b/81da62f4/00d7/4478/b2fb/ee04b6e09141.png)Last step, we'll only select our model, drag it, and drop it in the **"Input"** collection. So, the script can find your model inside there and work properly.  
   

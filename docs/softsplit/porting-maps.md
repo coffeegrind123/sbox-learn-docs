@@ -8,14 +8,14 @@ topic: Capable
 content_type: Text
 tags: [hammer, mapping, porting, source]
 rating: 3
-views: 1007
+views: 1070
 upvotes: 3
 downvotes: 0
 updated: 'Updated
 
-  17 Days Ago'
+  18 Days Ago'
 summary: Step-by-step guide on how to port maps from any Source engine game
-scraped_at: '2026-06-07T09:16:14Z'
+scraped_at: '2026-06-08T11:00:46Z'
 ---
 
 # Porting Source maps
@@ -24,8 +24,8 @@ scraped_at: '2026-06-07T09:16:14Z'
 
 # Introduction
 
-> **IMPORTANT:**  
-> This guide relies on Hammer in s&box, which will be deprecated in favour of the new scene mapping tools. In the future, this will be rewritten. Please keep this in mind!
+**IMPORTANT:**  
+This guide relies on Hammer in s&box, which will be deprecated in favour of the new scene mapping tools. In the future, this will be rewritten. Please keep this in mind!
 
 So, you have some old maps lying around from Garry's Mod and you wanna use them as a base to either iterate on or remake in the s&box engine. This guide will show you how I went about it when I was fixing up Big City.  
   
@@ -345,34 +345,44 @@ If the map is huge, do this pass in sections. Big open maps like Big City are ea
 
 # Troubleshooting
 
-**The VMF will not import**  
-Make sure the VMF was opened and saved in the old Hammer editor first. Make sure it is inside `Half-Life Alyx/content/source1mod/maps`. Make sure `gameinfo.gi` has the Source1Import block pointing at `Half-Life Alyx/game/source1mod`.  
-  
-**Everything has missing materials**  
-Check that the original `.vmt` and `.vtf` files exist in the Source mod folder and that the folder structure matches the material paths in the VMF.  
-  
-**Converted materials exist, but texture scale is wrong**  
-Make sure you gave the VMF importer access to the original Source content. The importer needs Source material and texture data; converted Source 2 materials alone are not enough.  
-  
-**Models are invisible or erroring**  
-Make sure the model and its materials were copied. A model can convert successfully while still pointing at missing materials. Check VConsole for the exact path it wants.  
-  
-**The map is black**  
-Add or fix environment lighting first. Then check whether the imported materials are valid. A black map is not always a lighting problem; broken shaders or missing textures can look the same at a glance.  
-  
-**Dynamic props or players are black**  
-Check lightprobe coverage. Look for gaps between volumes and use the lightprobe debug grid to confirm that the playable space is covered.  
-  
-**Compile times are terrible**  
-Check imported light ranges. Old lights can import with enormous ranges, and Source 2 uses range during compile to decide what each light can affect.  
-  
-**Collision feels wrong**  
-Check world collision separately from prop collision. Imported brushwork and imported models fail in different ways. If a model is the problem, open its `.vmdl` and simplify or rebuild the collision setup.  
-  
-**Water looks bad**  
-Rebuild it. Source water shaders do not translate cleanly to s&box materials. Keep the brush or plane placement as a reference and make a new water material that fits the scene.  
-  
-**Decals and overlays disappeared**  
+## **The VMF will not import**
+
+Make sure the VMF was opened and saved in the old Hammer editor first. Make sure it is inside `Half-Life Alyx/content/source1mod/maps`. Make sure `gameinfo.gi` has the Source1Import block pointing at `Half-Life Alyx/game/source1mod`.
+
+## **Everything has missing materials**
+
+Check that the original `.vmt` and `.vtf` files exist in the Source mod folder and that the folder structure matches the material paths in the VMF.
+
+## **Converted materials exist, but texture scale is wrong**
+
+Make sure you gave the VMF importer access to the original Source content. The importer needs Source material and texture data; converted Source 2 materials alone are not enough.
+
+## **Models are invisible or erroring**
+
+Make sure the model and its materials were copied. A model can convert successfully while still pointing at missing materials. Check VConsole for the exact path it wants.
+
+## **The map is black**
+
+Add or fix environment lighting first. Then check whether the imported materials are valid. A black map is not always a lighting problem; broken shaders or missing textures can look the same at a glance.
+
+## **Dynamic props or players are black**
+
+Check lightprobe coverage. Look for gaps between volumes and use the lightprobe debug grid to confirm that the playable space is covered.
+
+## **Compile times are terrible**
+
+Check imported light ranges. Old lights can import with enormous ranges, and Source 2 uses range during compile to decide what each light can affect.
+
+## **Collision feels wrong**
+
+Check world collision separately from prop collision. Imported brushwork and imported models fail in different ways. If a model is the problem, open its `.vmdl` and simplify or rebuild the collision setup.
+
+## **Water looks bad**
+
+Rebuild it. Source water shaders do not translate cleanly to s&box materials. Keep the brush or plane placement as a reference and make a new water material that fits the scene.
+
+## **Decals and overlays disappeared**
+
 Make sure createStaticOverlays was enabled during import. Even then, expect to replace many old overlays, sprites, stains, and signs by hand.
 
 # Summary

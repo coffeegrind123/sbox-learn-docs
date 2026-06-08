@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-06-07T09:16:14Z",
-  "count": 26,
+  "scraped_at": "2026-06-08T11:00:46Z",
+  "count": 27,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -115,21 +115,6 @@
       "url": "https://sbox.game/learn/gibbard/networked-variable-ui"
     },
     {
-      "path": "xaz/goo-101",
-      "title": "the goo quickstart",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": "Text",
-      "tags": [
-        "cs",
-        "csharp",
-        "goo",
-        "ui"
-      ],
-      "author": "xazware",
-      "url": "https://sbox.game/learn/xaz/goo-101"
-    },
-    {
       "path": "titanovsky/cc-bton",
       "title": "👽 How to make button",
       "difficulty": "Beginner",
@@ -143,6 +128,21 @@
       ],
       "author": "Titanovsky",
       "url": "https://sbox.game/learn/titanovsky/cc-bton"
+    },
+    {
+      "path": "xaz/goo-101",
+      "title": "the goo quickstart",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": "Text",
+      "tags": [
+        "cs",
+        "csharp",
+        "goo",
+        "ui"
+      ],
+      "author": "xazware",
+      "url": "https://sbox.game/learn/xaz/goo-101"
     },
     {
       "path": "facepunch/making-a-first-person-game",
@@ -203,6 +203,21 @@
       ],
       "author": "Facepunch",
       "url": "https://sbox.game/learn/facepunch/creating-an-entity-for-sandbox"
+    },
+    {
+      "path": "facepunch/twitch-api",
+      "title": "Introduction to the Streamer Api",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [
+        "gameplay",
+        "service",
+        "streamer",
+        "streaming"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/twitch-api"
     },
     {
       "path": "facepunch/map-project",
@@ -346,21 +361,6 @@
       "url": "https://sbox.game/learn/carsonk/how-to-make-ui"
     },
     {
-      "path": "ghage/claude-sbox-integration",
-      "title": "Claude Code (and any MCP client) inside sbox-dev",
-      "difficulty": null,
-      "topic": "Expert",
-      "content_type": "Text",
-      "tags": [
-        "agent",
-        "ai",
-        "automation",
-        "claude"
-      ],
-      "author": "ghage",
-      "url": "https://sbox.game/learn/ghage/claude-sbox-integration"
-    },
-    {
       "path": "titanovsky/useful_links_mapping",
       "title": "🏛️ Useful links / Полезные ссылки (Mapping)",
       "difficulty": "Beginner",
@@ -374,12 +374,27 @@
       ],
       "author": "Titanovsky",
       "url": "https://sbox.game/learn/titanovsky/useful_links_mapping"
+    },
+    {
+      "path": "ghage/claude-sbox-integration",
+      "title": "Claude Code (and any MCP client) inside sbox-dev",
+      "difficulty": null,
+      "topic": "Expert",
+      "content_type": "Text",
+      "tags": [
+        "agent",
+        "ai",
+        "automation",
+        "claude"
+      ],
+      "author": "ghage",
+      "url": "https://sbox.game/learn/ghage/claude-sbox-integration"
     }
   ],
   "defender": {
     "active": true,
-    "scanned": 27,
-    "passed": 26,
+    "scanned": 28,
+    "passed": 27,
     "blocked": [
       {
         "source": "nite/lowcfg",
