@@ -9,15 +9,15 @@ topic: Modelling
 content_type: Text
 tags: [beginnerfriendly, custompm, easy, sboxpm]
 rating: 4
-views: 1272
+views: 1319
 upvotes: 10
 downvotes: 0
 updated: 'Updated
 
-  13 Days Ago'
+  14 Days Ago'
 summary: A guide for porting Custom models & S1 models into S&box as custom player
   models!
-scraped_at: '2026-06-08T11:00:46Z'
+scraped_at: '2026-06-09T09:49:59Z'
 ---
 
 # Bob’s Guides : S&box Custom Playermodel Guide [For your games!]
