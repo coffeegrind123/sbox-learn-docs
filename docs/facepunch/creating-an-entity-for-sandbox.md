@@ -9,14 +9,14 @@ topic: Coding
 content_type: Text
 tags: [code, entity, game, sandbox]
 rating: 3
-views: 764
+views: 821
 upvotes: 5
 downvotes: 0
 updated: 'Updated
 
-  18 Days Ago'
+  20 Days Ago'
 summary: A quick-guide on creating your first entity for our Sandbox game.
-scraped_at: '2026-06-08T11:00:46Z'
+scraped_at: '2026-06-10T10:05:15Z'
 ---
 
 # Creating an Entity for Sandbox
