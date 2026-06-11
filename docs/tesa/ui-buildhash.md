@@ -8,14 +8,14 @@ difficulty: Beginner
 topic: UI
 tags: [hud, panel, razor, ui]
 rating: 4
-views: 1491
+views: 1532
 upvotes: 16
 downvotes: 1
 updated: 'Updated
 
-  23 Days Ago'
+  24 Days Ago'
 summary: A.K.A. "Why doesn't my panel update?"
-scraped_at: '2026-06-10T10:05:15Z'
+scraped_at: '2026-06-11T10:39:48Z'
 ---
 
 # Understanding the Razor's Reactivity

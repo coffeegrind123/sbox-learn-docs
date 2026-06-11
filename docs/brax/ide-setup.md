@@ -7,15 +7,15 @@ author_slug: brax
 difficulty: Beginner
 topic: Coding
 content_type: Text
-rating: 4
-views: 1639
-upvotes: 15
+rating: 5
+views: 1683
+upvotes: 16
 downvotes: 0
 updated: 'Updated
 
-  19 Days Ago'
+  20 Days Ago'
 summary: How to set up your IDE so Intellisense/lookups work
-scraped_at: '2026-06-10T10:05:15Z'
+scraped_at: '2026-06-11T10:39:48Z'
 ---
 
 # IDE Setup

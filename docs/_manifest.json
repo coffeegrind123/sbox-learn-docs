@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-10T10:05:15Z",
+  "scraped_at": "2026-06-11T10:39:48Z",
   "count": 28,
   "tutorials": [
     {
@@ -101,6 +101,21 @@
       "url": "https://sbox.game/learn/facepunch/creating-a-door"
     },
     {
+      "path": "facepunch/twitch-api",
+      "title": "Introduction to the Streamer Api",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [
+        "gameplay",
+        "service",
+        "streamer",
+        "streaming"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/twitch-api"
+    },
+    {
       "path": "gibbard/networked-variable-ui",
       "title": "Displaying networked variables in UI",
       "difficulty": "Beginner",
@@ -143,21 +158,6 @@
       ],
       "author": "xazware",
       "url": "https://sbox.game/learn/xaz/goo-101"
-    },
-    {
-      "path": "facepunch/twitch-api",
-      "title": "Introduction to the Streamer Api",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Text",
-      "tags": [
-        "gameplay",
-        "service",
-        "streamer",
-        "streaming"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/twitch-api"
     },
     {
       "path": "facepunch/making-a-first-person-game",
@@ -218,6 +218,20 @@
       ],
       "author": "Facepunch",
       "url": "https://sbox.game/learn/facepunch/creating-an-entity-for-sandbox"
+    },
+    {
+      "path": "aqua/node-editor-01",
+      "title": "🔩 Node Editor Introduction",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [
+        "editor",
+        "node",
+        "tool"
+      ],
+      "author": "The Aquarium",
+      "url": "https://sbox.game/learn/aqua/node-editor-01"
     },
     {
       "path": "facepunch/map-project",
@@ -288,20 +302,6 @@
       "url": "https://sbox.game/learn/mensch/networkig-101"
     },
     {
-      "path": "aqua/node-editor-01",
-      "title": "🔩 Node Editor Introduction",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Text",
-      "tags": [
-        "editor",
-        "node",
-        "tool"
-      ],
-      "author": "The Aquarium",
-      "url": "https://sbox.game/learn/aqua/node-editor-01"
-    },
-    {
       "path": "titanovsky/sync_ava_cosm",
       "title": "👗 Sync avatar's cosmetics",
       "difficulty": "Beginner",
@@ -361,6 +361,21 @@
       "url": "https://sbox.game/learn/carsonk/how-to-make-ui"
     },
     {
+      "path": "facepunch/modeldoc-basics",
+      "title": "Intro to ModelDoc",
+      "difficulty": "Beginner",
+      "topic": "Editor",
+      "content_type": "Text",
+      "tags": [
+        "3d",
+        "editor",
+        "intro",
+        "introduction"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/modeldoc-basics"
+    },
+    {
       "path": "titanovsky/useful_links_mapping",
       "title": "🏛️ Useful links / Полезные ссылки (Mapping)",
       "difficulty": "Beginner",
@@ -389,21 +404,6 @@
       ],
       "author": "ghage",
       "url": "https://sbox.game/learn/ghage/claude-sbox-integration"
-    },
-    {
-      "path": "facepunch/modeldoc-basics",
-      "title": "Intro to ModelDoc",
-      "difficulty": "Beginner",
-      "topic": "Editor",
-      "content_type": "Text",
-      "tags": [
-        "3d",
-        "editor",
-        "intro",
-        "introduction"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/modeldoc-basics"
     }
   ],
   "defender": {
