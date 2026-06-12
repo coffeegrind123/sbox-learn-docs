@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-11T10:39:48Z",
+  "scraped_at": "2026-06-12T10:17:32Z",
   "count": 28,
   "tutorials": [
     {
@@ -249,6 +249,19 @@
       "url": "https://sbox.game/learn/facepunch/map-project"
     },
     {
+      "path": "facepunch/creating-a-room",
+      "title": "Creating Your First Room",
+      "difficulty": "Beginner",
+      "topic": "Mapping",
+      "content_type": "Text",
+      "tags": [
+        "map",
+        "mapping"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-a-room"
+    },
+    {
       "path": "brax/resource-files",
       "title": "Resource Files",
       "difficulty": "Beginner",
@@ -272,19 +285,6 @@
       ],
       "author": "Softsplit",
       "url": "https://sbox.game/learn/softsplit/porting-maps"
-    },
-    {
-      "path": "facepunch/creating-a-room",
-      "title": "Creating Your First Room",
-      "difficulty": "Beginner",
-      "topic": "Mapping",
-      "content_type": "Text",
-      "tags": [
-        "map",
-        "mapping"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/creating-a-room"
     },
     {
       "path": "mensch/networkig-101",

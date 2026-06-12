@@ -8,14 +8,14 @@ topic: Capable
 content_type: Text
 tags: [gameplay, service, streamer, streaming]
 rating: 4
-views: 273
+views: 350
 upvotes: 7
 downvotes: 0
 updated: 'Updated
 
-  4 Days Ago'
+  5 Days Ago'
 summary: How to make a game that Twitch viewers can interact with
-scraped_at: '2026-06-11T10:39:48Z'
+scraped_at: '2026-06-12T10:17:32Z'
 ---
 
 # Introduction to the Streamer Api
