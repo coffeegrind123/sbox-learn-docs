@@ -8,14 +8,14 @@ difficulty: Beginner
 topic: UI
 tags: [button, razor, scss, ui]
 rating: 3
-views: 1318
+views: 1351
 upvotes: 11
 downvotes: 2
 updated: 'Updated
 
-  25 Days Ago'
+  26 Days Ago'
 summary: ok, let's go make
-scraped_at: '2026-06-12T10:17:32Z'
+scraped_at: '2026-06-13T09:19:56Z'
 ---
 
 # 👽 How to make button

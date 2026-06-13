@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-12T10:17:32Z",
+  "scraped_at": "2026-06-13T09:19:56Z",
   "count": 28,
   "tutorials": [
     {
@@ -72,6 +72,20 @@
       "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
     },
     {
+      "path": "facepunch/creating-a-door",
+      "title": "Creating a Door",
+      "difficulty": "Beginner",
+      "topic": "Mapping",
+      "content_type": "Text",
+      "tags": [
+        "door",
+        "map",
+        "mapping"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-a-door"
+    },
+    {
       "path": "tesa/ui-buildhash",
       "title": "Understanding the Razor's Reactivity",
       "difficulty": "Beginner",
@@ -85,20 +99,6 @@
       ],
       "author": "Tea Sanctuary",
       "url": "https://sbox.game/learn/tesa/ui-buildhash"
-    },
-    {
-      "path": "facepunch/creating-a-door",
-      "title": "Creating a Door",
-      "difficulty": "Beginner",
-      "topic": "Mapping",
-      "content_type": "Text",
-      "tags": [
-        "door",
-        "map",
-        "mapping"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/creating-a-door"
     },
     {
       "path": "facepunch/twitch-api",
@@ -331,6 +331,21 @@
       "url": "https://sbox.game/learn/jogamedev/multiplayer-101"
     },
     {
+      "path": "facepunch/modeldoc-basics",
+      "title": "Intro to ModelDoc",
+      "difficulty": "Beginner",
+      "topic": "Editor",
+      "content_type": "Text",
+      "tags": [
+        "3d",
+        "editor",
+        "intro",
+        "introduction"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/modeldoc-basics"
+    },
+    {
       "path": "facepunch/creating-first-project",
       "title": "Creating your First Project",
       "difficulty": "Beginner",
@@ -359,21 +374,6 @@
       ],
       "author": "Carson Kompon",
       "url": "https://sbox.game/learn/carsonk/how-to-make-ui"
-    },
-    {
-      "path": "facepunch/modeldoc-basics",
-      "title": "Intro to ModelDoc",
-      "difficulty": "Beginner",
-      "topic": "Editor",
-      "content_type": "Text",
-      "tags": [
-        "3d",
-        "editor",
-        "intro",
-        "introduction"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/modeldoc-basics"
     },
     {
       "path": "titanovsky/useful_links_mapping",

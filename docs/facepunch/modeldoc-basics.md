@@ -8,15 +8,15 @@ difficulty: Beginner
 topic: Editor
 content_type: Text
 tags: [3d, editor, intro, introduction]
-rating: 0
-views: 130
-upvotes: 0
+rating: 2
+views: 166
+upvotes: 1
 downvotes: 0
 updated: 'Updated
 
-  3 Days Ago'
+  4 Days Ago'
 summary: Import a 3D model and make your first .vmdl using ModelDoc
-scraped_at: '2026-06-12T10:17:32Z'
+scraped_at: '2026-06-13T09:19:56Z'
 ---
 
 # Intro to ModelDoc
