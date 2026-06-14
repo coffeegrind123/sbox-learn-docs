@@ -9,15 +9,15 @@ topic: Modelling
 content_type: Text
 tags: [beginnerfriendly, custompm, easy, sboxpm]
 rating: 4
-views: 1513
+views: 1555
 upvotes: 12
 downvotes: 0
 updated: 'Updated
 
-  18 Days Ago'
+  19 Days Ago'
 summary: A guide for porting Custom models & S1 models into S&box as custom player
   models!
-scraped_at: '2026-06-13T09:19:56Z'
+scraped_at: '2026-06-14T09:37:52Z'
 ---
 
 # Bob’s Guides : S&box Custom Playermodel Guide [For your games!]
@@ -51,8 +51,6 @@ What are we waiting for? **Let’s get started!**──────────�
 # ⚙️ Model Requirements [Read]
 
 Alright. Before we start touching anything. We should know if our model is okay to port into **” S&box”**. There are no strict rules. Just to let you know what the engine supports and needs for our process.
-
-**• Requirements**
 
 Let’s start with the **"Requirements"** for your model. You should make sure that your model meets these requirements.
 
@@ -94,7 +92,7 @@ Let’s start with the **"Requirements"** for your model. You should make sure t
 
 We'll need these tools and software before start porting your model into **S&box**. Most of them are **Essential**. But some are **Optional**. Download them first, and we'll set them up in the next section. We'll also need to install add-ons to use in **Blender** to help with the processes of working with other model formats. But, only if you're working with those formats.
 
-**• Blender & Addons**
+## **• Blender & Addons**
 
 - >  🟠**Blender**: Blender will be mainly used for this guide. No need to worry, we'll only use it for very easy steps. even beginners can do it.        
   > ➜ Steam Link: <https://store.steampowered.com/app/365670/Blender/>  
@@ -107,12 +105,12 @@ We'll need these tools and software before start porting your model into **S&box
 - >  😺**Blender CATS add-on (Optional)**: An addon to import & fix MMD models, merge the same materials, and many more useful features. We'll be only using this addon for **MMD** models but there are many useful features in this addon. So, grab it if you want.  
   > ➜ **Link**: [https://github.com/teamneoneko/Cats-Blender-Plugin-Unofficial-](https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fgithub.com%2Fteamneoneko%2FCats-Blender-Plugin-Unofficial-)
 
-[![](https://cdn.sbox.game/upload/b/6a37ca94/7a42/49a7/9aa4/71858367108b.png)](https://cdn.sbox.game/upload/b/6a37ca94/7a42/49a7/9aa4/71858367108b.png) **•** **Required Files**
+## **•** **Required Files**
 
 - >  😎 **Custom Models 2 S&box**:  
   > ➜ **Link**: [https://github.com/BobmacU/CustomModel-2-Sbox](https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fgithub.com%2FBobmacU%2FCustomModel-2-Sbox)
 
-**•** **Optionals**
+## **•** **Optionals**
 
 - >  📚 **EasyExtractUnitypackage (For .Unitypackage only)**: An efficient tool that can extract .Unitypackage easily.  
   > ⇒ **Link**: [https://github.com/HakuSystems/EasyExtractUnitypackage](https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fgithub.com%2FHakuSystems%2FEasyExtractUnitypackage)
@@ -127,7 +125,7 @@ We'll need these tools and software before start porting your model into **S&box
 
 So.. I assume you have installed the required files. Let's start with installing the Blender addons.
 
-**• Installing Blender Add-ons**
+## **• Installing Blender Add-ons**
 
 Alright, here's how to install Blender add-ons. Scroll down a bit if you know how to install add-ons. Nothing hard, **It's very easy.**  
   
@@ -138,7 +136,7 @@ Click the small arrow in the upper right corner and choose **"Install from Disk.
 Find your add-on ZIP file, select it, and click **"Install from Disk"**.  
 Repeat the same for every add-on you want to install. [![](https://cdn.sbox.game/upload/b/a5cad9b2/0572/4b4d/b34c/6aa2ed31747d.gif)](https://cdn.sbox.game/upload/b/a5cad9b2/0572/4b4d/b34c/6aa2ed31747d.gif)That's all for installing the Blender add-ons. Let's continue.
 
-**• Set up scene**
+## **• Set up scene**
 
 I know you've installed **Custom Models 2 S&box** file. Extract it, and you'll see four files. Which are.
 
@@ -153,11 +151,15 @@ So, those four will do the work for you to convert your model. Open **Blender**.
 
 # 📥 Importing - FBX
 
-[![](https://cdn.sbox.game/upload/b/09354549/16c3/411a/96f9/421e5663c847.png)](https://cdn.sbox.game/upload/b/09354549/16c3/411a/96f9/421e5663c847.png)Ok, importing an **"FBX"** file into Blender is super easy. Let me show you how you can import **FBX** and **.Unitypackage**. Just to know, I copied almost everything from my last guide and rewrote some stuff.  
-  
-**• Importing FBX into Blender**
+[![](https://cdn.sbox.game/upload/b/09354549/16c3/411a/96f9/421e5663c847.png)](https://cdn.sbox.game/upload/b/09354549/16c3/411a/96f9/421e5663c847.png)Ok, importing an **"FBX"** file into Blender is super easy. Let me show you how you can import **FBX** and **.Unitypackage**. Just to know, I copied almost everything from my last guide and rewrote some stuff.
 
-This is child's play, all you gotta do is: Click **"File"** in the top left corner and then hover your cursor on the **“Import”**, and you’ll see a bunch of options pop up beside it. Click **“FBX (.fbx)”** and browse to the location where your model’s FBX is located. Select it and click **”Import FBX”**[![](https://cdn.sbox.game/upload/b/ad2f54e7/65e8/4451/9ab4/f1c7ff36979c.gif)](https://cdn.sbox.game/upload/b/ad2f54e7/65e8/4451/9ab4/f1c7ff36979c.gif)Wait, and there you go!. You just successfully imported the model into the scene. That's all for importing the **FBX**. It's very easy, right? What about models that only come with **.unitypackage**, from **Unity**. I'll show you how. Skip if you don't have one.[![](https://cdn.sbox.game/upload/b/4934f51c/8936/40a1/a3f6/1767241a74c7.png)](https://cdn.sbox.game/upload/b/4934f51c/8936/40a1/a3f6/1767241a74c7.png)**• Extracting Unitypackage**[![](https://cdn.sbox.game/upload/b/f8908f8e/8c38/48f6/837f/f489341e4b92.png)](https://cdn.sbox.game/upload/b/f8908f8e/8c38/48f6/837f/f489341e4b92.png)I assume you already have the tool I linked above. Go get it if you haven't. Let's start. Firstly, you're going to open that tool. This is the **homepage**. Nothing special to see. But hey, it's a useful tool to extract **".Unitypackage"** files.[![](https://cdn.sbox.game/upload/b/43df8493/41e1/4099/94f2/6b8057ca3221.png)](https://cdn.sbox.game/upload/b/43df8493/41e1/4099/94f2/6b8057ca3221.png)Then, click **"Locate Unitypackage"**, browse for your file, select it, and hit **"Open"**. Now click **"Start extraction"** and wait — it’s usually quick (depends on your system). Once done, hit **"View extracted"**, then the button next to your package’s name, and choose **"Open (Selected) Directory"**. That’s where your extracted **".Unitypackage"** folder will be.[![](https://cdn.sbox.game/upload/b/84617bd3/b9ab/4e11/a83b/bc30d60ab7f4.gif)](https://cdn.sbox.game/upload/b/84617bd3/b9ab/4e11/a83b/bc30d60ab7f4.gif)Go inside, and you’ll see a bunch of folders. The **"FBX"** files are usually inside **"FBX"** or **"Models"** folders. Grab them and paste them into your main model folder (where the **.Unitypackage** is), or just make a new folder for them.  
+## **• Importing FBX into Blender**
+
+This is child's play, all you gotta do is: Click **"File"** in the top left corner and then hover your cursor on the **“Import”**, and you’ll see a bunch of options pop up beside it. Click **“FBX (.fbx)”** and browse to the location where your model’s FBX is located. Select it and click **”Import FBX”**[![](https://cdn.sbox.game/upload/b/ad2f54e7/65e8/4451/9ab4/f1c7ff36979c.gif)](https://cdn.sbox.game/upload/b/ad2f54e7/65e8/4451/9ab4/f1c7ff36979c.gif)Wait, and there you go!. You just successfully imported the model into the scene. That's all for importing the **FBX**. It's very easy, right? What about models that only come with **.unitypackage**, from **Unity**. I'll show you how. Skip if you don't have one.[![](https://cdn.sbox.game/upload/b/4934f51c/8936/40a1/a3f6/1767241a74c7.png)](https://cdn.sbox.game/upload/b/4934f51c/8936/40a1/a3f6/1767241a74c7.png)
+
+## **• Extracting Unitypackage**
+
+[![](https://cdn.sbox.game/upload/b/f8908f8e/8c38/48f6/837f/f489341e4b92.png)](https://cdn.sbox.game/upload/b/f8908f8e/8c38/48f6/837f/f489341e4b92.png)I assume you already have the tool I linked above. Go get it if you haven't. Let's start. Firstly, you're going to open that tool. This is the **homepage**. Nothing special to see. But hey, it's a useful tool to extract **".Unitypackage"** files.[![](https://cdn.sbox.game/upload/b/43df8493/41e1/4099/94f2/6b8057ca3221.png)](https://cdn.sbox.game/upload/b/43df8493/41e1/4099/94f2/6b8057ca3221.png)Then, click **"Locate Unitypackage"**, browse for your file, select it, and hit **"Open"**. Now click **"Start extraction"** and wait — it’s usually quick (depends on your system). Once done, hit **"View extracted"**, then the button next to your package’s name, and choose **"Open (Selected) Directory"**. That’s where your extracted **".Unitypackage"** folder will be.[![](https://cdn.sbox.game/upload/b/84617bd3/b9ab/4e11/a83b/bc30d60ab7f4.gif)](https://cdn.sbox.game/upload/b/84617bd3/b9ab/4e11/a83b/bc30d60ab7f4.gif)Go inside, and you’ll see a bunch of folders. The **"FBX"** files are usually inside **"FBX"** or **"Models"** folders. Grab them and paste them into your main model folder (where the **.Unitypackage** is), or just make a new folder for them.  
   
 But we’re not done yet — when you only have a **".Unitypackage"**, it often doesn’t include textures (in very rare cases). You’ll need to copy the textures as well, which are usually found in the **"Textures"** or **"Tex"** folder. If you don’t see those, check inside **"Materials"** — that’s where they sometimes hide.  
 [![](https://cdn.sbox.game/upload/b/2087c7d4/1fb1/4452/8ba1/8e87e8ecd7ca.png)](https://cdn.sbox.game/upload/b/2087c7d4/1fb1/4452/8ba1/8e87e8ecd7ca.png)  
@@ -172,13 +174,13 @@ Alright, this is something new. We're going to import **Source 1** models into *
   
 If you're going to port your own ported models or probably used my Gmod guide. I'm sure you have your own files. **SMD** or **DMX** files. Much better if you used **DMX**. Because it's supported natively in **Source 2**. And, I'm sure you know how to import them, too. But here for people who don't know.
 
-**• Importing SMD & DMX**
+## **• Importing SMD & DMX**
 
-Let's kick start with the **SMD**. Cuz' that's what you get from decompiling the **MDL** file. Make sure you have the [**Blender Source Tools**](https://steamcommunity.com/linkfilter/?u=http%3A%2F%2Fsteamreview.org%2FBlenderSourceTools%2F)[steamreview.org] installed. To import them. Click **"File"** from the top-left corner, then hover your cursor on the “Import”, and you’ll see a bunch of options pop up beside it. Click **Source Engine....**.  
+Let's kick start with the **SMD**. Cuz' that's what you get from decompiling the **MDL** file. Make sure you have the [**Blender Source Tools**](https://steamcommunity.com/linkfilter/?u=http%3A%2F%2Fsteamreview.org%2FBlenderSourceTools%2F)installed. To import them. Click **"File"** from the top-left corner, then hover your cursor on the “Import”, and you’ll see a bunch of options pop up beside it. Click **Source Engine....**.  
   
 A window will pop up. First thing you have to do is to browse to your **SMD/DMX** files. And then, select one of the files. And then, click the **Bone Append** dropdown. Select **Make New Armature**. Untick **Create collections** as it can cause errors. And click **Import....**.[![](https://cdn.sbox.game/upload/b/a5c8ccf5/7e78/44a2/8723/e0bf885b3116.gif)](https://cdn.sbox.game/upload/b/a5c8ccf5/7e78/44a2/8723/e0bf885b3116.gif)One of the meshes will be imported with an armature. We'll import the rest by doing the same steps again, but this time. Select all the other meshes except the **physics.smd**. We'll set **Validate Against Target** this time. So, our meshes will use the imported armature.[![](https://cdn.sbox.game/upload/b/d582afa4/12d6/495b/b5fb/1168e2de6117.png)](https://cdn.sbox.game/upload/b/d582afa4/12d6/495b/b5fb/1168e2de6117.png)For the **DMX** files. You're done with importing here. But for **SMD**. They store shapekeys in a separate file called **VTA**, which is a disadvantage of **SMD** over **DMX**. We'll handle that.
 
-**• Importing VTA (Shapekeys) - Optional**
+## **• Importing VTA (Shapekeys) - Optional**
 
 Most of the models have shapekeys which are used for **Flexes** which are stored in **VTA**. If your model don't have it after you decompiled the model. **Skip this section.**  
 So, to import the **VTA** correctly. Select the mesh that the shapekeys belong to in Blender. Mostly, the head/face of the model. And then, import the **VTA** file with **Validate Against Target**.[![](https://cdn.sbox.game/upload/b/73d153f3/45a4/484d/90c6/b7d473774ebc.png)](https://cdn.sbox.game/upload/b/73d153f3/45a4/484d/90c6/b7d473774ebc.png)Wait a few seconds, and it'll be imported with an error, and it'll create a thing called **"VTA vertices"**. Ignore the error and delete the **VTA vertices**, and you're done with importing the Source 1 models into Blender.[![](https://cdn.sbox.game/upload/b/89d6465e/9b4f/45a4/8ba5/a7afd9e90fb0.png)](https://cdn.sbox.game/upload/b/89d6465e/9b4f/45a4/8ba5/a7afd9e90fb0.png)  
@@ -186,11 +188,21 @@ So, to import the **VTA** correctly. Select the mesh that the shapekeys belong t
   
 ────────────────────────────────────────────────────────────────────────
 
+# 🖼️ VTF conversion - Source 1
+
+This is also a section for **"Source 1"** models. If you don't know. S1 models uses a different texture format called **"VTF (Valve Texture File)"** and **"VMT (Valve Material File)"**. We don't care about **"VMT"** here. That stores the material parameters and info. **VTF** has what we want.  
+  
+We'll convert those **VTF** files to **"PNG"** in this section. It's not very hard. Just open and export. Make sure you have [**VTFEdit**](https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fgithub.com%2FNeilJed%2FVTFLib%2Freleases)installed which is also listed in the **《 🛠️ Required tools 》**.
+
+First of all, open **"VTFEdit"**. or open the **"VTF"** file of the texture you want to convert. Keep in mind that you need to convert every **VTF** that the model uses. Includes **Basecolor/Main color** and **Bumpmap**. If you've ported models into **S1** like me. You know what to convert.[![](https://cdn.sbox.game/upload/b/a7c1a1f1/f59a/4b26/ab1a/de2ecbcdfe29.png)](https://cdn.sbox.game/upload/b/a7c1a1f1/f59a/4b26/ab1a/de2ecbcdfe29.png) When you opened **VTFEdit**. Click **"File"** from the left-upper corner. Or, you can press **"Ctrl + O"**. A window will pop up. Open the **"VTF"** file you want to convert. For modders, I'm sure you already have those files to open with **VTFEdit** for always by default which you can click and open the **VTF** file instantly. [![](https://cdn.sbox.game/upload/b/40f25999/96c1/444a/ac7c/e57f2aa2f3ba.png)](https://cdn.sbox.game/upload/b/40f25999/96c1/444a/ac7c/e57f2aa2f3ba.png) After that. Press **"Ctrl + E"** to export. A window will pop up. You can select the export file type from **"Save as Type"**. Select **"TGA"** or **"PNG"**. Others works too. But, those twos are recommended. [![](https://cdn.sbox.game/upload/b/7c29340f/2a04/4ea0/b986/3af72650a304.png)](https://cdn.sbox.game/upload/b/7c29340f/2a04/4ea0/b986/3af72650a304.png) When you're done with that, Make a folder inside your decompiled folder (or somewhere you want to keep them) and click **"Save"** and the texture will be exported. Repeat that for every **VTF** files your S1 model use. When you're done with it. Proceed to next section which should be **《 📏 Scaling 》**.
+
+────────────────────────────────────────────────────────────────────────
+
 # 📥 Importing - MMD
 
 [![](https://cdn.sbox.game/upload/b/cb5c2dcb/77e7/4fd4/ae27/195b2c6d1939.png)](https://cdn.sbox.game/upload/b/cb5c2dcb/77e7/4fd4/ae27/195b2c6d1939.png)Yeah, importing MMD models. It’s easy—only the fixing part can be a bit frustrating, but it’s mostly one-click stuff. Anyway, make sure you installed this [add-on](https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fgithub.com%2Fteamneoneko%2FCats-Blender-Plugin-Unofficial-%2Freleases%2F)[github.com]. That add-on helps you fix some issues and even assists in other situations. Don't worry. I'll guide you through.
 
-**• Importing PMX**
+## **• Importing PMX**
 
 Importing every model format is just child's play if you know how.  
 Open **"Blender"**. *Yes, you're going to work inside Blender. That’s why I keep repeating this in every import section.*  
@@ -200,7 +212,9 @@ Once that’s done, click "Import Model File".[![](https://cdn.sbox.game/upload/
 Your model will be imported. Now let’s clean + fix it using the add-on we installed.  
 It’s a one-click fix—no stress, no complicated steps.
 
-**• Fixing the model**[![](https://cdn.sbox.game/upload/b/b2393963/0b55/463b/bdad/7385ceba9abe.png)](https://cdn.sbox.game/upload/b/b2393963/0b55/463b/bdad/7385ceba9abe.png)Alright, let’s start fixing the model. It’s super easy.  
+## **• Fixing the model**
+
+Alright, let’s start fixing the model. It’s super easy.  
 First, Zoom in till you can see your model, and then we need to make the model a **"Single User"**. No clue what it does exactly, but it’s required before the fix by default.  
   
 To do that, press **"A"** on your keyboard to select everything.  
@@ -217,8 +231,6 @@ And that’s it. **Your model is now fixed and ready.**[![](https://cdn.sbox.gam
 
 [![](https://cdn.sbox.game/upload/b/a0095d74/7922/4b92/9a4a/6ba3f63cf869.png)](https://cdn.sbox.game/upload/b/a0095d74/7922/4b92/9a4a/6ba3f63cf869.png)Importing **VRM** models is pretty straightforward too. The only thing you'll need is the "Blender VRM add-on" here!. So, make sure you have already installed the [add-on](https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fextensions.blender.org%2Fadd-ons%2Fvrm%2F). So, let's start.
 
-**• Importing VRM**
-
 This part is just as easy as importing an FBX as it is. Open **Blender**, click **File** on the top-left corner, hover over **Import**, and you’ll see a list of options.  
   
 If you’ve installed the VRM add-on, you’ll see **VRM (.vrm)** and **VRMA (.vrma)**. Click **VRM (.vrm)**, then browse to your model’s **.VRM** file, select it, tick ✓ "Extract texture images into the folder", and hit **Open**.  
@@ -231,7 +243,7 @@ Anyway, to remove them, right-click the collection with a white box icon named *
 
 Good work, now we can continue to use the script. But we will have to scale up/down our model to match the armature we have in the scene file. But, how much? It's very easy. The scale may be different depending on the model type. It seems like **MMD** and **VRM** models have the same scale. I'm not sure if it depends on the model author. **FBX** doesn't have a fixed scale. So, it can be random. For **Source 1** formats. It'll be very huge compared to the reference armature given in the scene. **But our goal is the same.**
 
-**• Scaling the model**
+## **• Scaling the model**
 
 First, we'll only select our imported model's armature and its meshes. We'll see the differences between scaling for each format below. But, before that. I'll explain what we'll do. We'll scale down our model by selecting the model and its armature. Press **"S"** and move the cursor up/down depending on what we'll do. We can hold **Shift** while scaling for more precise scaling!  
   
@@ -239,12 +251,17 @@ For **Source 1**. We'll scale the model down as it's very huge compared to the r
   
 So, when we scale. We will keep our eyes on the **shoulder/clavicle** bones of the reference armature, and we'll scale down our model until our model's shoulder/clavicle is fitted to the reference armature shoulder/clavicle bone in the middle. Just like humans' bones are in the middle.[![](https://cdn.sbox.game/upload/b/b7e48a8f/e7f6/489d/a289/12935c1ece14.png)](https://cdn.sbox.game/upload/b/b7e48a8f/e7f6/489d/a289/12935c1ece14.png)Just like this. After it's fitted. We'll press **"Ctrl + A"** and click **"All transforms"**. So, the scale will be applied. **Now, have a look!**.
 
-**• Source 1 model**[![](https://cdn.sbox.game/upload/b/ca986b11/1b70/4586/8f6e/20c2470d13c9.gif)](https://cdn.sbox.game/upload/b/ca986b11/1b70/4586/8f6e/20c2470d13c9.gif)  
+**• Source 1 model**[![](https://cdn.sbox.game/upload/b/ca986b11/1b70/4586/8f6e/20c2470d13c9.gif)](https://cdn.sbox.game/upload/b/ca986b11/1b70/4586/8f6e/20c2470d13c9.gif)
+
 As you can see, I scaled the model down until the model's shoulder is fitted with the reference's shoulder bones in the middle. Let's see how we can do for the other ones.
 
-**• Other models**[![](https://cdn.sbox.game/upload/b/d4fef895/0404/458a/8981/0f0d379c0026.gif)](https://cdn.sbox.game/upload/b/d4fef895/0404/458a/8981/0f0d379c0026.gif)For this **VRM** model. I only had to scale up a little bit to fit the shoulder in the middle. So, I hope you get the concept of what you're going to do. But what about very small models?  
-  
-**• Very small models**[![](https://cdn.sbox.game/upload/b/e126ce69/fc34/44bb/924f/998c94198af1.png)](https://cdn.sbox.game/upload/b/e126ce69/fc34/44bb/924f/998c94198af1.png)For very small models like this one. Just scale it up until it matches. We'll handle the size problem in the **ModelDoc** later.  
+**• Other models**
+
+[![](https://cdn.sbox.game/upload/b/d4fef895/0404/458a/8981/0f0d379c0026.gif)](https://cdn.sbox.game/upload/b/d4fef895/0404/458a/8981/0f0d379c0026.gif)For this **VRM** model. I only had to scale up a little bit to fit the shoulder in the middle. So, I hope you get the concept of what you're going to do. But what about very small models?
+
+**• Very small models**
+
+[![](https://cdn.sbox.game/upload/b/e126ce69/fc34/44bb/924f/998c94198af1.png)](https://cdn.sbox.game/upload/b/e126ce69/fc34/44bb/924f/998c94198af1.png)For very small models like this one. Just scale it up until it matches. We'll handle the size problem in the **ModelDoc** later.  
   
 So, that's all for scaling the model. We'll proceed to the next section :)  
   
@@ -253,8 +270,6 @@ So, that's all for scaling the model. We'll proceed to the next section :)
 # 🔤 Bone Rename
 
 Just like good ol' **Source 1**. We'll have to rename the bones in the script to make the script work properly with our custom model's bones. For **Source 1** models, you can just skip this section, as you might've already loaded the **Source 1** version of the script. Which already has the correct bone mapping for your model.
-
-**• Bone mapping**
 
 For other models, scroll down to **line 48**. You'll see a bone mapping table for renaming your model. Let's start with the **"Core"** bones. We have **seven** bones for that. But, only five if you don't want the moving eyes.  
   
@@ -276,14 +291,12 @@ If you want. Remove the hashes (#) from the eye bone lines, copy the eye bones' 
 [![](https://cdn.sbox.game/upload/b/fbfcf8e8/8ca2/4dd6/91ee/bd1a2e500d27.png)](https://cdn.sbox.game/upload/b/fbfcf8e8/8ca2/4dd6/91ee/bd1a2e500d27.png)We're done with setting up bone names for the script. Please proceed to the next section. **Will ya?**  
 ────────────────────────────────────────────────────────────────────────
 
-# 😶 Shapekeys
+# 😶 Shapekeys Cleanup
 
 Unlike my Gmod one, we won't talk much about shapekeys, as **S&box** seems to have a very high shapekey/morph limit. I don't know the exact limit. But I recommend keeping it under **700**. You shouldn’t worry about this unless your model is a very customizable model with hundreds of shapekeys..  
   
-Anyway, we should check some stuff about shapekeys before getting our model into **ModelDoc**. It seems to be more strict than the **StudioMDL** from **Source 1**. It doesn't allow special symbols in the shapekey names and seems to break the shapekey/morph with spaces in the name. So, we have to do some preparation for that.  
-  
-**• Renaming Shapekeys**  
-  
+Anyway, we should check some stuff about shapekeys before getting our model into **ModelDoc**. It seems to be more strict than the **StudioMDL** from **Source 1**. It doesn't allow special symbols in the shapekey names and seems to break the shapekey/morph with spaces in the name. So, we have to do some preparation for that.
+
 This is very simple. First, you will have to click the **"Data"** tab with a green triangle. Scroll down a bit, and you'll see your model's shapekeys there.[![](https://cdn.sbox.game/upload/b/5a5e970e/1655/4243/a329/bcafb78a22ac.png)](https://cdn.sbox.game/upload/b/5a5e970e/1655/4243/a329/bcafb78a22ac.png)And then, you're going to remove **spaces** & special characters from the names. Double-click the shapekey's name and then replace spaces with **underscores( _ )**. And, just give a name for the special character ones. Example as **Mouth ω**. I'll just rename it to **Mouth_Cat** for that.[![](https://cdn.sbox.game/upload/b/7c2ffeac/29bd/410d/abf3/60fcd4875106.png)](https://cdn.sbox.game/upload/b/7c2ffeac/29bd/410d/abf3/60fcd4875106.png)  
 [![](https://cdn.sbox.game/upload/b/28bfa5f1/890f/4bd6/8843/e28fdc5f1139.png)](https://cdn.sbox.game/upload/b/28bfa5f1/890f/4bd6/8843/e28fdc5f1139.png)Here's how I do. It's kinda funny, but I'm going to hate **ModelDoc** a lot for that. Keep doing that for all shapekeys until all of them are renamed properly. That's all for this section. There's nothing special for this section.  
 ────────────────────────────────────────────────────────────────────────
@@ -294,7 +307,7 @@ This section will be very short. I just want you to double-check the bone names,
   
 We'll save the file as a backup before running the script. Press **Ctrl + Alt + S** to save the file as **incremental**. So, it won't overwrite the original scene file. After that, let's run the script.
 
-**• Running the script**
+## **• Running the script**
 
 It's very simple. Click the **"▶"** at the top to run the script or you can hover your cursor into the scripting tab and press **"Alt + P**.[![](https://cdn.sbox.game/upload/b/ee4cacbd/d84b/4705/a7c7/32efd978d041.png)](https://cdn.sbox.game/upload/b/ee4cacbd/d84b/4705/a7c7/32efd978d041.png)Wait a bit, and it'll do everything to make the model compatible with **S&box** citizen's rig. Here's what it does.
 
@@ -317,7 +330,7 @@ It's very simple. Click the **"▶"** at the top to run the script or you can ho
 As you can see, my model is now ready and compatible with **S&box** armature.  
 That's all. and it'll export a **FBX** file into the file where the script file is located. We're done with the **Phase 1**, where we prepare our model.
 
-**• Fixing the head pose [Optional]**
+## **• Fixing the head pose [Optional]**
 
 But, sometimes. your model's head might be a little bit off. We can fix it easily by using [**this addon**](https://steamcommunity.com/linkfilter/?u=https%3A%2F%2Fgithub.com%2Fteamneoneko%2FCats-Blender-Plugin-Unofficial-)**.** Install it. As I said above. This addon has many useful features including applying pose without having to do many crazy stuff.  
   
@@ -365,7 +378,7 @@ Anyway, we're done with the quick rundown. Let's continue. First thing you have 
 
 Alright, we don't want our model without any textures. In S&box. **Might be weird but your model won't work properly without having materials assigned.** But, It's very easy to set them up. I'd say it's much easier than **Source 1**.
 
-**• Material Editor**
+## **• Material Editor**
 
 So, the first thing to do is create another folder inside your model's folder. Name it "materials" or something. You don't need to do this, but staying organized is a good habit. And, copy all of your model's texture files into that folder. Texture files will show up in the editor.[![](https://cdn.sbox.game/upload/b/841ac4f1/95fb/4152/a7d2/b0e127343899.png)](https://cdn.sbox.game/upload/b/841ac4f1/95fb/4152/a7d2/b0e127343899.png)  
 [![](https://cdn.sbox.game/upload/b/b578174f/5d5d/4b40/a98a/682111b959ef.png)](https://cdn.sbox.game/upload/b/b578174f/5d5d/4b40/a98a/682111b959ef.png)After that, you will have to right-click a texture and click **"Create Material"**. It'll ask you where you want to save your material file, but just click **"Save"** as it'll point to your material folder by default. You can have a name for your material, too. But I'll leave it as it is.[![](https://cdn.sbox.game/upload/b/747c025a/8e0e/4913/b734/1eaedb611163.gif)](https://cdn.sbox.game/upload/b/747c025a/8e0e/4913/b734/1eaedb611163.gif)**Wait!**. For the models with **"PBR"** textures. You can add prefixes at the end of the normal map and other masks' names to set them up automatically for you. See : <https://sbox.game/dev/doc/assets/naming-conventions>[![](https://cdn.sbox.game/upload/b/16f543ec/e07d/4f91/967c/3e8a42f0539c.png)](https://cdn.sbox.game/upload/b/16f543ec/e07d/4f91/967c/3e8a42f0539c.png)So, you can rename the end prefixes of your PBR textures to set them up automatically by the **"Material Editor"** when you create a material of the color texture. If you're lazy. You can also set them up in the editor later.  
@@ -394,18 +407,20 @@ For editing the material. Here's what you need to know for editing. When finding
 - If you want to use **PBR** : Tick **"Specular"** from the **"PBR"** for PBR specular lighting. Also, tick **"Metalness Texture"** to use **Metalness map"**.
 - If you want to use an emissive mask : Tick **"Selfillum"** and a new option called **"Selfillum"** will show up. Import your emissive mask and adjust settings if needed.
 
-You just have to mess around for others as well. And you'll know how it works. Here's an example material setup.[![](https://cdn.sbox.game/upload/b/73cbb148/9cb9/45e8/aa32/5fc8fde498a4.png)](https://cdn.sbox.game/upload/b/73cbb148/9cb9/45e8/aa32/5fc8fde498a4.png)When you edited the material. Press **"Ctrl + S"** to save the material.  
+You just have to mess around for others as well. And you'll know how it works. Here's an example material setup.[![](https://cdn.sbox.game/upload/b/73cbb148/9cb9/45e8/aa32/5fc8fde498a4.png)](https://cdn.sbox.game/upload/b/73cbb148/9cb9/45e8/aa32/5fc8fde498a4.png)When you edited the material. Press **"Ctrl + S"** to save the material. For **Source 1** models with normal/bump maps. **Source 1** use **DirectX format** for them which means you'll have to flip the **Y-channel** in **S&box** as it needs **OpenGL** format for normal/bump maps.  
   
-**• Setting up Materials**
+Luckily, the material editor has a feature you can use in the editor. Which can be found by clicking the "**Gear**" icon beside the color ball icon button. [![](https://cdn.sbox.game/upload/b/da94d84e/b078/4c4b/a7ce/28804550e6ce.png)](https://cdn.sbox.game/upload/b/da94d84e/b078/4c4b/a7ce/28804550e6ce.png)In there, tick **Inverted Normals (-Y)** and click **Accept**. Which'll flip the **Y-channel** to make the normal map compatible with **S&box**. **OpenGL** format is used in many modern engines. So, that's an extra step for converting from old engines to a modern one.
+
+## **• Setting up Materials**
 
 We're done with the materials. So, we'll go back to the **"ModelDoc"**. You'll see **"MaterialGroupList"**. Click the **"DefaultMaterialGroup"**. Make sure **"Globally Replace All Materials In Model"** is unticked. It'll be unticked, but untick it if it's ticked.  
 And, you'll see the list of materials used in your model. We just need to open the material file for each one. Don't mind about my model lying down on the ground in the viewport.[![](https://cdn.sbox.game/upload/b/748fae06/4ac9/4481/9d30/8b943c1bc393.png)](https://cdn.sbox.game/upload/b/748fae06/4ac9/4481/9d30/8b943c1bc393.png)This part is very easy peasy. Just click the magnifying glass icon for each material and open your material files (VMAT) for each material slot. See how it did below.[![](https://cdn.sbox.game/upload/b/c5d21589/21dc/49a6/85e3/7bc5cd4a448a.png)](https://cdn.sbox.game/upload/b/c5d21589/21dc/49a6/85e3/7bc5cd4a448a.png)That's it. You just need to assign each material to its correct place. If you don't know which one should be used for which one. Check inside **"Blender"** for that. Click the **"Materials"** tab, select one material, and you'll see the imported texture files for the material.[![](https://cdn.sbox.game/upload/b/ebf1f256/5f69/4c41/bd41/039ef90db6a8.png)](https://cdn.sbox.game/upload/b/ebf1f256/5f69/4c41/bd41/039ef90db6a8.png)After all, press **"Needs Compiling"** and it'll compile your model, or you can also press **"F9"**. But, make sure you imported the correct files, including the **"anmgrph"** or the animations won't work. Wait a few good seconds and stalls.[![](https://cdn.sbox.game/upload/b/62038cc2/94b5/47b8/b4de/cb0cbbe85f79.png)](https://cdn.sbox.game/upload/b/62038cc2/94b5/47b8/b4de/cb0cbbe85f79.png)When it says **"Compiled and Up-To-Date"**, your model will be compiled as a **usable playermodel**.[![](https://cdn.sbox.game/upload/b/9efcc54c/5c96/46c5/840f/6552f7ca2768.png)](https://cdn.sbox.game/upload/b/9efcc54c/5c96/46c5/840f/6552f7ca2768.png)────────────────────────────────────────────────────────────────────────
 
 # 👶 Size Adjustment
 
-I know you were forced to scale down/up your model depending on your model to fit the reference armature in the script part. But we can fix it just by adjusting some values and calculations.   
-  
-**• Size adjustments**First, open your **"VMDL"** or if you're still in the **"ModelDoc"**. Scroll down a bit in the node outliner, and you'll see **"ModelModifierList"** with a node called **"ScaleAndMirror"**. And you'll see a value **"Scale"**.[![](https://cdn.sbox.game/upload/b/c122e0b9/8a6a/47be/b175/569be6e6160e.png)](https://cdn.sbox.game/upload/b/c122e0b9/8a6a/47be/b175/569be6e6160e.png)  
+I know you were forced to scale down/up your model depending on your model to fit the reference armature in the script part. But we can fix it just by adjusting some values and calculations.
+
+First, open your **"VMDL"** or if you're still in the **"ModelDoc"**. Scroll down a bit in the node outliner, and you'll see **"ModelModifierList"** with a node called **"ScaleAndMirror"**. And you'll see a value **"Scale"**.[![](https://cdn.sbox.game/upload/b/c122e0b9/8a6a/47be/b175/569be6e6160e.png)](https://cdn.sbox.game/upload/b/c122e0b9/8a6a/47be/b175/569be6e6160e.png)  
 [![](https://cdn.sbox.game/upload/b/9771bcb8/bff6/44d4/b4c0/75e6e6fb1f56.png)](https://cdn.sbox.game/upload/b/9771bcb8/bff6/44d4/b4c0/75e6e6fb1f56.png)Let's just say your model is 1/4 of the reference armature's size. Then, we'll calculate the size by dividing **"0.3937"** with **"4"**. So, we get **"0.0984"**. Then we will type in the calculated value in the box and compile the model again. We'll have to eyeball it until it looks correct for this until I find a correct solution.  
 For my model. It's just a little bit shorter than the reference armature. So, I'll just use **"0.3837"**. For your model, open the Blender scene file again, import your model, and compare it.[![](https://cdn.sbox.game/upload/b/ec47c094/6420/4444/9e2c/ef0184a0d9fa.png)](https://cdn.sbox.game/upload/b/ec47c094/6420/4444/9e2c/ef0184a0d9fa.png)  
 [![](https://cdn.sbox.game/upload/b/47212cf3/00fe/4390/b938/25ce56d0b37c.png)](https://cdn.sbox.game/upload/b/47212cf3/00fe/4390/b938/25ce56d0b37c.png)After that, compile the model to see the changes. If you're not satisfied. Keep messing with the values until the size looks good for you.  
@@ -414,8 +429,6 @@ For my model. It's just a little bit shorter than the reference armature. So, I'
 # 👕 Adding Bodygroups [Optional]
 
 [![](https://cdn.sbox.game/upload/b/f23b55d9/2a2b/4734/84a2/15840b691f43.png)](https://cdn.sbox.game/upload/b/f23b55d9/2a2b/4734/84a2/15840b691f43.png)In this section, we'll add bodygroups for our model. It's simple and easy. We only need to mess around in the **"ModelDoc"** for that. I'll guide you the way.
-
-**• Adding bodygroups**
 
 Adding bodygroups is very easy to do as well. But I learned to add them while writing this right here. It was fast to learn tho. Let's see.  
   
@@ -440,9 +453,11 @@ Compile your model again, and the bodygroups will show up when you use your mode
 # 👁️ Moving Eyes [Optional]
 
 Alright, you want extra work. Let's work then. For this section. It's still optional even if you had **"EYES_ENABLED"** as true. It's not very noticeable unless you look closer.  
-We'll do some adjustments if needed, but I've adjusted the thing as best as I could. But, might need adjustments depending on your model's eye size and bones.  
-  
-**• Attachments adjustments**As long as your model has eye bones and is set up in the script. The eyes should be working. But, there's a chance it might've messed up. For that, you'll have to fix it by adjusting values.  
+We'll do some adjustments if needed, but I've adjusted the thing as best as I could. But, might need adjustments depending on your model's eye size and bones.
+
+## **• Attachment adjustments**
+
+As long as your model has eye bones and is set up in the script. The eyes should be working. But, there's a chance it might've messed up. For that, you'll have to fix it by adjusting values.  
   
 The first thing is fixing the eyes to face forward correctly. Your model's eyes might not be facing the foward correctly. To fix that. Open your **"VMDL"** to open it in the **"ModelDoc"**. Scroll down in the node outliner and find **"AttachmentList"**. You'll see two attachments below it.  
   
@@ -452,16 +467,15 @@ You'll find it under **"WeightListList"**. Select it and adjust the slider value
   
 "Some models have their eye bone far behind the eye, so the pivot angle is greater than the human citizen model, which has the eye bone in the center of the eye. Adjust the eye_R and eye_L sliders below to adjust how much to reduce the animation by. The default is 75%, meaning that the animation is 25% of what it normally is."
 
-**• Adjusting Eye Movement**
+## **• Adjusting Eye Movement**
 
 After that, you can do one more thing. Which is limiting how much the eyes can move. You might want to use it to make the eyes move further or use it to fix some issues. To do that, move your eyes up to the **"Graph"** thing first. Where the **"anmgrph"** for your model is loaded. You'll see an **"Edit"** button. Click it.[![](https://cdn.sbox.game/upload/b/71b5a869/1cd3/4799/b093/6c04fa26e35c.png)](https://cdn.sbox.game/upload/b/71b5a869/1cd3/4799/b093/6c04fa26e35c.png)Move your cursor into the checkerboard window where all of the animation nodes are located. funny checkboards.. And then, hold **"MMB"** to move around. But, you gotta move to the right side. Scroll your **"MMB"** button to zoom in/out. What we gotta find is four green nodes above a huge **"Section 05..."** node.[![](https://cdn.sbox.game/upload/b/d5aa030a/5ffc/4fcb/b54e/538683998146.gif)](https://cdn.sbox.game/upload/b/d5aa030a/5ffc/4fcb/b54e/538683998146.gif)When you found them, you gotta have to edit all four of them. First, by selecting one of them, it'll show its properties in the **"Properties"** panel. You'll have to adjust **"Pitch"** and **"Yaw"** values to limit or give the eyes a bigger space. And when you're satisfied. Press **"Ctrl + S"** and close the **"AnimGraph"**.[![](https://cdn.sbox.game/upload/b/6a42220f/449c/45e3/b0da/50fefcb81953.png)](https://cdn.sbox.game/upload/b/6a42220f/449c/45e3/b0da/50fefcb81953.png)  
 [![](https://cdn.sbox.game/upload/b/f13d8be5/b2bf/41dc/be09/e906d5783d5e.png)](https://cdn.sbox.game/upload/b/f13d8be5/b2bf/41dc/be09/e906d5783d5e.png)If you want to disable the feature. You'll have to find the **"GameDataList"** category. Click the dropdown of **"Prefab [...]"**. And, you'll see **"LookAtChains"** group. Click the dropdown of it and scroll a bit. You'll see **"EyeRLookChain"** and **"EyeLLookChain"** nodes. All you gotta do is right-click and click **"Disable"** and compile your model again.[![](https://cdn.sbox.game/upload/b/898f92d6/7c28/4a59/bd1b/8122faf141fa.png)](https://cdn.sbox.game/upload/b/898f92d6/7c28/4a59/bd1b/8122faf141fa.png)────────────────────────────────────────────────────────────────────────
 
 # ⏩ Animation speeds [Optional]
 
-For very tiny models or models half the size of a human citizen or less. Your model might be sliding on the ground instead of walking, crouching, or running. You can easily fix that.
-
-**• Sliding animation fix**
+For very tiny models or models half the size of a human citizen or less. Your model might be sliding on the ground instead of walking, crouching, or running. You can easily fix that if that happens!  
+You can also use this for speeding up the animations!
 
 Open your **"AnmGrph"** in the **"ModelDoc"** again. And, then you'll see a tab called **"Parameters"**. By default, the tab is very small. So, we can hold the edge of the tab with our cursor and move it up to move up the tab. like this.[![](https://cdn.sbox.game/upload/b/b2432363/c03d/4654/88ec/0e82188e078c.png)](https://cdn.sbox.game/upload/b/b2432363/c03d/4654/88ec/0e82188e078c.png)After that, scroll down in the list and find **"speed_scale"** float parameter right under **"speed_reload"**. Select it and you'll see its properties in the **"Properties"** tab. Change **"Default Value"** to higher to fix the issue. Press **"Ctrl + S'** to save it. See the changes in the scene editor. Modify if not satisfied. Repeat until it looks fine. For very tall models. You might need to do the opposite to fix the issue.[![](https://cdn.sbox.game/upload/b/75fed42e/1e48/49ce/ac29/e937d9dc2dda.png)](https://cdn.sbox.game/upload/b/75fed42e/1e48/49ce/ac29/e937d9dc2dda.png)That's all for this section :)  
 ────────────────────────────────────────────────────────────────────────
@@ -469,8 +483,6 @@ Open your **"AnmGrph"** in the **"ModelDoc"** again. And, then you'll see a tab 
 # 🏃‍➡️ Testing
 
 Oh boy.. We've been doing this thing for a while. Now, it's time to test it. To do that, we'll create a **"Player Controller"** and replace our custom model with the sausage model. Let's do this.
-
-**• Testing the playermodel**
 
 First, right-click in the scene viewport or in the hierarchy. Hover your cursor on **"Create"** and then click **"Player Controller"**. Name the controller whatever you like, and then the player controller with a sausage guy will be created. Pull the controller until it touches the ground if it's flying. Oh, btw, sausage guy's name is **"Terry"**. But, we don't want **"Terry"**. Instead, we'll use our model.[![](https://cdn.sbox.game/upload/b/1f458434/84a3/4135/bff3/06ba3bf24bec.gif)](https://cdn.sbox.game/upload/b/1f458434/84a3/4135/bff3/06ba3bf24bec.gif)  
 Click the small arrow beside **"Player Controller"** in the hierarchy. You'll see a child component called **"Body"**. Click it and see the inspector. The model is rendered with a **"Model Renderer (skinned)"**, and you'll see that the sausage model is used there.  
@@ -518,4 +530,12 @@ Thank you so much for using the guide! :)
 **V1.0** - **”Tutorial released!”**  
   
 • Released the tutorial in **S&box tutorials**.  
+  
+---  
+  
+ **V1.1** - **”Source 1 texture conversion.”**  
+  
+• Added **"VTF conversion"** for **Source 1** models.  
+ • Added warnings and more info for Blender version and addons.  
+• Made the sub-topics uses **"H2"** for better switching.   
 ────────────────────────────────────────────────────────────────────────
