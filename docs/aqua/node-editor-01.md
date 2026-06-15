@@ -8,14 +8,14 @@ topic: Capable
 content_type: Text
 tags: [editor, node, tool]
 rating: 3
-views: 734
+views: 762
 upvotes: 4
 downvotes: 0
 updated: 'Updated
 
-  22 Days Ago'
+  23 Days Ago'
 summary: An introduction to the built-in node editor framework.
-scraped_at: '2026-06-14T09:37:52Z'
+scraped_at: '2026-06-15T12:19:42Z'
 ---
 
 # 🔩 Node Editor Introduction
