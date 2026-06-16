@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-06-15T12:19:42Z",
-  "count": 28,
+  "scraped_at": "2026-06-16T11:14:23Z",
+  "count": 29,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -404,12 +404,27 @@
       ],
       "author": "ghage",
       "url": "https://sbox.game/learn/ghage/claude-sbox-integration"
+    },
+    {
+      "path": "facepunch/replays-leaderboards",
+      "title": "Ghost Replays via Movie Maker + Stats Data",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [
+        "code",
+        "data",
+        "ghost",
+        "maker"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/replays-leaderboards"
     }
   ],
   "defender": {
     "active": true,
-    "scanned": 29,
-    "passed": 28,
+    "scanned": 30,
+    "passed": 29,
     "blocked": [
       {
         "source": "nite/lowcfg",
