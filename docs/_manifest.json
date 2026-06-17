@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-16T11:14:23Z",
+  "scraped_at": "2026-06-17T11:00:38Z",
   "count": 29,
   "tutorials": [
     {
@@ -234,6 +234,19 @@
       "url": "https://sbox.game/learn/aqua/node-editor-01"
     },
     {
+      "path": "facepunch/creating-a-room",
+      "title": "Creating Your First Room",
+      "difficulty": "Beginner",
+      "topic": "Mapping",
+      "content_type": "Text",
+      "tags": [
+        "map",
+        "mapping"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-a-room"
+    },
+    {
       "path": "facepunch/modeldoc-basics",
       "title": "Intro to ModelDoc",
       "difficulty": "Beginner",
@@ -262,19 +275,6 @@
       ],
       "author": "Facepunch",
       "url": "https://sbox.game/learn/facepunch/map-project"
-    },
-    {
-      "path": "facepunch/creating-a-room",
-      "title": "Creating Your First Room",
-      "difficulty": "Beginner",
-      "topic": "Mapping",
-      "content_type": "Text",
-      "tags": [
-        "map",
-        "mapping"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/creating-a-room"
     },
     {
       "path": "brax/resource-files",

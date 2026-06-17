@@ -8,15 +8,15 @@ topic: Capable
 content_type: Text
 tags: [code, data, ghost, maker]
 rating: 0
-views: 7
+views: 45
 upvotes: 0
 downvotes: 0
 updated: 'Updated
 
-  60 Minutes Ago'
+  Yesterday'
 summary: How to leverage storing information in stats to make a ghost replay system
   powered by Movie Maker.
-scraped_at: '2026-06-16T11:14:23Z'
+scraped_at: '2026-06-17T11:00:38Z'
 ---
 
 # Ghost Replays via Movie Maker + Stats Data
@@ -39,12 +39,16 @@ We want to make a *ghost*: a replay of how a player moved, that other people can
 
 ## Start recording
 
-Point a recorder at the player object. Its transform (and children) is captured automatically every fixed update.
+Point a recorder at the player object. Its transform is captured automatically every fixed update.
 
 ```
 using Sandbox.MovieMaker;
 
-var recorder = new MovieRecorder( Scene, MovieRecorderOptions.Default.WithCaptureGameObject( player ) );
+var options = new MovieRecorderOptions()
+    .WithCaptureGameObject( player, trackName: "Player" );
+
+var recorder = new MovieRecorder( Scene, options );
+
 recorder.Start();
 ```
 
@@ -106,9 +110,9 @@ var ghost  = ghostPrefab.Clone();
 var player = ghost.AddComponent<MoviePlayer>();
 
 var clip = resource.Compiled;
-var root = clip.Tracks.OfType<IReferenceTrack<GameObject>>().First( t => t.Parent is null );
+var track = clip.GetReference<GameObject>( "Player" );
 
-player.Binder.Add( root, ghost ); 
+player.Binder.Add( track, ghost ); 
 player.Play( clip );
 player.IsLooping = true;
 ```
