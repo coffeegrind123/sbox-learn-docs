@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-06-17T11:00:38Z",
-  "count": 29,
+  "scraped_at": "2026-06-18T10:23:51Z",
+  "count": 30,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -287,6 +287,21 @@
       "url": "https://sbox.game/learn/brax/resource-files"
     },
     {
+      "path": "facepunch/replays-leaderboards",
+      "title": "Ghost Replays via Movie Maker + Stats Data",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [
+        "code",
+        "data",
+        "ghost",
+        "maker"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/replays-leaderboards"
+    },
+    {
       "path": "softsplit/porting-maps",
       "title": "Porting Source maps",
       "difficulty": null,
@@ -376,6 +391,21 @@
       "url": "https://sbox.game/learn/mensch/networkig-101"
     },
     {
+      "path": "facepunch/stats-and-leaderboards",
+      "title": "How do I use the Stats System?",
+      "difficulty": "Beginner",
+      "topic": "Coding",
+      "content_type": "Text",
+      "tags": [
+        "code",
+        "data",
+        "info",
+        "leaderboard"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/stats-and-leaderboards"
+    },
+    {
       "path": "titanovsky/useful_links_mapping",
       "title": "🏛️ Useful links / Полезные ссылки (Mapping)",
       "difficulty": "Beginner",
@@ -404,27 +434,12 @@
       ],
       "author": "ghage",
       "url": "https://sbox.game/learn/ghage/claude-sbox-integration"
-    },
-    {
-      "path": "facepunch/replays-leaderboards",
-      "title": "Ghost Replays via Movie Maker + Stats Data",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Text",
-      "tags": [
-        "code",
-        "data",
-        "ghost",
-        "maker"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/replays-leaderboards"
     }
   ],
   "defender": {
     "active": true,
-    "scanned": 30,
-    "passed": 29,
+    "scanned": 31,
+    "passed": 30,
     "blocked": [
       {
         "source": "nite/lowcfg",
