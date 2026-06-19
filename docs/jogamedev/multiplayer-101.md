@@ -8,14 +8,14 @@ topic: Capable
 content_type: Text
 tags: [multiplayer, network, synchronize]
 rating: 2
-views: 507
+views: 540
 upvotes: 2
 downvotes: 0
 updated: 'Updated
 
-  16 Days Ago'
+  18 Days Ago'
 summary: A super-simple guide to make a multiplayer game quickly!
-scraped_at: '2026-06-18T10:23:51Z'
+scraped_at: '2026-06-19T10:40:31Z'
 ---
 
 # Multiplayer 101 - Easy as pie!
