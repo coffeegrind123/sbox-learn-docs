@@ -9,14 +9,14 @@ topic: Mapping
 content_type: Text
 tags: [door, map, mapping]
 rating: 4
-views: 1458
+views: 1504
 upvotes: 20
 downvotes: 1
 updated: 'Updated
 
-  31 Days Ago'
+  32 Days Ago'
 summary: How to make a basic door.
-scraped_at: '2026-06-21T09:53:31Z'
+scraped_at: '2026-06-22T12:08:39Z'
 ---
 
 # Creating a Door
