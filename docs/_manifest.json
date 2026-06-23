@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-06-22T12:08:39Z",
-  "count": 29,
+  "scraped_at": "2026-06-23T09:43:08Z",
+  "count": 30,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -86,6 +86,21 @@
       "url": "https://sbox.game/learn/facepunch/creating-a-door"
     },
     {
+      "path": "tesa/ui-buildhash",
+      "title": "Understanding the Razor's Reactivity",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": null,
+      "tags": [
+        "hud",
+        "panel",
+        "razor",
+        "ui"
+      ],
+      "author": "Tea Sanctuary",
+      "url": "https://sbox.game/learn/tesa/ui-buildhash"
+    },
+    {
       "path": "facepunch/twitch-api",
       "title": "Introduction to the Streamer Api",
       "difficulty": null,
@@ -113,6 +128,36 @@
       ],
       "author": "Gibbard",
       "url": "https://sbox.game/learn/gibbard/networked-variable-ui"
+    },
+    {
+      "path": "facepunch/replays-leaderboards",
+      "title": "Ghost Replays via Movie Maker + Stats Data",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [
+        "code",
+        "data",
+        "ghost",
+        "maker"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/replays-leaderboards"
+    },
+    {
+      "path": "facepunch/modeldoc-basics",
+      "title": "Intro to ModelDoc",
+      "difficulty": "Beginner",
+      "topic": "Editor",
+      "content_type": "Text",
+      "tags": [
+        "3d",
+        "editor",
+        "intro",
+        "introduction"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/modeldoc-basics"
     },
     {
       "path": "facepunch/making-a-first-person-game",
@@ -175,21 +220,6 @@
       "url": "https://sbox.game/learn/xaz/goo-101"
     },
     {
-      "path": "facepunch/replays-leaderboards",
-      "title": "Ghost Replays via Movie Maker + Stats Data",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Text",
-      "tags": [
-        "code",
-        "data",
-        "ghost",
-        "maker"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/replays-leaderboards"
-    },
-    {
       "path": "cseliot/sbox-resources",
       "title": "SBox Resources, An Open-Source \"Subway Map\" for all things S&Box",
       "difficulty": "Beginner",
@@ -203,21 +233,6 @@
       ],
       "author": "cseliot",
       "url": "https://sbox.game/learn/cseliot/sbox-resources"
-    },
-    {
-      "path": "facepunch/modeldoc-basics",
-      "title": "Intro to ModelDoc",
-      "difficulty": "Beginner",
-      "topic": "Editor",
-      "content_type": "Text",
-      "tags": [
-        "3d",
-        "editor",
-        "intro",
-        "introduction"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/modeldoc-basics"
     },
     {
       "path": "aqua/node-editor-01",
@@ -361,21 +376,6 @@
       "url": "https://sbox.game/learn/facepunch/creating-first-project"
     },
     {
-      "path": "mensch/networkig-101",
-      "title": "Simple Multiplayer Game",
-      "difficulty": null,
-      "topic": "Networking",
-      "content_type": null,
-      "tags": [
-        "basics",
-        "beginner",
-        "networking",
-        "simple"
-      ],
-      "author": "Menschlich",
-      "url": "https://sbox.game/learn/mensch/networkig-101"
-    },
-    {
       "path": "facepunch/stats-and-leaderboards",
       "title": "How do I use the Stats System?",
       "difficulty": "Beginner",
@@ -389,6 +389,21 @@
       ],
       "author": "Facepunch",
       "url": "https://sbox.game/learn/facepunch/stats-and-leaderboards"
+    },
+    {
+      "path": "mensch/networkig-101",
+      "title": "Simple Multiplayer Game",
+      "difficulty": null,
+      "topic": "Networking",
+      "content_type": null,
+      "tags": [
+        "basics",
+        "beginner",
+        "networking",
+        "simple"
+      ],
+      "author": "Menschlich",
+      "url": "https://sbox.game/learn/mensch/networkig-101"
     },
     {
       "path": "titanovsky/useful_links_mapping",
@@ -424,19 +439,12 @@
   "defender": {
     "active": true,
     "scanned": 31,
-    "passed": 29,
+    "passed": 30,
     "blocked": [
-      {
-        "source": "tesa/ui-buildhash",
-        "riskLevel": "high",
-        "tier2Score": 0.955236100951207,
-        "detections": [],
-        "patternsByField": {}
-      },
       {
         "source": "nite/lowcfg",
         "riskLevel": "high",
-        "tier2Score": 0.9591342357570638,
+        "tier2Score": 0.9532728571294113,
         "detections": [],
         "patternsByField": {}
       }
