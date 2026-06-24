@@ -7,14 +7,14 @@ author_slug: mensch
 topic: Networking
 tags: [basics, beginner, networking, simple]
 rating: 2
-views: 1416
+views: 1444
 upvotes: 9
 downvotes: 6
 updated: 'Updated
 
-  36 Days Ago'
+  37 Days Ago'
 summary: Networking basics in just 4 steps.
-scraped_at: '2026-06-23T09:43:08Z'
+scraped_at: '2026-06-24T09:34:02Z'
 ---
 
 # Simple Multiplayer Game
