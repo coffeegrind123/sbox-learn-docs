@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-06-24T09:34:02Z",
-  "count": 30,
+  "scraped_at": "2026-06-25T09:25:59Z",
+  "count": 29,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -84,21 +84,6 @@
       ],
       "author": "Facepunch",
       "url": "https://sbox.game/learn/facepunch/creating-a-door"
-    },
-    {
-      "path": "tesa/ui-buildhash",
-      "title": "Understanding the Razor's Reactivity",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": null,
-      "tags": [
-        "hud",
-        "panel",
-        "razor",
-        "ui"
-      ],
-      "author": "Tea Sanctuary",
-      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "facepunch/twitch-api",
@@ -439,12 +424,19 @@
   "defender": {
     "active": true,
     "scanned": 31,
-    "passed": 30,
+    "passed": 29,
     "blocked": [
+      {
+        "source": "tesa/ui-buildhash",
+        "riskLevel": "high",
+        "tier2Score": 0.955236100951207,
+        "detections": [],
+        "patternsByField": {}
+      },
       {
         "source": "nite/lowcfg",
         "riskLevel": "high",
-        "tier2Score": 0.9532728571294113,
+        "tier2Score": 0.9591342357570638,
         "detections": [],
         "patternsByField": {}
       }
