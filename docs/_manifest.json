@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-06-27T08:38:49Z",
-  "count": 29,
+  "scraped_at": "2026-06-28T08:55:43Z",
+  "count": 30,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -84,6 +84,21 @@
       ],
       "author": "Facepunch",
       "url": "https://sbox.game/learn/facepunch/creating-a-door"
+    },
+    {
+      "path": "tesa/ui-buildhash",
+      "title": "Understanding the Razor's Reactivity",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": null,
+      "tags": [
+        "hud",
+        "panel",
+        "razor",
+        "ui"
+      ],
+      "author": "Tea Sanctuary",
+      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "facepunch/twitch-api",
@@ -190,21 +205,6 @@
       "url": "https://sbox.game/learn/facepunch/creating-an-entity-for-sandbox"
     },
     {
-      "path": "xaz/goo-101",
-      "title": "the goo quickstart",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": "Text",
-      "tags": [
-        "cs",
-        "csharp",
-        "goo",
-        "ui"
-      ],
-      "author": "xazware",
-      "url": "https://sbox.game/learn/xaz/goo-101"
-    },
-    {
       "path": "cseliot/sbox-resources",
       "title": "SBox Resources, An Open-Source \"Subway Map\" for all things S&Box",
       "difficulty": "Beginner",
@@ -232,6 +232,21 @@
       ],
       "author": "The Aquarium",
       "url": "https://sbox.game/learn/aqua/node-editor-01"
+    },
+    {
+      "path": "xaz/goo-101",
+      "title": "the goo quickstart",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": "Text",
+      "tags": [
+        "cs",
+        "csharp",
+        "goo",
+        "ui"
+      ],
+      "author": "xazware",
+      "url": "https://sbox.game/learn/xaz/goo-101"
     },
     {
       "path": "facepunch/creating-a-room",
@@ -424,19 +439,12 @@
   "defender": {
     "active": true,
     "scanned": 31,
-    "passed": 29,
+    "passed": 30,
     "blocked": [
-      {
-        "source": "tesa/ui-buildhash",
-        "riskLevel": "high",
-        "tier2Score": 0.955236100951207,
-        "detections": [],
-        "patternsByField": {}
-      },
       {
         "source": "nite/lowcfg",
         "riskLevel": "high",
-        "tier2Score": 0.9591342357570638,
+        "tier2Score": 0.9532728571294113,
         "detections": [],
         "patternsByField": {}
       }
