@@ -70,14 +70,24 @@ DEFAULT_OUT = REPO_DIR / "docs"
 
 # Camoufox binary discovery — same conventions as the user's other scrapers.
 # In CI the binary is unpacked to backend/camoufox_build/camoufox-bin and
-# also symlinked to platformdirs(camoufox) so the Python camoufox package
-# finds it automatically. Locally, `python -m camoufox fetch` drops it under
-# ~/.cache/camoufox/camoufox-bin. We honor all three.
+# registered with the camoufox library by backend/setup_camoufox.py.
+#
+# camoufox >=0.5 replaced the FLAT cache layout (binary directly in
+# platformdirs(camoufox)) with a multiversion one
+# (<cache>/browsers/<repo>/<version>/camoufox-bin), so the old flat candidate no
+# longer matches a `camoufox fetch` install. Ask the library where its active
+# build is rather than guessing at the path, and keep the flat path last for
+# pre-0.5 installs.
 def _discover_camoufox_bin() -> Path | None:
     candidates = [
         Path("/opt/camoufox/camoufox-bin"),
         BACKEND_DIR / "camoufox_build" / "camoufox-bin",
     ]
+    try:
+        from camoufox.pkgman import camoufox_path
+        candidates.append(Path(camoufox_path(download_if_missing=False)) / "camoufox-bin")
+    except Exception:
+        pass
     try:
         from platformdirs import user_cache_dir
         candidates.append(Path(user_cache_dir("camoufox")) / "camoufox-bin")

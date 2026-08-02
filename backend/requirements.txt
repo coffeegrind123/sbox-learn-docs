@@ -1,3 +1,7 @@
 camoufox
 markdownify
 PyYAML
+# playwright 1.60 dispatches pageError with `location.url`, which the camoufox
+# Firefox juggler never sends. The driver then dies on the FIRST uncaught JS error
+# on any page, taking the whole scrape with it.
+playwright<1.60
