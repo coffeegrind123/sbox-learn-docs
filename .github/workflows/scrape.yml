@@ -72,7 +72,15 @@ jobs:
 
       - name: Run scraper
         working-directory: backend/src
-        run: python scrape.py 2>&1 | tail -200
+        # pipefail is load-bearing: scrape.py already ends in
+        #   sys.exit(0 if written > 0 else 1)
+        # but a pipeline reports the LAST command's status, so `| tail` returned 0
+        # and the job went green while the scrape wrote nothing. That masked a
+        # CamoufoxNotInstalled crash for 35 days (last real mirror update
+        # 2026-06-28); every daily run "succeeded" in ~1m17s.
+        run: |
+          set -o pipefail
+          python scrape.py 2>&1 | tail -200
         timeout-minutes: 15
 
       # Hard guard: fail the build if the manifest shows the defender
@@ -83,6 +91,23 @@ jobs:
           python3 - <<'PY'
           import json, sys
           mf = json.load(open("docs/_manifest.json"))
+          # docs/_manifest.json is COMMITTED, so a run that crashed before writing
+          # one would validate the PREVIOUS run's manifest and pass. Require it to
+          # be from this run before trusting anything in it.
+          from datetime import datetime, timezone
+          ts = mf.get("scraped_at", "")
+          try:
+              age = (datetime.now(timezone.utc)
+                     - datetime.fromisoformat(ts.replace("Z", "+00:00"))).total_seconds()
+          except Exception:
+              print(f"::error::manifest has no parseable scraped_at ({ts!r}) - cannot tell "
+                    "whether this is from the current run")
+              sys.exit(1)
+          if age > 3600:
+              print(f"::error::manifest is stale ({age/3600:.1f}h old, scraped_at={ts}) - the "
+                    "scrape did not write one this run, so this guard would be checking a "
+                    "previous run's result")
+              sys.exit(1)
           d = mf.get("defender", {})
           if not d.get("active"):
               print("::error::defender did not run for this scrape — manifest defender.active is false")
