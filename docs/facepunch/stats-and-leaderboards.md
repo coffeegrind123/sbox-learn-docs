@@ -8,15 +8,15 @@ difficulty: Beginner
 topic: Coding
 content_type: Text
 tags: [code, data, info, leaderboard]
-rating: 2
-views: 288
-upvotes: 2
+rating: 3
+views: 1239
+upvotes: 3
 downvotes: 0
 updated: 'Updated
 
-  10 Days Ago'
+  45 Days Ago'
 summary: A brief insight on how to make use of s&box's stats service.
-scraped_at: '2026-06-28T08:55:43Z'
+scraped_at: '2026-08-02T02:11:17Z'
 ---
 
 # How do I use the Stats System?

@@ -7,15 +7,15 @@ author_slug: brax
 difficulty: Beginner
 topic: Platform
 content_type: Text
-rating: 3
-views: 1307
-upvotes: 4
+rating: 4
+views: 2248
+upvotes: 6
 downvotes: 0
 updated: 'Updated
 
-  37 Days Ago'
+  2 Months Ago'
 summary: If your published game has missing images, check this out
-scraped_at: '2026-06-28T08:55:43Z'
+scraped_at: '2026-08-02T02:11:17Z'
 ---
 
 # Resource Files

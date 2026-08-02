@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-06-28T08:55:43Z",
-  "count": 30,
+  "scraped_at": "2026-08-02T02:11:17Z",
+  "count": 31,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -17,29 +17,18 @@
       "url": "https://sbox.game/learn/shadb/jiggle-101"
     },
     {
-      "path": "frxxks/beginner-resources",
-      "title": "🎓 Freaks Beginner Resources",
+      "path": "facepunch/creating-a-door",
+      "title": "Creating a Door",
       "difficulty": "Beginner",
-      "topic": "Editor",
-      "content_type": "Video",
-      "tags": [
-        "beginner",
-        "collection",
-        "compilation",
-        "first"
-      ],
-      "author": "Frxxks",
-      "url": "https://sbox.game/learn/frxxks/beginner-resources"
-    },
-    {
-      "path": "brax/ide-setup",
-      "title": "IDE Setup",
-      "difficulty": "Beginner",
-      "topic": "Coding",
+      "topic": "Mapping",
       "content_type": "Text",
-      "tags": [],
-      "author": "Braxnet",
-      "url": "https://sbox.game/learn/brax/ide-setup"
+      "tags": [
+        "door",
+        "map",
+        "mapping"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-a-door"
     },
     {
       "path": "carsonk/shader_quality_settings",
@@ -57,6 +46,31 @@
       "url": "https://sbox.game/learn/carsonk/shader_quality_settings"
     },
     {
+      "path": "brax/ide-setup",
+      "title": "IDE Setup",
+      "difficulty": "Beginner",
+      "topic": "Coding",
+      "content_type": "Text",
+      "tags": [],
+      "author": "Braxnet",
+      "url": "https://sbox.game/learn/brax/ide-setup"
+    },
+    {
+      "path": "frxxks/beginner-resources",
+      "title": "🎓 Freaks Beginner Resources",
+      "difficulty": "Beginner",
+      "topic": "Editor",
+      "content_type": "Video",
+      "tags": [
+        "beginner",
+        "collection",
+        "compilation",
+        "first"
+      ],
+      "author": "Frxxks",
+      "url": "https://sbox.game/learn/frxxks/beginner-resources"
+    },
+    {
       "path": "bobmac/sboxcustompmguide",
       "title": "Bob’s Guides : S&box Custom Playermodel Guide [For your games!]",
       "difficulty": "Beginner",
@@ -70,20 +84,6 @@
       ],
       "author": "Bobmac",
       "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
-    },
-    {
-      "path": "facepunch/creating-a-door",
-      "title": "Creating a Door",
-      "difficulty": "Beginner",
-      "topic": "Mapping",
-      "content_type": "Text",
-      "tags": [
-        "door",
-        "map",
-        "mapping"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/creating-a-door"
     },
     {
       "path": "tesa/ui-buildhash",
@@ -160,6 +160,21 @@
       "url": "https://sbox.game/learn/facepunch/modeldoc-basics"
     },
     {
+      "path": "xaz/goo-101",
+      "title": "goo-101: Hello World",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": "Text",
+      "tags": [
+        "cs",
+        "csharp",
+        "goo",
+        "ui"
+      ],
+      "author": "xazware",
+      "url": "https://sbox.game/learn/xaz/goo-101"
+    },
+    {
       "path": "facepunch/making-a-first-person-game",
       "title": "Making a First Person Game",
       "difficulty": "Beginner",
@@ -234,21 +249,6 @@
       "url": "https://sbox.game/learn/aqua/node-editor-01"
     },
     {
-      "path": "xaz/goo-101",
-      "title": "the goo quickstart",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": "Text",
-      "tags": [
-        "cs",
-        "csharp",
-        "goo",
-        "ui"
-      ],
-      "author": "xazware",
-      "url": "https://sbox.game/learn/xaz/goo-101"
-    },
-    {
       "path": "facepunch/creating-a-room",
       "title": "Creating Your First Room",
       "difficulty": "Beginner",
@@ -260,6 +260,16 @@
       ],
       "author": "Facepunch",
       "url": "https://sbox.game/learn/facepunch/creating-a-room"
+    },
+    {
+      "path": "brax/resource-files",
+      "title": "Resource Files",
+      "difficulty": "Beginner",
+      "topic": "Platform",
+      "content_type": "Text",
+      "tags": [],
+      "author": "Braxnet",
+      "url": "https://sbox.game/learn/brax/resource-files"
     },
     {
       "path": "facepunch/map-project",
@@ -290,16 +300,6 @@
       ],
       "author": "Facepunch",
       "url": "https://sbox.game/learn/facepunch/map-publish"
-    },
-    {
-      "path": "brax/resource-files",
-      "title": "Resource Files",
-      "difficulty": "Beginner",
-      "topic": "Platform",
-      "content_type": "Text",
-      "tags": [],
-      "author": "Braxnet",
-      "url": "https://sbox.game/learn/brax/resource-files"
     },
     {
       "path": "softsplit/porting-maps",
@@ -346,19 +346,19 @@
       "url": "https://sbox.game/learn/carsonk/how-to-make-ui"
     },
     {
-      "path": "titanovsky/sync_ava_cosm",
-      "title": "👗 Sync avatar's cosmetics",
+      "path": "facepunch/stats-and-leaderboards",
+      "title": "How do I use the Stats System?",
       "difficulty": "Beginner",
-      "topic": "Networking",
+      "topic": "Coding",
       "content_type": "Text",
       "tags": [
-        "dress",
-        "dresser",
-        "rpc",
-        "sync"
+        "code",
+        "data",
+        "info",
+        "leaderboard"
       ],
-      "author": "Titanovsky",
-      "url": "https://sbox.game/learn/titanovsky/sync_ava_cosm"
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/stats-and-leaderboards"
     },
     {
       "path": "facepunch/creating-first-project",
@@ -376,19 +376,34 @@
       "url": "https://sbox.game/learn/facepunch/creating-first-project"
     },
     {
-      "path": "facepunch/stats-and-leaderboards",
-      "title": "How do I use the Stats System?",
+      "path": "titanovsky/sync_ava_cosm",
+      "title": "👗 Sync avatar's cosmetics",
       "difficulty": "Beginner",
-      "topic": "Coding",
+      "topic": "Networking",
       "content_type": "Text",
       "tags": [
-        "code",
-        "data",
-        "info",
-        "leaderboard"
+        "dress",
+        "dresser",
+        "rpc",
+        "sync"
       ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/stats-and-leaderboards"
+      "author": "Titanovsky",
+      "url": "https://sbox.game/learn/titanovsky/sync_ava_cosm"
+    },
+    {
+      "path": "tobidev5/ui-images",
+      "title": "Adding images to UI",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": "Text",
+      "tags": [
+        "css",
+        "image",
+        "images",
+        "panel"
+      ],
+      "author": "tobidev5",
+      "url": "https://sbox.game/learn/tobidev5/ui-images"
     },
     {
       "path": "mensch/networkig-101",
@@ -406,21 +421,6 @@
       "url": "https://sbox.game/learn/mensch/networkig-101"
     },
     {
-      "path": "titanovsky/useful_links_mapping",
-      "title": "🏛️ Useful links / Полезные ссылки (Mapping)",
-      "difficulty": "Beginner",
-      "topic": "Mapping",
-      "content_type": "Text",
-      "tags": [
-        "face",
-        "hammer",
-        "links",
-        "map"
-      ],
-      "author": "Titanovsky",
-      "url": "https://sbox.game/learn/titanovsky/useful_links_mapping"
-    },
-    {
       "path": "ghage/claude-sbox-integration",
       "title": "Claude Code (and any MCP client) inside sbox-dev",
       "difficulty": null,
@@ -434,17 +434,39 @@
       ],
       "author": "ghage",
       "url": "https://sbox.game/learn/ghage/claude-sbox-integration"
+    },
+    {
+      "path": "titanovsky/useful_links_mapping",
+      "title": "🏛️ Useful links / Полезные ссылки (Mapping)",
+      "difficulty": "Beginner",
+      "topic": "Mapping",
+      "content_type": "Text",
+      "tags": [
+        "face",
+        "hammer",
+        "links",
+        "map"
+      ],
+      "author": "Titanovsky",
+      "url": "https://sbox.game/learn/titanovsky/useful_links_mapping"
     }
   ],
   "defender": {
     "active": true,
-    "scanned": 31,
-    "passed": 30,
+    "scanned": 33,
+    "passed": 31,
     "blocked": [
       {
         "source": "nite/lowcfg",
         "riskLevel": "high",
         "tier2Score": 0.9532728571294113,
+        "detections": [],
+        "patternsByField": {}
+      },
+      {
+        "source": "tobidev5/dedicated-servers",
+        "riskLevel": "high",
+        "tier2Score": 0.9617870709001629,
         "detections": [],
         "patternsByField": {}
       }

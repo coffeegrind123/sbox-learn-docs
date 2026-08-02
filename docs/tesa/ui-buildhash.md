@@ -8,14 +8,14 @@ difficulty: Beginner
 topic: UI
 tags: [hud, panel, razor, ui]
 rating: 4
-views: 2229
+views: 3548
 upvotes: 20
 downvotes: 1
 updated: 'Updated
 
-  41 Days Ago'
+  3 Months Ago'
 summary: A.K.A. "Why doesn't my panel update?"
-scraped_at: '2026-06-28T08:55:43Z'
+scraped_at: '2026-08-02T02:11:17Z'
 ---
 
 # Understanding the Razor's Reactivity
@@ -416,13 +416,7 @@ Let's add a **two-way** bind - Razor's way to let both the parent panel and its 
 ...
 ```
 
-Notice the new **Count:bind=@Count** bit. Also note that the two-way bind works only with the **properties**, not **fields**! This **Stack Overflow** answer explains the difference: [Stack Overflow
-
-What is the difference between a field and a property?
-
-In C#, what makes a field different from a property, and when should a field be used instead of a property?
-
-![](https://stackoverflow.com/Content/Sites/stackoverflow/Img/apple-touch-icon@2.png?v=0f0cab681579)](https://stackoverflow.com/a/18766790)~~Or, y'know, might as well ask your favorite Large Lying Machine 🤷‍♂️~~  
+Notice the new **Count:bind=@Count** bit. Also note that the two-way bind works only with the **properties**, not **fields**! This **Stack Overflow** answer explains the difference: ~~Or, y'know, might as well ask your favorite Large Lying Machine 🤷‍♂️~~  
 Restart the scene, and... Uh-h-h-h...   
 [](https://cdn.sbox.game/upload/b/a4b05132/3624/48a6/be40/bec311c553cd.mp4)It kind of works, but for some reason only when you hover your mouse over the panel. Why does it happen?
 
