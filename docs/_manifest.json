@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-08-02T08:26:20Z",
+  "scraped_at": "2026-08-03T09:48:48Z",
   "count": 31,
   "tutorials": [
     {
@@ -406,21 +406,6 @@
       "url": "https://sbox.game/learn/tobidev5/ui-images"
     },
     {
-      "path": "mensch/networkig-101",
-      "title": "Simple Multiplayer Game",
-      "difficulty": null,
-      "topic": "Networking",
-      "content_type": null,
-      "tags": [
-        "basics",
-        "beginner",
-        "networking",
-        "simple"
-      ],
-      "author": "Menschlich",
-      "url": "https://sbox.game/learn/mensch/networkig-101"
-    },
-    {
       "path": "ghage/claude-sbox-integration",
       "title": "Claude Code (and any MCP client) inside sbox-dev",
       "difficulty": null,
@@ -434,6 +419,21 @@
       ],
       "author": "ghage",
       "url": "https://sbox.game/learn/ghage/claude-sbox-integration"
+    },
+    {
+      "path": "mensch/networkig-101",
+      "title": "Simple Multiplayer Game",
+      "difficulty": null,
+      "topic": "Networking",
+      "content_type": null,
+      "tags": [
+        "basics",
+        "beginner",
+        "networking",
+        "simple"
+      ],
+      "author": "Menschlich",
+      "url": "https://sbox.game/learn/mensch/networkig-101"
     },
     {
       "path": "titanovsky/useful_links_mapping",
