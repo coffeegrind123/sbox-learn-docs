@@ -1,21 +1,7 @@
 {
-  "scraped_at": "2026-08-03T09:48:48Z",
+  "scraped_at": "2026-08-04T08:39:05Z",
   "count": 31,
   "tutorials": [
-    {
-      "path": "shadb/jiggle-101",
-      "title": "Setting up jigglebones for cosmetics",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Text",
-      "tags": [
-        "bones",
-        "cosmetics",
-        "jiggle"
-      ],
-      "author": "ShadowBrain Games",
-      "url": "https://sbox.game/learn/shadb/jiggle-101"
-    },
     {
       "path": "facepunch/creating-a-door",
       "title": "Creating a Door",
@@ -54,6 +40,20 @@
       "tags": [],
       "author": "Braxnet",
       "url": "https://sbox.game/learn/brax/ide-setup"
+    },
+    {
+      "path": "shadb/jiggle-101",
+      "title": "Setting up jigglebones for cosmetics",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [
+        "bones",
+        "cosmetics",
+        "jiggle"
+      ],
+      "author": "ShadowBrain Games",
+      "url": "https://sbox.game/learn/shadb/jiggle-101"
     },
     {
       "path": "frxxks/beginner-resources",
