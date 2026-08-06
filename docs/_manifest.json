@@ -1,21 +1,7 @@
 {
-  "scraped_at": "2026-08-05T08:38:26Z",
+  "scraped_at": "2026-08-06T08:38:34Z",
   "count": 31,
   "tutorials": [
-    {
-      "path": "facepunch/creating-a-door",
-      "title": "Creating a Door",
-      "difficulty": "Beginner",
-      "topic": "Mapping",
-      "content_type": "Text",
-      "tags": [
-        "door",
-        "map",
-        "mapping"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/creating-a-door"
-    },
     {
       "path": "carsonk/shader_quality_settings",
       "title": "Writing shaders that respond to Quality Settings",
@@ -69,6 +55,20 @@
       ],
       "author": "Frxxks",
       "url": "https://sbox.game/learn/frxxks/beginner-resources"
+    },
+    {
+      "path": "facepunch/creating-a-door",
+      "title": "Creating a Door",
+      "difficulty": "Beginner",
+      "topic": "Mapping",
+      "content_type": "Text",
+      "tags": [
+        "door",
+        "map",
+        "mapping"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-a-door"
     },
     {
       "path": "bobmac/sboxcustompmguide",

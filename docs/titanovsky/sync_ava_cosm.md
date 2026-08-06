@@ -9,14 +9,14 @@ topic: Networking
 content_type: Text
 tags: [dress, dresser, rpc, sync]
 rating: 2
-views: 2621
+views: 2646
 upvotes: 6
 downvotes: 4
 updated: 'Updated
 
   3 Months Ago'
 summary: It's time for everyone to show off your clothing
-scraped_at: '2026-08-05T08:38:26Z'
+scraped_at: '2026-08-06T08:38:34Z'
 ---
 
 # 👗 Sync avatar's cosmetics
