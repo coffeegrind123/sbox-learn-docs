@@ -9,14 +9,14 @@ topic: Mapping
 content_type: Text
 tags: [game, map, mapping, project]
 rating: 3
-views: 2779
+views: 2806
 upvotes: 4
 downvotes: 0
 updated: 'Updated
 
   3 Months Ago'
 summary: This guide explains how to create a map project that targets a specific game.
-scraped_at: '2026-08-12T07:27:03Z'
+scraped_at: '2026-08-13T07:36:43Z'
 ---
 
 # Creating a Map Project
