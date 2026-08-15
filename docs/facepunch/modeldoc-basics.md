@@ -9,14 +9,14 @@ topic: Editor
 content_type: Text
 tags: [3d, editor, intro, introduction]
 rating: 4
-views: 2403
+views: 2432
 upvotes: 7
 downvotes: 0
 updated: 'Updated
 
   2 Months Ago'
 summary: Import a 3D model and make your first .vmdl using ModelDoc
-scraped_at: '2026-08-14T07:26:28Z'
+scraped_at: '2026-08-15T06:40:13Z'
 ---
 
 # Intro to ModelDoc
