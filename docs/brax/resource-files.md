@@ -8,14 +8,14 @@ difficulty: Beginner
 topic: Platform
 content_type: Text
 rating: 4
-views: 2630
+views: 2656
 upvotes: 6
 downvotes: 0
 updated: 'Updated
 
   3 Months Ago'
 summary: If your published game has missing images, check this out
-scraped_at: '2026-08-16T06:41:35Z'
+scraped_at: '2026-08-17T06:57:51Z'
 ---
 
 # Resource Files

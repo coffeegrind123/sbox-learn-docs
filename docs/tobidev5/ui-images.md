@@ -9,14 +9,14 @@ topic: UI
 content_type: Text
 tags: [css, image, images, panel]
 rating: 3
-views: 1052
+views: 1079
 upvotes: 4
 downvotes: 0
 updated: 'Updated
 
-  36 Days Ago'
+  37 Days Ago'
 summary: How to add images to your razor ui
-scraped_at: '2026-08-16T06:41:35Z'
+scraped_at: '2026-08-17T06:57:51Z'
 ---
 
 # Adding images to UI
