@@ -9,7 +9,7 @@ topic: Editor
 content_type: Video
 tags: [beginner, collection, compilation, first]
 rating: 5
-views: 8139
+views: 8178
 upvotes: 25
 downvotes: 0
 updated: 'Updated
@@ -17,7 +17,7 @@ updated: 'Updated
   3 Months Ago'
 summary: A comprehensive beginners resource collection helping you getting started
   with game development in s&box.
-scraped_at: '2026-08-20T06:48:34Z'
+scraped_at: '2026-08-21T06:50:02Z'
 ---
 
 # 🎓 Freaks Beginner Resources
