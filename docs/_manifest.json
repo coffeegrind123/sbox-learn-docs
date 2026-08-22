@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-08-21T06:50:02Z",
+  "scraped_at": "2026-08-22T06:41:30Z",
   "count": 31,
   "tutorials": [
     {
@@ -287,6 +287,21 @@
       "url": "https://sbox.game/learn/facepunch/map-project"
     },
     {
+      "path": "facepunch/stats-and-leaderboards",
+      "title": "How do I use the Stats System?",
+      "difficulty": "Beginner",
+      "topic": "Coding",
+      "content_type": "Text",
+      "tags": [
+        "code",
+        "data",
+        "info",
+        "leaderboard"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/stats-and-leaderboards"
+    },
+    {
       "path": "facepunch/map-publish",
       "title": "Map Publishing",
       "difficulty": "Beginner",
@@ -359,21 +374,6 @@
       ],
       "author": "Carson Kompon",
       "url": "https://sbox.game/learn/carsonk/how-to-make-ui"
-    },
-    {
-      "path": "facepunch/stats-and-leaderboards",
-      "title": "How do I use the Stats System?",
-      "difficulty": "Beginner",
-      "topic": "Coding",
-      "content_type": "Text",
-      "tags": [
-        "code",
-        "data",
-        "info",
-        "leaderboard"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/stats-and-leaderboards"
     },
     {
       "path": "facepunch/creating-first-project",
