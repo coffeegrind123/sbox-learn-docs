@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-08-24T07:00:52Z",
+  "scraped_at": "2026-08-25T06:51:06Z",
   "count": 31,
   "tutorials": [
     {
@@ -457,16 +457,16 @@
     "passed": 31,
     "blocked": [
       {
-        "source": "nite/lowcfg",
+        "source": "beswitched/git-lfs",
         "riskLevel": "high",
-        "tier2Score": 0.9532728571294113,
+        "tier2Score": 0.9539638408722914,
         "detections": [],
         "patternsByField": {}
       },
       {
-        "source": "beswitched/git-lfs",
+        "source": "nite/lowcfg",
         "riskLevel": "high",
-        "tier2Score": 0.9539638408722914,
+        "tier2Score": 0.9532728571294113,
         "detections": [],
         "patternsByField": {}
       },
