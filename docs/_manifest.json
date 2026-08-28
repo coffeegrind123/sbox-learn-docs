@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-08-27T17:25:33Z",
+  "scraped_at": "2026-08-28T18:18:56Z",
   "count": 31,
   "tutorials": [
     {
@@ -116,20 +116,6 @@
       "url": "https://sbox.game/learn/facepunch/twitch-api"
     },
     {
-      "path": "gibbard/networked-variable-ui",
-      "title": "Displaying networked variables in UI",
-      "difficulty": "Beginner",
-      "topic": "Networking",
-      "content_type": "Text",
-      "tags": [
-        "beginner",
-        "networking",
-        "ui"
-      ],
-      "author": "Gibbard",
-      "url": "https://sbox.game/learn/gibbard/networked-variable-ui"
-    },
-    {
       "path": "facepunch/replays-leaderboards",
       "title": "Ghost Replays via Movie Maker + Stats Data",
       "difficulty": null,
@@ -173,6 +159,20 @@
       ],
       "author": "xazware",
       "url": "https://sbox.game/learn/xaz/goo-101"
+    },
+    {
+      "path": "gibbard/networked-variable-ui",
+      "title": "Displaying networked variables in UI",
+      "difficulty": "Beginner",
+      "topic": "Networking",
+      "content_type": "Text",
+      "tags": [
+        "beginner",
+        "networking",
+        "ui"
+      ],
+      "author": "Gibbard",
+      "url": "https://sbox.game/learn/gibbard/networked-variable-ui"
     },
     {
       "path": "facepunch/making-a-first-person-game",
