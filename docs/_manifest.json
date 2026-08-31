@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-08-30T11:28:10Z",
-  "count": 31,
+  "scraped_at": "2026-08-31T12:58:57Z",
+  "count": 30,
   "tutorials": [
     {
       "path": "carsonk/shader_quality_settings",
@@ -235,20 +235,6 @@
       "url": "https://sbox.game/learn/cseliot/sbox-resources"
     },
     {
-      "path": "aqua/node-editor-01",
-      "title": "🔩 Node Editor Introduction",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Text",
-      "tags": [
-        "editor",
-        "node",
-        "tool"
-      ],
-      "author": "The Aquarium",
-      "url": "https://sbox.game/learn/aqua/node-editor-01"
-    },
-    {
       "path": "facepunch/creating-a-room",
       "title": "Creating Your First Room",
       "difficulty": "Beginner",
@@ -453,8 +439,8 @@
   ],
   "defender": {
     "active": true,
-    "scanned": 34,
-    "passed": 31,
+    "scanned": 33,
+    "passed": 30,
     "blocked": [
       {
         "source": "beswitched/git-lfs",
