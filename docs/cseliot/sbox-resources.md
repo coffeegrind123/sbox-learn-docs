@@ -9,14 +9,14 @@ topic: Platform
 content_type: Text
 tags: [guides, links, maps, tutorial]
 rating: 3
-views: 3066
+views: 3070
 upvotes: 5
 downvotes: 0
 updated: 'Updated
 
   3 months ago'
 summary: An Open-Source "Subway Map" for all things S&Box
-scraped_at: '2026-09-01T11:16:57Z'
+scraped_at: '2026-09-02T10:50:38Z'
 ---
 
 # SBox Resources, An Open-Source "Subway Map" for all things S&Box
@@ -29,7 +29,7 @@ Hence [SBOX-RESOURCES](https://github.com/CSEliot/sbox-resources) (https://githu
   
 Updates posted here: <https://sbox.game/f/resources/2447/1/#post5>  
   
-[![](https://opengraph.githubassets.com/eed617d907e44a87da2881c03a07939be636223f2c33596766ac382ce96e6edd/CSEliot/sbox-resources)
+[![](https://opengraph.githubassets.com/438063874196bf276c5f4b231410e9cc2e641485fd81fbb3c1e2c5bc7131b4cc/CSEliot/sbox-resources)
 
 GitHub
 
