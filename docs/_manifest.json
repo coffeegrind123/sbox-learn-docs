@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-09-02T10:50:38Z",
-  "count": 29,
+  "scraped_at": "2026-09-03T10:50:33Z",
+  "count": 30,
   "tutorials": [
     {
       "path": "carsonk/shader_quality_settings",
@@ -420,12 +420,26 @@
       ],
       "author": "Titanovsky",
       "url": "https://sbox.game/learn/titanovsky/useful_links_mapping"
+    },
+    {
+      "path": "notpointless/retarget-humanoid-animations",
+      "title": "Retargeting Humanoid Animations",
+      "difficulty": "Beginner",
+      "topic": "Animation",
+      "content_type": "Video",
+      "tags": [
+        "animation",
+        "humanoid",
+        "retargeting"
+      ],
+      "author": "chomnr",
+      "url": "https://sbox.game/learn/notpointless/retarget-humanoid-animations"
     }
   ],
   "defender": {
     "active": true,
-    "scanned": 33,
-    "passed": 29,
+    "scanned": 34,
+    "passed": 30,
     "blocked": [
       {
         "source": "tesa/ui-buildhash",
