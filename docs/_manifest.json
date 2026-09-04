@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-09-03T10:50:33Z",
-  "count": 30,
+  "scraped_at": "2026-09-04T10:49:43Z",
+  "count": 32,
   "tutorials": [
     {
       "path": "carsonk/shader_quality_settings",
@@ -84,6 +84,21 @@
       ],
       "author": "Bobmac",
       "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
+    },
+    {
+      "path": "tesa/ui-buildhash",
+      "title": "Understanding the Razor's Reactivity",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": null,
+      "tags": [
+        "hud",
+        "panel",
+        "razor",
+        "ui"
+      ],
+      "author": "Tea Sanctuary",
+      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "facepunch/twitch-api",
@@ -422,6 +437,16 @@
       "url": "https://sbox.game/learn/titanovsky/useful_links_mapping"
     },
     {
+      "path": "endf13ld/sprite-controller",
+      "title": "Creating a Sprite Controller in s&box",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [],
+      "author": "ENDF13LD",
+      "url": "https://sbox.game/learn/endf13ld/sprite-controller"
+    },
+    {
       "path": "notpointless/retarget-humanoid-animations",
       "title": "Retargeting Humanoid Animations",
       "difficulty": "Beginner",
@@ -438,34 +463,27 @@
   ],
   "defender": {
     "active": true,
-    "scanned": 34,
-    "passed": 30,
+    "scanned": 35,
+    "passed": 32,
     "blocked": [
-      {
-        "source": "tesa/ui-buildhash",
-        "riskLevel": "high",
-        "tier2Score": 0.955236100951207,
-        "detections": [],
-        "patternsByField": {}
-      },
       {
         "source": "beswitched/git-lfs",
         "riskLevel": "high",
-        "tier2Score": 0.955977866717923,
+        "tier2Score": 0.9539638408722914,
         "detections": [],
         "patternsByField": {}
       },
       {
         "source": "nite/lowcfg",
         "riskLevel": "high",
-        "tier2Score": 0.9591342357570638,
+        "tier2Score": 0.9532728571294113,
         "detections": [],
         "patternsByField": {}
       },
       {
         "source": "tobidev5/dedicated-servers",
         "riskLevel": "high",
-        "tier2Score": 0.963344169012535,
+        "tier2Score": 0.9617870709001629,
         "detections": [],
         "patternsByField": {}
       }
