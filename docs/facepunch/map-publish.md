@@ -8,16 +8,16 @@ difficulty: Beginner
 topic: Mapping
 content_type: Text
 tags: [map, mapping, publish, scene]
-rating: 3
-views: 3228
-upvotes: 5
+rating: 4
+views: 3237
+upvotes: 6
 downvotes: 0
 updated: 'Updated
 
   3 months ago'
 summary: This guide explains how to publish your map so it can be shared, downloaded,
   and played.
-scraped_at: '2026-09-07T11:51:13Z'
+scraped_at: '2026-09-08T10:48:22Z'
 ---
 
 # Map Publishing

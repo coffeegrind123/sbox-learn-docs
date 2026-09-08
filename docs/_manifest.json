@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-09-07T11:51:13Z",
-  "count": 32,
+  "scraped_at": "2026-09-08T10:48:22Z",
+  "count": 31,
   "tutorials": [
     {
       "path": "carsonk/shader_quality_settings",
@@ -84,21 +84,6 @@
       ],
       "author": "Bobmac",
       "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
-    },
-    {
-      "path": "tesa/ui-buildhash",
-      "title": "Understanding the Razor's Reactivity",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": null,
-      "tags": [
-        "hud",
-        "panel",
-        "razor",
-        "ui"
-      ],
-      "author": "Tea Sanctuary",
-      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "facepunch/twitch-api",
@@ -288,21 +273,6 @@
       "url": "https://sbox.game/learn/facepunch/stats-and-leaderboards"
     },
     {
-      "path": "facepunch/map-publish",
-      "title": "Map Publishing",
-      "difficulty": "Beginner",
-      "topic": "Mapping",
-      "content_type": "Text",
-      "tags": [
-        "map",
-        "mapping",
-        "publish",
-        "scene"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/map-publish"
-    },
-    {
       "path": "tobidev5/ui-images",
       "title": "Adding images to UI",
       "difficulty": "Beginner",
@@ -316,6 +286,21 @@
       ],
       "author": "tobidev5",
       "url": "https://sbox.game/learn/tobidev5/ui-images"
+    },
+    {
+      "path": "facepunch/map-publish",
+      "title": "Map Publishing",
+      "difficulty": "Beginner",
+      "topic": "Mapping",
+      "content_type": "Text",
+      "tags": [
+        "map",
+        "mapping",
+        "publish",
+        "scene"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/map-publish"
     },
     {
       "path": "softsplit/porting-maps",
@@ -464,26 +449,33 @@
   "defender": {
     "active": true,
     "scanned": 35,
-    "passed": 32,
+    "passed": 31,
     "blocked": [
+      {
+        "source": "tesa/ui-buildhash",
+        "riskLevel": "high",
+        "tier2Score": 0.955236100951207,
+        "detections": [],
+        "patternsByField": {}
+      },
       {
         "source": "beswitched/git-lfs",
         "riskLevel": "high",
-        "tier2Score": 0.9539638408722914,
+        "tier2Score": 0.955977866717923,
         "detections": [],
         "patternsByField": {}
       },
       {
         "source": "nite/lowcfg",
         "riskLevel": "high",
-        "tier2Score": 0.9532728571294113,
+        "tier2Score": 0.9591342357570638,
         "detections": [],
         "patternsByField": {}
       },
       {
         "source": "tobidev5/dedicated-servers",
         "riskLevel": "high",
-        "tier2Score": 0.9617870709001629,
+        "tier2Score": 0.963344169012535,
         "detections": [],
         "patternsByField": {}
       }
