@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-09-08T10:48:22Z",
-  "count": 31,
+  "scraped_at": "2026-09-09T10:54:42Z",
+  "count": 32,
   "tutorials": [
     {
       "path": "carsonk/shader_quality_settings",
@@ -16,16 +16,6 @@
       ],
       "author": "Carson Kompon",
       "url": "https://sbox.game/learn/carsonk/shader_quality_settings"
-    },
-    {
-      "path": "brax/ide-setup",
-      "title": "IDE Setup",
-      "difficulty": "Beginner",
-      "topic": "Coding",
-      "content_type": "Text",
-      "tags": [],
-      "author": "Braxnet",
-      "url": "https://sbox.game/learn/brax/ide-setup"
     },
     {
       "path": "shadb/jiggle-101",
@@ -84,6 +74,31 @@
       ],
       "author": "Bobmac",
       "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
+    },
+    {
+      "path": "tesa/ui-buildhash",
+      "title": "Understanding the Razor's Reactivity",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": null,
+      "tags": [
+        "hud",
+        "panel",
+        "razor",
+        "ui"
+      ],
+      "author": "Tea Sanctuary",
+      "url": "https://sbox.game/learn/tesa/ui-buildhash"
+    },
+    {
+      "path": "brax/ide-setup",
+      "title": "IDE Setup",
+      "difficulty": "Beginner",
+      "topic": "Coding",
+      "content_type": "Text",
+      "tags": [],
+      "author": "Braxnet",
+      "url": "https://sbox.game/learn/brax/ide-setup"
     },
     {
       "path": "facepunch/twitch-api",
@@ -243,6 +258,21 @@
       "url": "https://sbox.game/learn/brax/resource-files"
     },
     {
+      "path": "tobidev5/ui-images",
+      "title": "Adding images to UI",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": "Text",
+      "tags": [
+        "css",
+        "image",
+        "images",
+        "panel"
+      ],
+      "author": "tobidev5",
+      "url": "https://sbox.game/learn/tobidev5/ui-images"
+    },
+    {
       "path": "facepunch/map-project",
       "title": "Creating a Map Project",
       "difficulty": "Beginner",
@@ -271,21 +301,6 @@
       ],
       "author": "Facepunch",
       "url": "https://sbox.game/learn/facepunch/stats-and-leaderboards"
-    },
-    {
-      "path": "tobidev5/ui-images",
-      "title": "Adding images to UI",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": "Text",
-      "tags": [
-        "css",
-        "image",
-        "images",
-        "panel"
-      ],
-      "author": "tobidev5",
-      "url": "https://sbox.game/learn/tobidev5/ui-images"
     },
     {
       "path": "facepunch/map-publish",
@@ -449,33 +464,26 @@
   "defender": {
     "active": true,
     "scanned": 35,
-    "passed": 31,
+    "passed": 32,
     "blocked": [
-      {
-        "source": "tesa/ui-buildhash",
-        "riskLevel": "high",
-        "tier2Score": 0.955236100951207,
-        "detections": [],
-        "patternsByField": {}
-      },
       {
         "source": "beswitched/git-lfs",
         "riskLevel": "high",
-        "tier2Score": 0.955977866717923,
+        "tier2Score": 0.9539638408722914,
         "detections": [],
         "patternsByField": {}
       },
       {
         "source": "nite/lowcfg",
         "riskLevel": "high",
-        "tier2Score": 0.9591342357570638,
+        "tier2Score": 0.9532728571294113,
         "detections": [],
         "patternsByField": {}
       },
       {
         "source": "tobidev5/dedicated-servers",
         "riskLevel": "high",
-        "tier2Score": 0.963344169012535,
+        "tier2Score": 0.9617870709001629,
         "detections": [],
         "patternsByField": {}
       }
