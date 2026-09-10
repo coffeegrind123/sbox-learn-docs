@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-09-09T10:54:42Z",
-  "count": 32,
+  "scraped_at": "2026-09-10T10:51:26Z",
+  "count": 33,
   "tutorials": [
     {
       "path": "carsonk/shader_quality_settings",
@@ -422,6 +422,21 @@
       "url": "https://sbox.game/learn/mensch/networkig-101"
     },
     {
+      "path": "facepunch/citizen-look-at-targeting",
+      "title": "Making eyes look-at a target (Citizens)",
+      "difficulty": "Beginner",
+      "topic": "Gameplay",
+      "content_type": "Text",
+      "tags": [
+        "at",
+        "citizen",
+        "eyes",
+        "look"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/citizen-look-at-targeting"
+    },
+    {
       "path": "titanovsky/useful_links_mapping",
       "title": "🏛️ Useful links / Полезные ссылки (Mapping)",
       "difficulty": "Beginner",
@@ -463,8 +478,8 @@
   ],
   "defender": {
     "active": true,
-    "scanned": 35,
-    "passed": 32,
+    "scanned": 36,
+    "passed": 33,
     "blocked": [
       {
         "source": "beswitched/git-lfs",
