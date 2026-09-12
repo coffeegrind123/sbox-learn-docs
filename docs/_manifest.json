@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-09-11T10:47:46Z",
-  "count": 33,
+  "scraped_at": "2026-09-12T10:16:10Z",
+  "count": 34,
   "tutorials": [
     {
       "path": "carsonk/shader_quality_settings",
@@ -392,6 +392,21 @@
       "url": "https://sbox.game/learn/titanovsky/sync_ava_cosm"
     },
     {
+      "path": "tobidev5/dedicated-servers",
+      "title": "Setting up a Dedicated Server",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [
+        "dedicated",
+        "dedicatedserver",
+        "guide",
+        "server"
+      ],
+      "author": "tobidev5",
+      "url": "https://sbox.game/learn/tobidev5/dedicated-servers"
+    },
+    {
       "path": "ghage/claude-sbox-integration",
       "title": "Claude Code (and any MCP client) inside sbox-dev",
       "difficulty": null,
@@ -479,7 +494,7 @@
   "defender": {
     "active": true,
     "scanned": 36,
-    "passed": 33,
+    "passed": 34,
     "blocked": [
       {
         "source": "beswitched/git-lfs",
@@ -492,13 +507,6 @@
         "source": "nite/lowcfg",
         "riskLevel": "high",
         "tier2Score": 0.9532728571294113,
-        "detections": [],
-        "patternsByField": {}
-      },
-      {
-        "source": "tobidev5/dedicated-servers",
-        "riskLevel": "high",
-        "tier2Score": 0.9617870709001629,
         "detections": [],
         "patternsByField": {}
       }

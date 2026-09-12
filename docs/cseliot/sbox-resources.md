@@ -9,14 +9,14 @@ topic: Platform
 content_type: Text
 tags: [guides, links, maps, tutorial]
 rating: 3
-views: 3094
+views: 3095
 upvotes: 5
 downvotes: 0
 updated: 'Updated
 
   3 months ago'
 summary: An Open-Source "Subway Map" for all things S&Box
-scraped_at: '2026-09-11T10:47:46Z'
+scraped_at: '2026-09-12T10:16:10Z'
 ---
 
 # SBox Resources, An Open-Source "Subway Map" for all things S&Box
@@ -29,10 +29,10 @@ Hence [SBOX-RESOURCES](https://github.com/CSEliot/sbox-resources) (https://githu
   
 Updates posted here: <https://sbox.game/f/resources/2447/1/#post5>  
   
-[![](https://opengraph.githubassets.com/438063874196bf276c5f4b231410e9cc2e641485fd81fbb3c1e2c5bc7131b4cc/CSEliot/sbox-resources)
+[![](https://opengraph.githubassets.com/073884e9b842574ece6cf93f10ea080b12276ba7f940ed6b3f5088ec4ac065b1/CSEliot/sbox-resources)
 
 GitHub
 
-GitHub - CSEliot/sbox-resources: There's 2/3 good threads on discord for resources. There's the forums. But those have the following limitations: Dependent on single users, and require accounts.
+GitHub - CSEliot/sbox-resources: A Subway Map and Index of everything you need S&Box (Sandbox) by Facepunch. There's 2/3 good threads on discord for resources. There's the forums. But those have the following limitations: Dependent on single users, and require accounts.
 
-There's 2/3 good threads on discord for resources. There's the forums. But those have the following limitations: Dependent on single users, and require accounts. - CSEliot/sbox-resources](https://github.com/CSEliot/sbox-resources)
+A Subway Map and Index of everything you need S&amp;Box (Sandbox) by Facepunch. There&#39;s 2/3 good threads on discord for resources. There&#39;s the forums. But those have the following limitatio...](https://github.com/CSEliot/sbox-resources)
