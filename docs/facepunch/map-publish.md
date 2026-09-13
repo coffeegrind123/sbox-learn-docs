@@ -9,7 +9,7 @@ topic: Mapping
 content_type: Text
 tags: [map, mapping, publish, scene]
 rating: 4
-views: 3255
+views: 3261
 upvotes: 6
 downvotes: 0
 updated: 'Updated
@@ -17,7 +17,7 @@ updated: 'Updated
   3 months ago'
 summary: This guide explains how to publish your map so it can be shared, downloaded,
   and played.
-scraped_at: '2026-09-12T10:16:10Z'
+scraped_at: '2026-09-13T11:16:42Z'
 ---
 
 # Map Publishing

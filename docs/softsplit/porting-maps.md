@@ -8,14 +8,14 @@ topic: Capable
 content_type: Text
 tags: [hammer, mapping, porting, source]
 rating: 3
-views: 4829
+views: 4840
 upvotes: 3
 downvotes: 0
 updated: 'Updated
 
   3 months ago'
 summary: Step-by-step guide on how to port maps from any Source engine game
-scraped_at: '2026-09-12T10:16:10Z'
+scraped_at: '2026-09-13T11:16:42Z'
 ---
 
 # Porting Source maps
