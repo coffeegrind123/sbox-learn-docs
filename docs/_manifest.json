@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-09-13T11:16:42Z",
-  "count": 34,
+  "scraped_at": "2026-09-14T12:05:48Z",
+  "count": 35,
   "tutorials": [
     {
       "path": "carsonk/shader_quality_settings",
@@ -452,6 +452,21 @@
       "url": "https://sbox.game/learn/facepunch/citizen-look-at-targeting"
     },
     {
+      "path": "notpointless/game-publishing",
+      "title": "Game Publishing",
+      "difficulty": "Beginner",
+      "topic": "Platform",
+      "content_type": null,
+      "tags": [
+        "development",
+        "editor",
+        "game",
+        "guide"
+      ],
+      "author": "chomnr",
+      "url": "https://sbox.game/learn/notpointless/game-publishing"
+    },
+    {
       "path": "titanovsky/useful_links_mapping",
       "title": "🏛️ Useful links / Полезные ссылки (Mapping)",
       "difficulty": "Beginner",
@@ -467,16 +482,6 @@
       "url": "https://sbox.game/learn/titanovsky/useful_links_mapping"
     },
     {
-      "path": "endf13ld/sprite-controller",
-      "title": "Creating a Sprite Controller in s&box",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Text",
-      "tags": [],
-      "author": "ENDF13LD",
-      "url": "https://sbox.game/learn/endf13ld/sprite-controller"
-    },
-    {
       "path": "notpointless/retarget-humanoid-animations",
       "title": "Retargeting Humanoid Animations",
       "difficulty": "Beginner",
@@ -489,12 +494,22 @@
       ],
       "author": "chomnr",
       "url": "https://sbox.game/learn/notpointless/retarget-humanoid-animations"
+    },
+    {
+      "path": "endf13ld/sprite-controller",
+      "title": "Creating a Sprite Controller in s&box",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [],
+      "author": "ENDF13LD",
+      "url": "https://sbox.game/learn/endf13ld/sprite-controller"
     }
   ],
   "defender": {
     "active": true,
-    "scanned": 36,
-    "passed": 34,
+    "scanned": 37,
+    "passed": 35,
     "blocked": [
       {
         "source": "beswitched/git-lfs",
