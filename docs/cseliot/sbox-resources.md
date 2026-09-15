@@ -9,14 +9,14 @@ topic: Platform
 content_type: Text
 tags: [guides, links, maps, tutorial]
 rating: 3
-views: 3098
+views: 3101
 upvotes: 5
 downvotes: 0
 updated: 'Updated
 
-  3 months ago'
+  4 months ago'
 summary: An Open-Source "Subway Map" for all things S&Box
-scraped_at: '2026-09-14T12:05:48Z'
+scraped_at: '2026-09-15T11:18:29Z'
 ---
 
 # SBox Resources, An Open-Source "Subway Map" for all things S&Box
@@ -27,12 +27,4 @@ There's 2 or 3 good locations on discord for resources. There's also the forums.
   
 Hence [SBOX-RESOURCES](https://github.com/CSEliot/sbox-resources) (https://github.com/CSEliot/sbox-resources)  
   
-Updates posted here: <https://sbox.game/f/resources/2447/1/#post5>  
-  
-[![](https://opengraph.githubassets.com/073884e9b842574ece6cf93f10ea080b12276ba7f940ed6b3f5088ec4ac065b1/CSEliot/sbox-resources)
-
-GitHub
-
-GitHub - CSEliot/sbox-resources: A Subway Map and Index of everything you need S&Box (Sandbox) by Facepunch. There's 2/3 good threads on discord for resources. There's the forums. But those have the following limitations: Dependent on single users, and require accounts.
-
-A Subway Map and Index of everything you need S&amp;Box (Sandbox) by Facepunch. There&#39;s 2/3 good threads on discord for resources. There&#39;s the forums. But those have the following limitatio...](https://github.com/CSEliot/sbox-resources)
+Updates posted here: <https://sbox.game/f/resources/2447/1/#post5>
