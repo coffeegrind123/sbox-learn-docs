@@ -8,7 +8,7 @@ difficulty: Beginner
 topic: Platform
 tags: [development, editor, game, guide]
 rating: 2
-views: 17
+views: 21
 upvotes: 1
 downvotes: 0
 updated: 'Updated
@@ -16,7 +16,7 @@ updated: 'Updated
   2 days ago'
 summary: A quick guide to publishing your s&box game and making it publicly available
   on sbox.game.
-scraped_at: '2026-09-15T11:18:29Z'
+scraped_at: '2026-09-16T11:00:47Z'
 ---
 
 # Game Publishing
