@@ -8,7 +8,7 @@ topic: Capable
 content_type: Text
 tags: [code, data, ghost, maker]
 rating: 4
-views: 2660
+views: 2667
 upvotes: 7
 downvotes: 0
 updated: 'Updated
@@ -16,7 +16,7 @@ updated: 'Updated
   3 months ago'
 summary: How to leverage storing information in stats to make a ghost replay system
   powered by Movie Maker.
-scraped_at: '2026-09-16T11:00:47Z'
+scraped_at: '2026-09-17T11:11:34Z'
 ---
 
 # Ghost Replays via Movie Maker + Stats Data

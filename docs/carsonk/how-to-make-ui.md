@@ -9,7 +9,7 @@ topic: UI
 content_type: Video
 tags: [coding, css, razor, scss]
 rating: 3
-views: 2685
+views: 2688
 upvotes: 3
 downvotes: 0
 updated: 'Updated
@@ -17,7 +17,7 @@ updated: 'Updated
   3 months ago'
 summary: How to make your own custom UI in S&box (assuming you know nothing, but something
   helps)
-scraped_at: '2026-09-16T11:00:47Z'
+scraped_at: '2026-09-17T11:11:34Z'
 ---
 
 # How to make UI in S&box
