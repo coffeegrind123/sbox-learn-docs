@@ -8,14 +8,14 @@ topic: Capable
 content_type: Text
 tags: [quality, render, settings, shader]
 rating: 4
-views: 3697
+views: 3704
 upvotes: 13
 downvotes: 0
 updated: 'Updated
 
   3 months ago'
 summary: How to make your shaders run better when players have low video settings
-scraped_at: '2026-09-17T11:11:34Z'
+scraped_at: '2026-09-18T10:44:55Z'
 ---
 
 # Writing shaders that respond to Quality Settings

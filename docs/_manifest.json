@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-09-17T11:11:34Z",
-  "count": 34,
+  "scraped_at": "2026-09-18T10:44:55Z",
+  "count": 35,
   "tutorials": [
     {
       "path": "carsonk/shader_quality_settings",
@@ -74,6 +74,21 @@
       ],
       "author": "Bobmac",
       "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
+    },
+    {
+      "path": "tesa/ui-buildhash",
+      "title": "Understanding the Razor's Reactivity",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": null,
+      "tags": [
+        "hud",
+        "panel",
+        "razor",
+        "ui"
+      ],
+      "author": "Tea Sanctuary",
+      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "brax/ide-setup",
@@ -494,26 +509,19 @@
   "defender": {
     "active": true,
     "scanned": 37,
-    "passed": 34,
+    "passed": 35,
     "blocked": [
-      {
-        "source": "tesa/ui-buildhash",
-        "riskLevel": "high",
-        "tier2Score": 0.955236100951207,
-        "detections": [],
-        "patternsByField": {}
-      },
       {
         "source": "beswitched/git-lfs",
         "riskLevel": "high",
-        "tier2Score": 0.955977866717923,
+        "tier2Score": 0.9539638408722914,
         "detections": [],
         "patternsByField": {}
       },
       {
         "source": "nite/lowcfg",
         "riskLevel": "high",
-        "tier2Score": 0.9591342357570638,
+        "tier2Score": 0.9532728571294113,
         "detections": [],
         "patternsByField": {}
       }
