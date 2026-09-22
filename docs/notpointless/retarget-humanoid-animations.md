@@ -9,15 +9,15 @@ topic: Animation
 content_type: Video
 tags: [animation, humanoid, retargeting]
 rating: 1
-views: 148
+views: 154
 upvotes: 1
 downvotes: 2
 updated: 'Updated
 
-  18 days ago'
+  19 days ago'
 summary: Retarget humanoid animations between different rigs in s&box with automatic
   bone mapping, root motion, and optional animation variants.
-scraped_at: '2026-09-21T12:15:20Z'
+scraped_at: '2026-09-22T11:08:26Z'
 ---
 
 # Retargeting Humanoid Animations

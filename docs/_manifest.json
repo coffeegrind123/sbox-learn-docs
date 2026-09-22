@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-09-21T12:15:20Z",
-  "count": 35,
+  "scraped_at": "2026-09-22T11:08:26Z",
+  "count": 34,
   "tutorials": [
     {
       "path": "carsonk/shader_quality_settings",
@@ -18,20 +18,6 @@
       "url": "https://sbox.game/learn/carsonk/shader_quality_settings"
     },
     {
-      "path": "shadb/jiggle-101",
-      "title": "Setting up jigglebones for cosmetics",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Text",
-      "tags": [
-        "bones",
-        "cosmetics",
-        "jiggle"
-      ],
-      "author": "ShadowBrain Games",
-      "url": "https://sbox.game/learn/shadb/jiggle-101"
-    },
-    {
       "path": "frxxks/beginner-resources",
       "title": "🎓 Freaks Beginner Resources",
       "difficulty": "Beginner",
@@ -45,20 +31,6 @@
       ],
       "author": "Frxxks",
       "url": "https://sbox.game/learn/frxxks/beginner-resources"
-    },
-    {
-      "path": "facepunch/creating-a-door",
-      "title": "Creating a Door",
-      "difficulty": "Beginner",
-      "topic": "Mapping",
-      "content_type": "Text",
-      "tags": [
-        "door",
-        "map",
-        "mapping"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/creating-a-door"
     },
     {
       "path": "bobmac/sboxcustompmguide",
@@ -76,19 +48,32 @@
       "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
     },
     {
-      "path": "tesa/ui-buildhash",
-      "title": "Understanding the Razor's Reactivity",
+      "path": "facepunch/creating-a-door",
+      "title": "Creating a Door",
       "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": null,
+      "topic": "Mapping",
+      "content_type": "Text",
       "tags": [
-        "hud",
-        "panel",
-        "razor",
-        "ui"
+        "door",
+        "map",
+        "mapping"
       ],
-      "author": "Tea Sanctuary",
-      "url": "https://sbox.game/learn/tesa/ui-buildhash"
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-a-door"
+    },
+    {
+      "path": "shadb/jiggle-101",
+      "title": "Setting up jigglebones for cosmetics",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [
+        "bones",
+        "cosmetics",
+        "jiggle"
+      ],
+      "author": "ShadowBrain Games",
+      "url": "https://sbox.game/learn/shadb/jiggle-101"
     },
     {
       "path": "brax/ide-setup",
@@ -509,19 +494,26 @@
   "defender": {
     "active": true,
     "scanned": 37,
-    "passed": 35,
+    "passed": 34,
     "blocked": [
+      {
+        "source": "tesa/ui-buildhash",
+        "riskLevel": "high",
+        "tier2Score": 0.955236100951207,
+        "detections": [],
+        "patternsByField": {}
+      },
       {
         "source": "beswitched/git-lfs",
         "riskLevel": "high",
-        "tier2Score": 0.9539638408722914,
+        "tier2Score": 0.955977866717923,
         "detections": [],
         "patternsByField": {}
       },
       {
         "source": "nite/lowcfg",
         "riskLevel": "high",
-        "tier2Score": 0.9532728571294113,
+        "tier2Score": 0.9591342357570638,
         "detections": [],
         "patternsByField": {}
       }
