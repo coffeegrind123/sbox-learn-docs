@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-09-22T11:08:26Z",
-  "count": 34,
+  "scraped_at": "2026-09-23T10:58:36Z",
+  "count": 35,
   "tutorials": [
     {
       "path": "carsonk/shader_quality_settings",
@@ -46,6 +46,21 @@
       ],
       "author": "Bobmac",
       "url": "https://sbox.game/learn/bobmac/sboxcustompmguide"
+    },
+    {
+      "path": "tesa/ui-buildhash",
+      "title": "Understanding the Razor's Reactivity",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": null,
+      "tags": [
+        "hud",
+        "panel",
+        "razor",
+        "ui"
+      ],
+      "author": "Tea Sanctuary",
+      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "facepunch/creating-a-door",
@@ -131,21 +146,6 @@
       "url": "https://sbox.game/learn/facepunch/modeldoc-basics"
     },
     {
-      "path": "xaz/goo-101",
-      "title": "goo-101: Hello World",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": "Text",
-      "tags": [
-        "cs",
-        "csharp",
-        "goo",
-        "ui"
-      ],
-      "author": "xazware",
-      "url": "https://sbox.game/learn/xaz/goo-101"
-    },
-    {
       "path": "gibbard/networked-variable-ui",
       "title": "Displaying networked variables in UI",
       "difficulty": "Beginner",
@@ -203,6 +203,21 @@
       ],
       "author": "Facepunch",
       "url": "https://sbox.game/learn/facepunch/creating-an-entity-for-sandbox"
+    },
+    {
+      "path": "xaz/goo-101",
+      "title": "goo-101: Hello World",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": "Text",
+      "tags": [
+        "cs",
+        "csharp",
+        "goo",
+        "ui"
+      ],
+      "author": "xazware",
+      "url": "https://sbox.game/learn/xaz/goo-101"
     },
     {
       "path": "cseliot/sbox-resources",
@@ -494,26 +509,19 @@
   "defender": {
     "active": true,
     "scanned": 37,
-    "passed": 34,
+    "passed": 35,
     "blocked": [
-      {
-        "source": "tesa/ui-buildhash",
-        "riskLevel": "high",
-        "tier2Score": 0.955236100951207,
-        "detections": [],
-        "patternsByField": {}
-      },
       {
         "source": "beswitched/git-lfs",
         "riskLevel": "high",
-        "tier2Score": 0.955977866717923,
+        "tier2Score": 0.9539638408722914,
         "detections": [],
         "patternsByField": {}
       },
       {
         "source": "nite/lowcfg",
         "riskLevel": "high",
-        "tier2Score": 0.9591342357570638,
+        "tier2Score": 0.9532728571294113,
         "detections": [],
         "patternsByField": {}
       }
