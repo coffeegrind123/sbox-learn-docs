@@ -1,4 +1,7 @@
-camoufox
+# The launcher, pinned to the SAME fork and commit the workflow downloads the
+# browser from (coffeegrind123/camoufox-beta cg.3). An unpinned `camoufox` pulled
+# whatever PyPI had, a launcher from a different project than the build.
+camoufox[geoip] @ git+https://github.com/coffeegrind123/camoufox-beta.git@a96b87fd9ee9551ce79510a75194ea9b3a139982#subdirectory=pythonlib
 markdownify
 PyYAML
 # playwright 1.60 dispatches pageError with `location.url`, which the camoufox

@@ -82,7 +82,7 @@ npm install --omit=dev
 # coffeegrind123/camoufox-beta; locally you can either fetch the same
 # release or use a system-installed camoufox.
 mkdir -p camoufox_build
-curl -L -o camoufox.zip "https://github.com/coffeegrind123/camoufox-beta/releases/download/v146.0.1-beta.25-patched/camoufox-146.0.1-beta.25-lin.x86_64.zip"
+curl -L -o camoufox.zip "https://github.com/coffeegrind123/camoufox-beta/releases/download/v152.0.4-beta.31-cg.3/camoufox-152.0.4-beta.31-lin.x86_64.zip"
 unzip camoufox.zip -d camoufox_build && rm camoufox.zip
 chmod +x camoufox_build/camoufox-bin
 
