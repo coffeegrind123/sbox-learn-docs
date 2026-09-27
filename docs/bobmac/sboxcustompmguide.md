@@ -9,7 +9,7 @@ topic: Modelling
 content_type: Text
 tags: [beginnerfriendly, custompm, easy, sboxpm]
 rating: 4
-views: 5899
+views: 5900
 upvotes: 14
 downvotes: 0
 updated: 'Updated
@@ -17,7 +17,7 @@ updated: 'Updated
   4 months ago'
 summary: A guide for porting Custom models & S1 models into S&box as custom player
   models!
-scraped_at: '2026-09-27T11:37:04Z'
+scraped_at: '2026-09-27T13:23:35Z'
 ---
 
 # Bob’s Guides : S&box Custom Playermodel Guide [For your games!]
@@ -31,15 +31,7 @@ Welcome to the **S&box Model Port Guide**!.
 This guide is the second guide of my **”Bob’s Guides”** tutorial series and rewritten as an **“S&box Tutorial”!**
 
 You can check out the Steam guide version **below.**  
-[![](https://images.steamusercontent.com/ugc/14838972452876969380/48FC796DB6B0DEF7B564A2EA467D1E5021E7FE9D/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false)
-
-steamcommunity.com
-
-Steam Community :: Guide :: Bob’s Guides : S&box Custom Playermodel Guide [V1.31]
-
-Welcome to the S&amp;box Model Port Guide !.
-S&amp;box is based on heavily modified Source 2 which is newer and more complex than Source 1 .
-In this guide, I’ll guide you through the proce](https://steamcommunity.com/sharedfiles/filedetails/?id=3665997623)I know you're here because you hate the sausage characters even I don't. So, this guide is for you. I'll be showing you how to port custom models into **S&box** for your own game. (Sandbox mode support isn't here yet.)
+I know you're here because you hate the sausage characters even I don't. So, this guide is for you. I'll be showing you how to port custom models into **S&box** for your own game. (Sandbox mode support isn't here yet.)
 
 Anyway, You won't need to re-rig, retarget or do crazy stuff. No need to worry about using **Blender**. This guide is aimed from **Beginners**. And, We'll use an automated script for the main part which is very easy. *Thanks to* ***Noztik***. I’d say porting custom models into **S&box** is **100 times easier** than porting into **Garry’s Mod** or other Source 1 games.  
   
