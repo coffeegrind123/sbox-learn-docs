@@ -7,7 +7,7 @@ author_slug: endf13ld
 topic: Capable
 content_type: Text
 rating: 0
-views: 122
+views: 123
 upvotes: 0
 downvotes: 0
 updated: 'Updated
@@ -16,7 +16,7 @@ updated: 'Updated
 summary: The SpriteController in s&box uses C# to convert player input relative to
   the camera's perspective, drive horizontal and vertical movement via CharacterController,
   and trigger 4-way sprite animations.
-scraped_at: '2026-09-28T13:11:13Z'
+scraped_at: '2026-09-28T13:22:50Z'
 ---
 
 # Creating a Sprite Controller in s&box
