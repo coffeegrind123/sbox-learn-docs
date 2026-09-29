@@ -9,14 +9,14 @@ topic: Platform
 content_type: Text
 tags: [guides, links, maps, tutorial]
 rating: 3
-views: 3151
+views: 3153
 upvotes: 5
 downvotes: 0
 updated: 'Updated
 
   4 months ago'
 summary: An Open-Source "Subway Map" for all things S&Box
-scraped_at: '2026-09-28T13:22:50Z'
+scraped_at: '2026-09-29T12:20:01Z'
 ---
 
 # SBox Resources, An Open-Source "Subway Map" for all things S&Box
