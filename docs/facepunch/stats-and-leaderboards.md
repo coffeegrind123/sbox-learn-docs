@@ -9,14 +9,14 @@ topic: Coding
 content_type: Text
 tags: [code, data, info, leaderboard]
 rating: 3
-views: 2207
+views: 2216
 upvotes: 4
 downvotes: 0
 updated: 'Updated
 
   3 months ago'
 summary: A brief insight on how to make use of s&box's stats service.
-scraped_at: '2026-09-29T12:20:01Z'
+scraped_at: '2026-09-30T12:05:51Z'
 ---
 
 # How do I use the Stats System?

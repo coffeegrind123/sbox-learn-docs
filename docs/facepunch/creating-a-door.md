@@ -8,15 +8,15 @@ difficulty: Beginner
 topic: Mapping
 content_type: Text
 tags: [door, map, mapping]
-rating: 4
-views: 4283
-upvotes: 23
+rating: 5
+views: 4294
+upvotes: 24
 downvotes: 1
 updated: 'Updated
 
   4 months ago'
 summary: How to make a basic door.
-scraped_at: '2026-09-29T12:20:01Z'
+scraped_at: '2026-09-30T12:05:51Z'
 ---
 
 # Creating a Door

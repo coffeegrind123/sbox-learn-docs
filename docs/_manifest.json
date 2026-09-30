@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-09-29T12:20:01Z",
-  "count": 35,
+  "scraped_at": "2026-09-30T12:05:51Z",
+  "count": 36,
   "tutorials": [
     {
       "path": "facepunch/creating-a-door",
@@ -491,6 +491,21 @@
       "url": "https://sbox.game/learn/notpointless/retarget-humanoid-animations"
     },
     {
+      "path": "aloshi/setting-up-a-weapon",
+      "title": "Setting Up a Basic Weapon",
+      "difficulty": "Beginner",
+      "topic": "Gameplay",
+      "content_type": "Text",
+      "tags": [
+        "basecombatweapon",
+        "viewmodel",
+        "weapon",
+        "worldmodel"
+      ],
+      "author": "aloshi",
+      "url": "https://sbox.game/learn/aloshi/setting-up-a-weapon"
+    },
+    {
       "path": "notpointless/game-publishing",
       "title": "Game Publishing",
       "difficulty": "Beginner",
@@ -508,8 +523,8 @@
   ],
   "defender": {
     "active": true,
-    "scanned": 37,
-    "passed": 35,
+    "scanned": 38,
+    "passed": 36,
     "blocked": [
       {
         "source": "beswitched/git-lfs",
