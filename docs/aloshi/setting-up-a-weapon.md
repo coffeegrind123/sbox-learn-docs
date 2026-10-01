@@ -9,20 +9,20 @@ topic: Gameplay
 content_type: Text
 tags: [basecombatweapon, viewmodel, weapon, worldmodel]
 rating: 0
-views: 20
+views: 32
 upvotes: 0
 downvotes: 0
 updated: 'Updated
 
-  12 hours ago'
+  16 hours ago'
 summary: Set up a pistol that can be added to the Inventory component's Loadout as
-  a starting weapon. The model works in first and third person.
-scraped_at: '2026-09-30T12:05:51Z'
+  a starting weapon. Works in first and third person.
+scraped_at: '2026-10-01T12:39:06Z'
 ---
 
 # Setting Up a Basic Weapon
 
-> Set up a pistol that can be added to the Inventory component's Loadout as a starting weapon. The model works in first and third person.
+> Set up a pistol that can be added to the Inventory component's Loadout as a starting weapon. Works in first and third person.
 
 Since the [official docs](https://sbox.game/dev/doc/assets/ready-to-use-assets/first-person-weapons) are currently *very* light on details, here's a more detailed walkthrough on how to set up a weapon using the models available in the [sboxweapons package](https://sbox.game/facepunch/sboxweapons).
 
@@ -30,12 +30,12 @@ I'm not an experienced s&box developer. These are my notes as I stumbled through
 
 # Where we're going
 
-Our end goal is to have a Prefab of a pistol (a USP) that can be added to the BaseInventoryComponent's Loadout as a starting weapon. The pistol will work in first and third person.  
+Our end goal is to have a Prefab of a pistol (the USP) that can be added to the BaseInventoryComponent's Loadout as a starting weapon. The pistol will work in first and third person.  
   
 The sboxweapons package provides models, but they're not set up as immediately-usable prefabs. To do this, we'll need to create a couple intermediate prefabs:
 
 - The **ViewModel** prefab: this is what you see in first person while holding the gun.
-- The **WorldModel** prefab: this is what other players see attached to your player while holding the gun.
+- The **WorldModel** prefab: this is what other players see in your player model's hands (including you, when in third person mode).
 
 After we've created those, we'll create the weapon prefab itself (with the BaseCombatWeapon component) and a scene to test it in.
 
