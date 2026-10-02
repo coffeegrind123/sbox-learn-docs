@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-10-01T12:39:06Z",
-  "count": 36,
+  "scraped_at": "2026-10-02T12:03:12Z",
+  "count": 37,
   "tutorials": [
     {
       "path": "facepunch/creating-a-door",
@@ -491,6 +491,21 @@
       "url": "https://sbox.game/learn/notpointless/retarget-humanoid-animations"
     },
     {
+      "path": "rabbi32/shaders-for-noobs",
+      "title": "📜 Writing Shaders For Beginners - HLSL",
+      "difficulty": "Beginner",
+      "topic": "Coding",
+      "content_type": "Text",
+      "tags": [
+        "beginner",
+        "hlsl",
+        "shaders",
+        "vfxwrapper"
+      ],
+      "author": "Rabbi32",
+      "url": "https://sbox.game/learn/rabbi32/shaders-for-noobs"
+    },
+    {
       "path": "aloshi/setting-up-a-weapon",
       "title": "Setting Up a Basic Weapon",
       "difficulty": "Beginner",
@@ -523,8 +538,8 @@
   ],
   "defender": {
     "active": true,
-    "scanned": 38,
-    "passed": 36,
+    "scanned": 39,
+    "passed": 37,
     "blocked": [
       {
         "source": "beswitched/git-lfs",
