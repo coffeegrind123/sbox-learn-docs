@@ -8,14 +8,14 @@ topic: Capable
 content_type: Text
 tags: [dedicated, dedicatedserver, guide, linux]
 rating: 2
-views: 1550
+views: 1553
 upvotes: 2
 downvotes: 0
 updated: 'Updated
 
-  17 days ago'
+  18 days ago'
 summary: Learn how to setup your own dediacted servers - no subscriptions needed
-scraped_at: '2026-10-03T11:15:50Z'
+scraped_at: '2026-10-04T11:55:40Z'
 ---
 
 # Setting up a Dedicated Server
