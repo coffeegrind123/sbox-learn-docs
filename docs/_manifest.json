@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-04T11:55:40Z",
+  "scraped_at": "2026-10-05T13:54:01Z",
   "count": 36,
   "tutorials": [
     {
@@ -377,6 +377,16 @@
       "url": "https://sbox.game/learn/tobidev5/dedicated-servers"
     },
     {
+      "path": "endf13ld/sprite-controller",
+      "title": "Creating a Sprite Controller in s&box",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [],
+      "author": "ENDF13LD",
+      "url": "https://sbox.game/learn/endf13ld/sprite-controller"
+    },
+    {
       "path": "titanovsky/sync_ava_cosm",
       "title": "👗 Sync avatar's cosmetics",
       "difficulty": "Beginner",
@@ -435,16 +445,6 @@
       ],
       "author": "Facepunch",
       "url": "https://sbox.game/learn/facepunch/citizen-look-at-targeting"
-    },
-    {
-      "path": "endf13ld/sprite-controller",
-      "title": "Creating a Sprite Controller in s&box",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Text",
-      "tags": [],
-      "author": "ENDF13LD",
-      "url": "https://sbox.game/learn/endf13ld/sprite-controller"
     },
     {
       "path": "titanovsky/useful_links_mapping",
