@@ -9,15 +9,15 @@ topic: Gameplay
 content_type: Text
 tags: [basecombatweapon, viewmodel, weapon, worldmodel]
 rating: 0
-views: 56
+views: 58
 upvotes: 0
 downvotes: 0
 updated: 'Updated
 
-  4 days ago'
+  5 days ago'
 summary: Set up a pistol that can be added to the Inventory component's Loadout as
   a starting weapon. Works in first and third person.
-scraped_at: '2026-10-05T13:54:01Z'
+scraped_at: '2026-10-06T12:57:44Z'
 ---
 
 # Setting Up a Basic Weapon
