@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-11T12:17:39Z",
+  "scraped_at": "2026-10-12T14:42:25Z",
   "count": 36,
   "tutorials": [
     {
@@ -235,6 +235,16 @@
       "url": "https://sbox.game/learn/titanovsky/cc-bton"
     },
     {
+      "path": "brax/resource-files",
+      "title": "Resource Files",
+      "difficulty": "Beginner",
+      "topic": "Platform",
+      "content_type": "Text",
+      "tags": [],
+      "author": "Braxnet",
+      "url": "https://sbox.game/learn/brax/resource-files"
+    },
+    {
       "path": "facepunch/creating-a-room",
       "title": "Creating Your First Room",
       "difficulty": "Beginner",
@@ -261,16 +271,6 @@
       ],
       "author": "cseliot",
       "url": "https://sbox.game/learn/cseliot/sbox-resources"
-    },
-    {
-      "path": "brax/resource-files",
-      "title": "Resource Files",
-      "difficulty": "Beginner",
-      "topic": "Platform",
-      "content_type": "Text",
-      "tags": [],
-      "author": "Braxnet",
-      "url": "https://sbox.game/learn/brax/resource-files"
     },
     {
       "path": "facepunch/map-publish",
