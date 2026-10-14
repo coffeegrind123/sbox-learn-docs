@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-10-13T13:45:58Z",
-  "count": 39,
+  "scraped_at": "2026-10-14T11:23:34Z",
+  "count": 38,
   "tutorials": [
     {
       "path": "facepunch/creating-a-door",
@@ -84,21 +84,6 @@
       ],
       "author": "Carson Kompon",
       "url": "https://sbox.game/learn/carsonk/shader_quality_settings"
-    },
-    {
-      "path": "tesa/ui-buildhash",
-      "title": "Understanding the Razor's Reactivity",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": null,
-      "tags": [
-        "hud",
-        "panel",
-        "razor",
-        "ui"
-      ],
-      "author": "Tea Sanctuary",
-      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "facepunch/twitch-api",
@@ -432,6 +417,18 @@
       "url": "https://sbox.game/learn/mensch/networkig-101"
     },
     {
+      "path": "redkite/razor-basics-text-buttons-events",
+      "title": "🧧 Razor basics: text, buttons and events",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": "Text",
+      "tags": [
+        "ui"
+      ],
+      "author": "redkite",
+      "url": "https://sbox.game/learn/redkite/razor-basics-text-buttons-events"
+    },
+    {
       "path": "rabbi32/shaders-for-noobs",
       "title": "📜 Writing Shaders For Beginners - HLSL",
       "difficulty": "Beginner",
@@ -521,18 +518,6 @@
       "url": "https://sbox.game/learn/notpointless/game-publishing"
     },
     {
-      "path": "redkite/razor-basics-text-buttons-events",
-      "title": "🧧 Razor basics: text, buttons and events",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": "Text",
-      "tags": [
-        "ui"
-      ],
-      "author": "redkite",
-      "url": "https://sbox.game/learn/redkite/razor-basics-text-buttons-events"
-    },
-    {
       "path": "redkite/2d-topdown-movement-tutorial",
       "title": "🧧 Top down 2D Player movement and sprite animation tutorial",
       "difficulty": "Beginner",
@@ -566,19 +551,26 @@
   "defender": {
     "active": true,
     "scanned": 41,
-    "passed": 39,
+    "passed": 38,
     "blocked": [
+      {
+        "source": "tesa/ui-buildhash",
+        "riskLevel": "high",
+        "tier2Score": 0.955236100951207,
+        "detections": [],
+        "patternsByField": {}
+      },
       {
         "source": "beswitched/git-lfs",
         "riskLevel": "high",
-        "tier2Score": 0.9539638408722914,
+        "tier2Score": 0.955977866717923,
         "detections": [],
         "patternsByField": {}
       },
       {
         "source": "nite/lowcfg",
         "riskLevel": "high",
-        "tier2Score": 0.9532728571294113,
+        "tier2Score": 0.9591342357570638,
         "detections": [],
         "patternsByField": {}
       }
