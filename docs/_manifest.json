@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-10-16T10:56:03Z",
-  "count": 40,
+  "scraped_at": "2026-10-17T10:18:01Z",
+  "count": 39,
   "tutorials": [
     {
       "path": "facepunch/creating-a-door",
@@ -84,21 +84,6 @@
       ],
       "author": "Carson Kompon",
       "url": "https://sbox.game/learn/carsonk/shader_quality_settings"
-    },
-    {
-      "path": "tesa/ui-buildhash",
-      "title": "Understanding the Razor's Reactivity",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": null,
-      "tags": [
-        "hud",
-        "panel",
-        "razor",
-        "ui"
-      ],
-      "author": "Tea Sanctuary",
-      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "facepunch/twitch-api",
@@ -474,6 +459,20 @@
       "url": "https://sbox.game/learn/facepunch/citizen-look-at-targeting"
     },
     {
+      "path": "notpointless/retarget-humanoid-animations",
+      "title": "Retargeting Humanoid Animations",
+      "difficulty": "Beginner",
+      "topic": "Animation",
+      "content_type": "Video",
+      "tags": [
+        "animation",
+        "humanoid",
+        "retargeting"
+      ],
+      "author": "chomnr",
+      "url": "https://sbox.game/learn/notpointless/retarget-humanoid-animations"
+    },
+    {
       "path": "ghage/claude-sbox-integration",
       "title": "Claude Code (and any MCP client) inside sbox-dev",
       "difficulty": null,
@@ -487,20 +486,6 @@
       ],
       "author": "ghage",
       "url": "https://sbox.game/learn/ghage/claude-sbox-integration"
-    },
-    {
-      "path": "notpointless/retarget-humanoid-animations",
-      "title": "Retargeting Humanoid Animations",
-      "difficulty": "Beginner",
-      "topic": "Animation",
-      "content_type": "Video",
-      "tags": [
-        "animation",
-        "humanoid",
-        "retargeting"
-      ],
-      "author": "chomnr",
-      "url": "https://sbox.game/learn/notpointless/retarget-humanoid-animations"
     },
     {
       "path": "titanovsky/useful_links_mapping",
@@ -579,19 +564,26 @@
   "defender": {
     "active": true,
     "scanned": 42,
-    "passed": 40,
+    "passed": 39,
     "blocked": [
+      {
+        "source": "tesa/ui-buildhash",
+        "riskLevel": "high",
+        "tier2Score": 0.955236100951207,
+        "detections": [],
+        "patternsByField": {}
+      },
       {
         "source": "beswitched/git-lfs",
         "riskLevel": "high",
-        "tier2Score": 0.9539638408722914,
+        "tier2Score": 0.955977866717923,
         "detections": [],
         "patternsByField": {}
       },
       {
         "source": "nite/lowcfg",
         "riskLevel": "high",
-        "tier2Score": 0.9532728571294113,
+        "tier2Score": 0.9591342357570638,
         "detections": [],
         "patternsByField": {}
       }
