@@ -1,10 +1,9 @@
 # The launcher, pinned to the SAME fork and commit the workflow downloads the
-# browser from (coffeegrind123/camoufox-beta cg.6). An unpinned `camoufox` pulled
+# browser from (coffeegrind123/camoufox-beta cg.8). An unpinned `camoufox` pulled
 # whatever PyPI had, a launcher from a different project than the build.
-camoufox[geoip] @ git+https://github.com/coffeegrind123/camoufox-beta.git@b418bb69f760b3f5647ec2408735af4ffc21e888#subdirectory=pythonlib
+camoufox[geoip] @ git+https://github.com/coffeegrind123/camoufox-beta.git@2fb5b55298505c79a9a1777ddcd6bdac3aaf9d45#subdirectory=python
 markdownify
 PyYAML
-# playwright 1.60 dispatches pageError with `location.url`, which the camoufox
-# Firefox juggler never sends. The driver then dies on the FIRST uncaught JS error
-# on any page, taking the whole scrape with it.
-playwright<1.60
+# playwright: the launcher's own bound. cg.8's Juggler sends pageError's
+# location.url (the reason for the old <1.60 pin), and its CI ran on 1.62.
+playwright<1.63
