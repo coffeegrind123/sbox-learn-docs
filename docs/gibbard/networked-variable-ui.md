@@ -9,14 +9,14 @@ topic: Networking
 content_type: Text
 tags: [beginner, networking, ui]
 rating: 4
-views: 3455
+views: 3459
 upvotes: 10
 downvotes: 0
 updated: 'Updated
 
   5 months ago'
 summary: How to show a networked variable in your UI, like a score or a timer.
-scraped_at: '2026-10-20T11:04:23Z'
+scraped_at: '2026-10-21T11:20:44Z'
 ---
 
 # Displaying networked variables in UI
