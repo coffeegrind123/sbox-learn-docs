@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-10-23T11:11:00Z",
-  "count": 40,
+  "scraped_at": "2026-10-24T10:29:11Z",
+  "count": 41,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -548,6 +548,20 @@
       "url": "https://sbox.game/learn/notpointless/game-publishing"
     },
     {
+      "path": "redkite/basic-game-resources-tutorial",
+      "title": "🧧 Basic resources tutorial",
+      "difficulty": "Beginner",
+      "topic": "Editor",
+      "content_type": "Text",
+      "tags": [
+        "editor",
+        "resources",
+        "ui"
+      ],
+      "author": "redkite",
+      "url": "https://sbox.game/learn/redkite/basic-game-resources-tutorial"
+    },
+    {
       "path": "redkite/drag-and-drop-ui-basics",
       "title": "🧧 Drag and drop cards UI",
       "difficulty": "Beginner",
@@ -578,8 +592,8 @@
   ],
   "defender": {
     "active": true,
-    "scanned": 42,
-    "passed": 40,
+    "scanned": 43,
+    "passed": 41,
     "blocked": [
       {
         "source": "beswitched/git-lfs",

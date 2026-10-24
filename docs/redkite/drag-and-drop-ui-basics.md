@@ -9,14 +9,14 @@ topic: UI
 content_type: Text
 tags: [razor, ui]
 rating: 0
-views: 63
+views: 70
 upvotes: 0
 downvotes: 0
 updated: 'Updated
 
-  8 days ago'
+  9 days ago'
 summary: A beginner friendly walk through for making drag and drop-able cards.
-scraped_at: '2026-10-23T11:11:00Z'
+scraped_at: '2026-10-24T10:29:11Z'
 ---
 
 # 🧧 Drag and drop cards UI
