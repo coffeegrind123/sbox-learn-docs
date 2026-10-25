@@ -1,7 +1,7 @@
 # The launcher, pinned to the SAME fork and commit the workflow downloads the
-# browser from (coffeegrind123/camoufox-beta cg.9). An unpinned `camoufox` pulled
+# browser from (coffeegrind123/camoufox-free cg.9). An unpinned `camoufox` pulled
 # whatever PyPI had, a launcher from a different project than the build.
-camoufox[geoip] @ git+https://github.com/coffeegrind123/camoufox-beta.git@f597fa67fe29030b38c10dab193679adf84c073d#subdirectory=python
+camoufox[geoip] @ git+https://github.com/coffeegrind123/camoufox-free.git@f597fa67fe29030b38c10dab193679adf84c073d#subdirectory=python
 markdownify
 PyYAML
 # playwright: the launcher's own bound. cg.9's Juggler sends pageError's

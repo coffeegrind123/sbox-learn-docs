@@ -79,10 +79,10 @@ pip install -r requirements.txt
 npm install --omit=dev
 
 # Camoufox needs a prebuilt binary. CI uses the patched fork at
-# coffeegrind123/camoufox-beta; locally you can either fetch the same
+# coffeegrind123/camoufox-free; locally you can either fetch the same
 # release or use a system-installed camoufox.
 mkdir -p camoufox_build
-curl -L -o camoufox.zip "https://github.com/coffeegrind123/camoufox-beta/releases/download/v158.0-beta.33-cg.9/camoufox-158.0-beta.33-lin.x86_64.zip"
+curl -L -o camoufox.zip "https://github.com/coffeegrind123/camoufox-free/releases/download/v158.0-beta.33-cg.9/camoufox-158.0-beta.33-lin.x86_64.zip"
 unzip camoufox.zip -d camoufox_build && rm camoufox.zip
 chmod +x camoufox_build/camoufox-bin
 
