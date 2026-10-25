@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-24T10:29:11Z",
+  "scraped_at": "2026-10-25T00:05:06Z",
   "count": 41,
   "tutorials": [
     {
@@ -260,6 +260,21 @@
       "url": "https://sbox.game/learn/brax/resource-files"
     },
     {
+      "path": "facepunch/map-publish",
+      "title": "Map Publishing",
+      "difficulty": "Beginner",
+      "topic": "Mapping",
+      "content_type": "Text",
+      "tags": [
+        "map",
+        "mapping",
+        "publish",
+        "scene"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/map-publish"
+    },
+    {
       "path": "facepunch/creating-a-room",
       "title": "Creating Your First Room",
       "difficulty": "Beginner",
@@ -286,21 +301,6 @@
       ],
       "author": "cseliot",
       "url": "https://sbox.game/learn/cseliot/sbox-resources"
-    },
-    {
-      "path": "facepunch/map-publish",
-      "title": "Map Publishing",
-      "difficulty": "Beginner",
-      "topic": "Mapping",
-      "content_type": "Text",
-      "tags": [
-        "map",
-        "mapping",
-        "publish",
-        "scene"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/map-publish"
     },
     {
       "path": "softsplit/porting-maps",

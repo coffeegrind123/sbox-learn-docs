@@ -9,14 +9,14 @@ topic: Mapping
 content_type: Text
 tags: [map, mapping]
 rating: 3
-views: 3630
+views: 3635
 upvotes: 5
 downvotes: 0
 updated: 'Updated
 
   5 months ago'
 summary: Build your first playable room in s&box using the Mapping tools.
-scraped_at: '2026-10-24T10:29:11Z'
+scraped_at: '2026-10-25T00:05:06Z'
 ---
 
 # Creating Your First Room
