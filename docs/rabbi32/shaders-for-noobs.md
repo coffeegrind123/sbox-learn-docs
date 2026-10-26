@@ -9,14 +9,14 @@ topic: Coding
 content_type: Text
 tags: [beginner, hlsl, shaders, vfxwrapper]
 rating: 2
-views: 133
+views: 141
 upvotes: 1
 downvotes: 0
 updated: 'Updated
 
-  23 days ago'
+  24 days ago'
 summary: Understand Shader code for S&box
-scraped_at: '2026-10-25T10:55:45Z'
+scraped_at: '2026-10-26T12:27:05Z'
 ---
 
 # 📜 Writing Shaders For Beginners - HLSL
