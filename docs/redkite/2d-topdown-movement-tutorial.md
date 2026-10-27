@@ -9,15 +9,15 @@ topic: Gameplay
 content_type: Text
 tags: [2d, animation, camera, gameplay]
 rating: 0
-views: 97
+views: 102
 upvotes: 0
 downvotes: 0
 updated: 'Updated
 
-  13 days ago'
+  14 days ago'
 summary: A beginner friendly walk through for making simple 2D top down animated movement
   with camera following.
-scraped_at: '2026-10-26T12:27:05Z'
+scraped_at: '2026-10-27T11:45:27Z'
 ---
 
 # 🧧 Top down 2D Player movement and sprite animation tutorial
