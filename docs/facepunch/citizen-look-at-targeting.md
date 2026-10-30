@@ -9,14 +9,14 @@ topic: Gameplay
 content_type: Text
 tags: [at, citizen, eyes, look]
 rating: 2
-views: 210
+views: 212
 upvotes: 1
 downvotes: 0
 updated: 'Updated
 
   one month ago'
 summary: get your player eyes and/or head to look at anything
-scraped_at: '2026-10-29T12:28:10Z'
+scraped_at: '2026-10-30T12:19:35Z'
 ---
 
 # Making eyes look-at a target (Citizens)

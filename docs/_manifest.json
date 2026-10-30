@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-29T12:28:10Z",
+  "scraped_at": "2026-10-30T12:19:35Z",
   "count": 41,
   "tutorials": [
     {
@@ -417,20 +417,8 @@
       "url": "https://sbox.game/learn/titanovsky/sync_ava_cosm"
     },
     {
-      "path": "redkite/razor-basics-text-buttons-events",
-      "title": "🧧 Razor basics: text, buttons and events",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": "Text",
-      "tags": [
-        "ui"
-      ],
-      "author": "redkite",
-      "url": "https://sbox.game/learn/redkite/razor-basics-text-buttons-events"
-    },
-    {
       "path": "rabbi32/shaders-for-noobs",
-      "title": "📜 Writing Shaders For Beginners - HLSL",
+      "title": "📜 Writing Shaders For Beginners",
       "difficulty": "Beginner",
       "topic": "Coding",
       "content_type": "Text",
@@ -442,6 +430,18 @@
       ],
       "author": "Rabbi32",
       "url": "https://sbox.game/learn/rabbi32/shaders-for-noobs"
+    },
+    {
+      "path": "redkite/razor-basics-text-buttons-events",
+      "title": "🧧 Razor basics: text, buttons and events",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": "Text",
+      "tags": [
+        "ui"
+      ],
+      "author": "redkite",
+      "url": "https://sbox.game/learn/redkite/razor-basics-text-buttons-events"
     },
     {
       "path": "facepunch/citizen-look-at-targeting",

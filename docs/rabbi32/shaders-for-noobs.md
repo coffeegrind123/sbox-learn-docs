@@ -1,5 +1,5 @@
 ---
-title: 📜 Writing Shaders For Beginners - HLSL
+title: 📜 Writing Shaders For Beginners
 slug: rabbi32/shaders-for-noobs
 url: https://sbox.game/learn/rabbi32/shaders-for-noobs
 author: Rabbi32
@@ -9,17 +9,17 @@ topic: Coding
 content_type: Text
 tags: [beginner, hlsl, shaders, vfxwrapper]
 rating: 2
-views: 155
+views: 162
 upvotes: 1
 downvotes: 0
 updated: 'Updated
 
-  27 days ago'
+  15 hours ago'
 summary: Understand Shader code for S&box
-scraped_at: '2026-10-29T12:28:10Z'
+scraped_at: '2026-10-30T12:19:35Z'
 ---
 
-# 📜 Writing Shaders For Beginners - HLSL
+# 📜 Writing Shaders For Beginners
 
 > Understand Shader code for S&box
 
