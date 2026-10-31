@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-30T12:19:35Z",
+  "scraped_at": "2026-10-31T11:50:50Z",
   "count": 41,
   "tutorials": [
     {
@@ -84,21 +84,6 @@
       ],
       "author": "Carson Kompon",
       "url": "https://sbox.game/learn/carsonk/shader_quality_settings"
-    },
-    {
-      "path": "tesa/ui-buildhash",
-      "title": "Understanding the Razor's Reactivity",
-      "difficulty": "Beginner",
-      "topic": "UI",
-      "content_type": null,
-      "tags": [
-        "hud",
-        "panel",
-        "razor",
-        "ui"
-      ],
-      "author": "Tea Sanctuary",
-      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "facepunch/twitch-api",
@@ -548,6 +533,20 @@
       "url": "https://sbox.game/learn/notpointless/game-publishing"
     },
     {
+      "path": "notpointless/creating-custom-player-models",
+      "title": "Importing & Rigging Custom Player Models",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Video",
+      "tags": [
+        "animation",
+        "character",
+        "importing"
+      ],
+      "author": "chomnr",
+      "url": "https://sbox.game/learn/notpointless/creating-custom-player-models"
+    },
+    {
       "path": "redkite/basic-game-resources-tutorial",
       "title": "🧧 Basic resources tutorial",
       "difficulty": "Beginner",
@@ -592,20 +591,27 @@
   ],
   "defender": {
     "active": true,
-    "scanned": 43,
+    "scanned": 44,
     "passed": 41,
     "blocked": [
       {
+        "source": "tesa/ui-buildhash",
+        "riskLevel": "high",
+        "tier2Score": 0.955236100951207,
+        "detections": [],
+        "patternsByField": {}
+      },
+      {
         "source": "beswitched/git-lfs",
         "riskLevel": "high",
-        "tier2Score": 0.9539638408722914,
+        "tier2Score": 0.955977866717923,
         "detections": [],
         "patternsByField": {}
       },
       {
         "source": "nite/lowcfg",
         "riskLevel": "high",
-        "tier2Score": 0.9532728571294113,
+        "tier2Score": 0.9591342357570638,
         "detections": [],
         "patternsByField": {}
       }
