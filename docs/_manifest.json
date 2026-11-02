@@ -1,6 +1,6 @@
 {
-  "scraped_at": "2026-11-01T12:50:24Z",
-  "count": 42,
+  "scraped_at": "2026-11-02T14:59:44Z",
+  "count": 43,
   "tutorials": [
     {
       "path": "shadb/jiggle-101",
@@ -548,6 +548,16 @@
       "url": "https://sbox.game/learn/notpointless/game-publishing"
     },
     {
+      "path": "brax/viewmodel-fov",
+      "title": "Seperate viewmodel FOV rendering",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Text",
+      "tags": [],
+      "author": "Braxnet",
+      "url": "https://sbox.game/learn/brax/viewmodel-fov"
+    },
+    {
       "path": "notpointless/creating-custom-player-models",
       "title": "Importing & Rigging Custom Player Models",
       "difficulty": null,
@@ -606,8 +616,8 @@
   ],
   "defender": {
     "active": true,
-    "scanned": 44,
-    "passed": 42,
+    "scanned": 45,
+    "passed": 43,
     "blocked": [
       {
         "source": "beswitched/git-lfs",
