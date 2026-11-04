@@ -6,14 +6,14 @@ author: Braxnet
 author_slug: brax
 topic: Capable
 content_type: Text
-rating: 0
-views: 39
-upvotes: 0
+rating: 2
+views: 46
+upvotes: 1
 downvotes: 0
 updated: 'Updated
 
   2 days ago'
-scraped_at: '2026-11-03T13:47:16Z'
+scraped_at: '2026-11-04T13:55:41Z'
 ---
 
 # Seperate viewmodel FOV rendering
