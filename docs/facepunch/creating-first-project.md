@@ -9,14 +9,14 @@ topic: Editor
 content_type: Text
 tags: [beginner, editor, game, guide]
 rating: 3
-views: 3186
+views: 3196
 upvotes: 3
 downvotes: 0
 updated: 'Updated
 
   5 months ago'
 summary: A beginners guide to creating your first project in the s&box editor
-scraped_at: '2026-11-04T13:55:41Z'
+scraped_at: '2026-11-06T13:53:14Z'
 ---
 
 # Creating your First Project
