@@ -6,16 +6,16 @@ author: chomnr
 author_slug: notpointless
 topic: Capable
 content_type: Video
-tags: [animations, character, importing]
-rating: 0
-views: 93
-upvotes: 0
+tags: [animations, character, easy, importing]
+rating: 2
+views: 107
+upvotes: 1
 downvotes: 0
 updated: 'Updated
 
-  8 days ago'
+  17 hours ago'
 summary: import and rig custom player models
-scraped_at: '2026-11-09T15:29:44Z'
+scraped_at: '2026-11-10T14:30:31Z'
 ---
 
 # Importing & Rigging Custom Player Models

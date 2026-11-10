@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-09T15:29:44Z",
+  "scraped_at": "2026-11-10T14:30:31Z",
   "count": 43,
   "tutorials": [
     {
@@ -417,6 +417,21 @@
       "url": "https://sbox.game/learn/titanovsky/sync_ava_cosm"
     },
     {
+      "path": "notpointless/creating-custom-player-models",
+      "title": "Importing & Rigging Custom Player Models",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Video",
+      "tags": [
+        "animations",
+        "character",
+        "easy",
+        "importing"
+      ],
+      "author": "chomnr",
+      "url": "https://sbox.game/learn/notpointless/creating-custom-player-models"
+    },
+    {
       "path": "rabbi32/shaders-for-noobs",
       "title": "📜 Writing Shaders For Beginners",
       "difficulty": "Beginner",
@@ -556,20 +571,6 @@
       ],
       "author": "chomnr",
       "url": "https://sbox.game/learn/notpointless/game-publishing"
-    },
-    {
-      "path": "notpointless/creating-custom-player-models",
-      "title": "Importing & Rigging Custom Player Models",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Video",
-      "tags": [
-        "animations",
-        "character",
-        "importing"
-      ],
-      "author": "chomnr",
-      "url": "https://sbox.game/learn/notpointless/creating-custom-player-models"
     },
     {
       "path": "redkite/basic-game-resources-tutorial",
