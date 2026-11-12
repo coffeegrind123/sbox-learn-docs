@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-11T19:28:22Z",
+  "scraped_at": "2026-11-12T14:47:02Z",
   "count": 42,
   "tutorials": [
     {
@@ -402,6 +402,20 @@
       "url": "https://sbox.game/learn/titanovsky/sync_ava_cosm"
     },
     {
+      "path": "notpointless/retarget-humanoid-animations",
+      "title": "Retargeting Humanoid Animations",
+      "difficulty": "Beginner",
+      "topic": "Animation",
+      "content_type": "Video",
+      "tags": [
+        "animation",
+        "humanoid",
+        "retargeting"
+      ],
+      "author": "chomnr",
+      "url": "https://sbox.game/learn/notpointless/retarget-humanoid-animations"
+    },
+    {
       "path": "notpointless/creating-custom-player-models",
       "title": "Importing & Rigging Custom Player Models",
       "difficulty": null,
@@ -484,18 +498,19 @@
       "url": "https://sbox.game/learn/aloshi/setting-up-a-weapon"
     },
     {
-      "path": "notpointless/retarget-humanoid-animations",
-      "title": "Retargeting Humanoid Animations",
+      "path": "redkite/2d-topdown-movement-tutorial",
+      "title": "🧧 Top down 2D Player movement and sprite animation tutorial",
       "difficulty": "Beginner",
-      "topic": "Animation",
-      "content_type": "Video",
+      "topic": "Gameplay",
+      "content_type": "Text",
       "tags": [
+        "2d",
         "animation",
-        "humanoid",
-        "retargeting"
+        "camera",
+        "gameplay"
       ],
-      "author": "chomnr",
-      "url": "https://sbox.game/learn/notpointless/retarget-humanoid-animations"
+      "author": "redkite",
+      "url": "https://sbox.game/learn/redkite/2d-topdown-movement-tutorial"
     },
     {
       "path": "ghage/claude-sbox-integration",
@@ -583,21 +598,6 @@
       ],
       "author": "redkite",
       "url": "https://sbox.game/learn/redkite/drag-and-drop-ui-basics"
-    },
-    {
-      "path": "redkite/2d-topdown-movement-tutorial",
-      "title": "🧧 Top down 2D Player movement and sprite animation tutorial",
-      "difficulty": "Beginner",
-      "topic": "Gameplay",
-      "content_type": "Text",
-      "tags": [
-        "2d",
-        "animation",
-        "camera",
-        "gameplay"
-      ],
-      "author": "redkite",
-      "url": "https://sbox.game/learn/redkite/2d-topdown-movement-tutorial"
     }
   ],
   "defender": {
