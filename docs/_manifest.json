@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-13T14:06:01Z",
+  "scraped_at": "2026-11-14T13:07:53Z",
   "count": 42,
   "tutorials": [
     {
@@ -387,6 +387,21 @@
       "url": "https://sbox.game/learn/endf13ld/sprite-controller"
     },
     {
+      "path": "redkite/2d-topdown-movement-tutorial",
+      "title": "🧧 Top down 2D Player movement and sprite animation tutorial",
+      "difficulty": "Beginner",
+      "topic": "Gameplay",
+      "content_type": "Text",
+      "tags": [
+        "2d",
+        "animation",
+        "camera",
+        "gameplay"
+      ],
+      "author": "redkite",
+      "url": "https://sbox.game/learn/redkite/2d-topdown-movement-tutorial"
+    },
+    {
       "path": "titanovsky/sync_ava_cosm",
       "title": "👗 Sync avatar's cosmetics",
       "difficulty": "Beginner",
@@ -496,21 +511,6 @@
       ],
       "author": "aloshi",
       "url": "https://sbox.game/learn/aloshi/setting-up-a-weapon"
-    },
-    {
-      "path": "redkite/2d-topdown-movement-tutorial",
-      "title": "🧧 Top down 2D Player movement and sprite animation tutorial",
-      "difficulty": "Beginner",
-      "topic": "Gameplay",
-      "content_type": "Text",
-      "tags": [
-        "2d",
-        "animation",
-        "camera",
-        "gameplay"
-      ],
-      "author": "redkite",
-      "url": "https://sbox.game/learn/redkite/2d-topdown-movement-tutorial"
     },
     {
       "path": "ghage/claude-sbox-integration",
