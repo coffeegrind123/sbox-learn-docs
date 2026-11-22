@@ -8,14 +8,14 @@ topic: Capable
 content_type: Video
 tags: [animations, character, easy, importing]
 rating: 2
-views: 179
-upvotes: 1
+views: 206
+upvotes: 2
 downvotes: 0
 updated: 'Updated
 
-  7 days ago'
+  12 days ago'
 summary: import and rig custom player models
-scraped_at: '2026-11-17T15:39:41Z'
+scraped_at: '2026-11-22T08:18:59Z'
 ---
 
 # Importing & Rigging Custom Player Models

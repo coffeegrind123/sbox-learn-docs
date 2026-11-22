@@ -17,7 +17,7 @@ updated: 'Updated
   6 months ago'
 summary: A comprehensive beginners resource collection helping you getting started
   with game development in s&box.
-scraped_at: '2026-11-17T15:39:41Z'
+scraped_at: '2026-11-22T08:18:59Z'
 ---
 
 # 🎓 Freaks Beginner Resources

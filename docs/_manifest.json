@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-17T15:39:41Z",
+  "scraped_at": "2026-11-22T08:18:59Z",
   "count": 42,
   "tutorials": [
     {
@@ -84,6 +84,21 @@
       ],
       "author": "Carson Kompon",
       "url": "https://sbox.game/learn/carsonk/shader_quality_settings"
+    },
+    {
+      "path": "tesa/ui-buildhash",
+      "title": "Understanding the Razor's Reactivity",
+      "difficulty": "Beginner",
+      "topic": "UI",
+      "content_type": null,
+      "tags": [
+        "hud",
+        "panel",
+        "razor",
+        "ui"
+      ],
+      "author": "Tea Sanctuary",
+      "url": "https://sbox.game/learn/tesa/ui-buildhash"
     },
     {
       "path": "facepunch/twitch-api",
@@ -188,6 +203,21 @@
       ],
       "author": "tobidev5",
       "url": "https://sbox.game/learn/tobidev5/ui-images"
+    },
+    {
+      "path": "redkite/2d-topdown-movement-tutorial",
+      "title": "🧧 Top down 2D Player movement and sprite animation tutorial",
+      "difficulty": "Beginner",
+      "topic": "Gameplay",
+      "content_type": "Text",
+      "tags": [
+        "2d",
+        "animation",
+        "camera",
+        "gameplay"
+      ],
+      "author": "redkite",
+      "url": "https://sbox.game/learn/redkite/2d-topdown-movement-tutorial"
     },
     {
       "path": "facepunch/creating-an-entity-for-sandbox",
@@ -362,6 +392,21 @@
       "url": "https://sbox.game/learn/facepunch/creating-first-project"
     },
     {
+      "path": "notpointless/creating-custom-player-models",
+      "title": "Importing & Rigging Custom Player Models",
+      "difficulty": null,
+      "topic": "Capable",
+      "content_type": "Video",
+      "tags": [
+        "animations",
+        "character",
+        "easy",
+        "importing"
+      ],
+      "author": "chomnr",
+      "url": "https://sbox.game/learn/notpointless/creating-custom-player-models"
+    },
+    {
       "path": "tobidev5/dedicated-servers",
       "title": "Setting up a Dedicated Server",
       "difficulty": null,
@@ -385,21 +430,6 @@
       "tags": [],
       "author": "ENDF13LD",
       "url": "https://sbox.game/learn/endf13ld/sprite-controller"
-    },
-    {
-      "path": "redkite/2d-topdown-movement-tutorial",
-      "title": "🧧 Top down 2D Player movement and sprite animation tutorial",
-      "difficulty": "Beginner",
-      "topic": "Gameplay",
-      "content_type": "Text",
-      "tags": [
-        "2d",
-        "animation",
-        "camera",
-        "gameplay"
-      ],
-      "author": "redkite",
-      "url": "https://sbox.game/learn/redkite/2d-topdown-movement-tutorial"
     },
     {
       "path": "titanovsky/sync_ava_cosm",
@@ -429,21 +459,6 @@
       ],
       "author": "chomnr",
       "url": "https://sbox.game/learn/notpointless/retarget-humanoid-animations"
-    },
-    {
-      "path": "notpointless/creating-custom-player-models",
-      "title": "Importing & Rigging Custom Player Models",
-      "difficulty": null,
-      "topic": "Capable",
-      "content_type": "Video",
-      "tags": [
-        "animations",
-        "character",
-        "easy",
-        "importing"
-      ],
-      "author": "chomnr",
-      "url": "https://sbox.game/learn/notpointless/creating-custom-player-models"
     },
     {
       "path": "rabbi32/shaders-for-noobs",
@@ -513,21 +528,6 @@
       "url": "https://sbox.game/learn/aloshi/setting-up-a-weapon"
     },
     {
-      "path": "ghage/claude-sbox-integration",
-      "title": "Claude Code (and any MCP client) inside sbox-dev",
-      "difficulty": null,
-      "topic": "Expert",
-      "content_type": "Text",
-      "tags": [
-        "agent",
-        "ai",
-        "automation",
-        "claude"
-      ],
-      "author": "ghage",
-      "url": "https://sbox.game/learn/ghage/claude-sbox-integration"
-    },
-    {
       "path": "mensch/networkig-101",
       "title": "Simple Multiplayer Game",
       "difficulty": null,
@@ -543,6 +543,21 @@
       "url": "https://sbox.game/learn/mensch/networkig-101"
     },
     {
+      "path": "ghage/claude-sbox-integration",
+      "title": "Claude Code (and any MCP client) inside sbox-dev",
+      "difficulty": null,
+      "topic": "Expert",
+      "content_type": "Text",
+      "tags": [
+        "agent",
+        "ai",
+        "automation",
+        "claude"
+      ],
+      "author": "ghage",
+      "url": "https://sbox.game/learn/ghage/claude-sbox-integration"
+    },
+    {
       "path": "titanovsky/useful_links_mapping",
       "title": "🏛️ Useful links / Полезные ссылки (Mapping)",
       "difficulty": "Beginner",
@@ -556,21 +571,6 @@
       ],
       "author": "Titanovsky",
       "url": "https://sbox.game/learn/titanovsky/useful_links_mapping"
-    },
-    {
-      "path": "notpointless/game-publishing",
-      "title": "Game Publishing",
-      "difficulty": "Beginner",
-      "topic": "Platform",
-      "content_type": null,
-      "tags": [
-        "development",
-        "editor",
-        "game",
-        "guide"
-      ],
-      "author": "chomnr",
-      "url": "https://sbox.game/learn/notpointless/game-publishing"
     },
     {
       "path": "redkite/basic-game-resources-tutorial",
@@ -602,27 +602,20 @@
   ],
   "defender": {
     "active": true,
-    "scanned": 45,
+    "scanned": 44,
     "passed": 42,
     "blocked": [
       {
-        "source": "tesa/ui-buildhash",
-        "riskLevel": "high",
-        "tier2Score": 0.955236100951207,
-        "detections": [],
-        "patternsByField": {}
-      },
-      {
         "source": "beswitched/git-lfs",
         "riskLevel": "high",
-        "tier2Score": 0.955977866717923,
+        "tier2Score": 0.9539638408722914,
         "detections": [],
         "patternsByField": {}
       },
       {
         "source": "nite/lowcfg",
         "riskLevel": "high",
-        "tier2Score": 0.9591342357570638,
+        "tier2Score": 0.9532728571294113,
         "detections": [],
         "patternsByField": {}
       }
