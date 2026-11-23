@@ -9,15 +9,15 @@ topic: Editor
 content_type: Text
 tags: [editor, resources, ui]
 rating: 0
-views: 107
+views: 113
 upvotes: 0
 downvotes: 0
 updated: 'Updated
 
-  29 days ago'
+  one month ago'
 summary: A beginner friendly walk through to defining and creating your own assets
   using resources.
-scraped_at: '2026-11-22T14:14:55Z'
+scraped_at: '2026-11-23T17:36:40Z'
 ---
 
 # 🧧 Basic resources tutorial
