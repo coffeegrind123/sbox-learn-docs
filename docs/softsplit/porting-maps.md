@@ -8,14 +8,14 @@ topic: Capable
 content_type: Text
 tags: [hammer, mapping, porting, source]
 rating: 3
-views: 5757
+views: 5769
 upvotes: 3
 downvotes: 0
 updated: 'Updated
 
   6 months ago'
 summary: Step-by-step guide on how to port maps from any Source engine game
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # Porting Source maps
@@ -73,6 +73,7 @@ You will usually be working with folders like these:
 
 ```
 C:\Program Files (x86)\Steam\steamapps\common\Half-Life Alyx\content\hlvr_addons\source1mod_imported\
+C:\Program Files (x86)\Steam\steamapps\common\Half-Life Alyx\game\hlvr_addons\source1mod_imported\C:\Program Files (x86)\Steam\steamapps\common\Half-Life Alyx\content\hlvr_addons\source1mod_imported\
 C:\Program Files (x86)\Steam\steamapps\common\Half-Life Alyx\game\hlvr_addons\source1mod_imported\
 ```
 
@@ -85,13 +86,17 @@ Do not only give the importer converted Source 2 materials and models. The VMF i
 Create a Source mod folder in the Half-Life: Alyx game directory:
 
 ```
-Half-Life Alyx/game/source1mod/
+Half-Life Alyx/game/source1mod/Half-Life Alyx/game/source1mod/
 ```
 
 Put the original Source content in there using the same structure it had in the old game:
 
 ```
 Half-Life Alyx/game/source1mod/gameinfo.txt
+Half-Life Alyx/game/source1mod/materials/
+Half-Life Alyx/game/source1mod/models/
+Half-Life Alyx/game/source1mod/sound/
+Half-Life Alyx/game/source1mod/scripts/Half-Life Alyx/game/source1mod/gameinfo.txt
 Half-Life Alyx/game/source1mod/materials/
 Half-Life Alyx/game/source1mod/models/
 Half-Life Alyx/game/source1mod/sound/
@@ -103,7 +108,7 @@ If the content is inside a Source `.vpk`, extract it first. Source 2 does not im
 You also need a matching folder on the content side for the VMF itself:
 
 ```
-Half-Life Alyx/content/source1mod/maps/your_map.vmf
+Half-Life Alyx/content/source1mod/maps/your_map.vmfHalf-Life Alyx/content/source1mod/maps/your_map.vmf
 ```
 
 Putting the VMF here is important. It tells the Source 2 tools that the file is coming from a Source content root.
@@ -116,6 +121,13 @@ Find the Source1Import block and point it at the source1mod folder with the foll
 
 ```
 Source1Import
+{
+    "importmod"             "source1mod"
+    "importdir"             "..\source1mod"
+
+    "createStaticOverlays"  "1"
+    "createPathParticleRopes"   "1"
+}Source1Import
 {
     "importmod"             "source1mod"
     "importdir"             "..\source1mod"
@@ -151,7 +163,7 @@ In the bottom-right file type dropdown, select Source 1 Map Files (.vmf) instead
 Open the VMF from your Source content directory:
 
 ```
-Half-Life Alyx/content/source1mod/maps/your_map.vmf
+Half-Life Alyx/content/source1mod/maps/your_map.vmfHalf-Life Alyx/content/source1mod/maps/your_map.vmf
 ```
 
 If the setup is correct, Hammer will upconvert the VMF into a Source 2 map. Entities that exist in Source 2 should come across. Other entities will be converted to new versions where the importer knows how. Source lights, for example, are usually converted into Source 2 lights.  
@@ -159,7 +171,7 @@ If the setup is correct, Hammer will upconvert the VMF into a Source 2 map. Enti
 Save the result as a `.vmap` in your Alyx addon content folder, for example:
 
 ```
-Half-Life Alyx/content/hlvr_addons/garrysmod_imported/maps/your_map.vmap
+Half-Life Alyx/content/hlvr_addons/garrysmod_imported/maps/your_map.vmapHalf-Life Alyx/content/hlvr_addons/garrysmod_imported/maps/your_map.vmap
 ```
 
 Compile or preview the map in Alyx before moving anything to s&box. This lets the tools generate resources and makes obvious import problems easier to find.
@@ -207,13 +219,16 @@ Alyx has a built-in path for converting old `.mdl` files, but it is picky. Chara
 To try a direct `.mdl` import, put the `.mdl` and its companion files in the same folder structure they had in Source. For example:
 
 ```
-Half-Life Alyx/content/source1mod/models/humans/group01/male_07.mdl
+Half-Life Alyx/content/source1mod/models/humans/group01/male_07.mdlHalf-Life Alyx/content/source1mod/models/humans/group01/male_07.mdl
 ```
 
 Then create a `.vmdl` file next to it with a reference to the old model:
 
 ```
 <!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+    m_sMDLFilename = "models/humans/group01/male_07.mdl"
+}<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
 {
     m_sMDLFilename = "models/humans/group01/male_07.mdl"
 }
@@ -224,13 +239,13 @@ Open that `.vmdl` in the Source 2 tools and it should try to compile itself into
 You still need `.vmat` materials in the matching material paths. If the old model used:
 
 ```
-materials/models/humans/male/group01/citizen_sheet.vmt
+materials/models/humans/male/group01/citizen_sheet.vmtmaterials/models/humans/male/group01/citizen_sheet.vmt
 ```
 
 then the Source 2 version should be:
 
 ```
-materials/models/humans/male/group01/citizen_sheet.vmat
+materials/models/humans/male/group01/citizen_sheet.vmatmaterials/models/humans/male/group01/citizen_sheet.vmat
 ```
 
 ModelDoc can also help clean up old converted models. Use File > Import > Import and Convert old .VMDL. It will process the old compiled model and write FBX files you can inspect or adjust. This is useful when a converted prop exists but needs cleanup before moving into s&box.

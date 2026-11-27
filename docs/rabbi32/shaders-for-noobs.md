@@ -9,14 +9,14 @@ topic: Coding
 content_type: Text
 tags: [beginner, hlsl, shaders, vfxwrapper]
 rating: 2
-views: 264
+views: 268
 upvotes: 1
 downvotes: 0
 updated: 'Updated
 
-  27 days ago'
+  28 days ago'
 summary: Understand Shader code for S&box
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # 📜 Writing Shaders For Beginners
@@ -135,6 +135,38 @@ VS
 PS
 {
     
+}   // FEATURES block is for implementing options that you can click in sidebar of the material editor
+FEATURES
+{
+    
+}
+
+// MODES block implements shader modes. They define ways to render with different passes or conditions.
+MODES 
+{
+    // This is a main rendering mode. You may want to always include it. 
+    Forward();
+    
+}
+
+// COMMON block allows defining variables and other data that you can access from any shader stage.
+COMMON
+{
+    
+}
+
+// In this area you can define any structs, or other stuff. 
+
+// VS block is your Vertex Shader, and obviously where vertices are manipulated.
+VS
+{
+    
+}
+
+// PS is a Pixel Shader (aka fragment shader). This is the final stage and where the color is manipulated.
+PS
+{
+    
 }
 ```
 
@@ -178,6 +210,29 @@ VS
 PS
 {
     
+}FEATURES
+{
+    
+}
+
+MODES 
+{ 
+    Forward();
+}
+
+COMMON
+{
+    
+}
+
+VS
+{
+    
+}
+
+PS
+{
+    
 }
 ```
 
@@ -191,6 +246,9 @@ FEATURES block is for implementing options that you can adjust on the left sideb
 FEATURES
 {
     #include "common/features.hlsl"
+} FEATURES
+{
+    #include "common/features.hlsl"
 }
 ```
 
@@ -202,6 +260,10 @@ Next, we will add rendering modes the **MODES** block. This section tells the ga
 
 ```
 MODES
+{
+    Forward();
+    //Depth(); // Try adding Depth if you want and see if you can see the changes
+}   MODES
 {
     Forward();
     //Depth(); // Try adding Depth if you want and see if you can see the changes
@@ -225,6 +287,9 @@ By default, any variables or textures inputs you create inside a vertex shader a
 COMMON
 {
     #include "common/shared.hlsl"
+}COMMON
+{
+    #include "common/shared.hlsl"
 }
 ```
 
@@ -238,6 +303,9 @@ COMMON
 struct VertexInput
 {
     #include "common/vertexinput.hlsl"
+}; // don't forget the semicolon won't compile without itstruct VertexInput
+{
+    #include "common/vertexinput.hlsl"
 }; // don't forget the semicolon won't compile without it
 ```
 
@@ -249,6 +317,9 @@ When the `VertexInput` is done is returns a `PixelInput` which in turn is data u
 
 ```
 struct PixelInput
+{
+    #include "common/pixelinput.hlsl"
+}; // same here don't forget the semicolon struct PixelInput
 {
     #include "common/pixelinput.hlsl"
 }; // same here don't forget the semicolon
@@ -272,6 +343,14 @@ In the **VS** *(Vertex Shader)* block is where we obviously have our Vertex Shad
     {
         
     } 
+}  VS
+{
+    #include "common/vertex.hlsl"
+
+    PixelInput MainVs( VertexInput i )
+    {
+        
+    } 
 }
 ```
 
@@ -282,6 +361,16 @@ In the **VS** *(Vertex Shader)* block is where we obviously have our Vertex Shad
 
 ```
 VS
+{
+    #include "common/vertex.hlsl"
+        
+    PixelInput MainVs( VertexInput i )
+    {
+        PixelInput o = ProcessVertex( i );
+
+        return FinalizeVertex( o );
+    }
+}     VS
 {
     #include "common/vertex.hlsl"
         
@@ -316,6 +405,14 @@ PS
     {
         
     } 
+}PS
+{
+    #include "common/pixel.hlsl"
+
+    float4 MainPs( PixelInput i ) : SV_Target0
+    {
+        
+    } 
 }
 ```
 
@@ -337,6 +434,16 @@ PS
 
         return float4( col, 1 );
     }
+}PS
+{
+    #include "common/pixel.hlsl"
+
+    float4 MainPs( PixelInput i ) : SV_Target0
+    {
+        float3 col = float3( 1, 0, 0 );
+
+        return float4( col, 1 );
+    }
 }
 ```
 
@@ -344,6 +451,50 @@ PS
 
 ```
 FEATURES
+{
+    #include "common/features.hlsl"
+}
+
+MODES
+{
+    Forward();
+    //Depth(); // Test out if you want
+}   
+
+COMMON
+{
+    #include "common/shared.hlsl"
+}
+
+struct VertexInput
+{
+    #include "common/vertexinput.hlsl"
+};
+
+struct PixelInput
+{
+    #include "common/pixelinput.hlsl"
+};
+
+VS
+{
+    #include "common/vertex.hlsl"
+    PixelInput MainVs( VertexInput i )
+    {
+        PixelInput o = ProcessVertex( i );
+        return FinalizeVertex( o );
+    }
+}    
+
+PS
+{
+    #include "common/pixel.hlsl"
+    float4 MainPs( PixelInput i ) : SV_Target0
+    {
+        float3 col = float3( 1, 0, 0 );
+        return float4( col, 1 );
+    }
+} FEATURES
 {
     #include "common/features.hlsl"
 }

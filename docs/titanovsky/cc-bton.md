@@ -8,14 +8,14 @@ difficulty: Beginner
 topic: UI
 tags: [button, razor, scss, ui]
 rating: 3
-views: 4121
+views: 4126
 upvotes: 11
 downvotes: 2
 updated: 'Updated
 
   6 months ago'
 summary: ok, let's go make
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # 👽 How to make button
@@ -50,13 +50,24 @@ In Razor, it's simple, just add a button and attach an event to it. It's not dif
   }
 
 // BuildHash and the other
+}<button class="close-button" onclick="@CloseMenu">✕</button>
+
+@code
+{
+
+  private void CloseMenu()
+  {
+	  Log.Info("ok, Garry, we closed 👽");
+  }
+
+// BuildHash and the other
 }
 ```
 
 Now comes the interesting part: the element responsible for displaying the cursor is that
 
 ```
-pointer-events: all;
+pointer-events: all;pointer-events: all;
 ```
 
 > If you want the panel to be closed by default, add this selector to the class that controls when the menu is open (for example, "visible-panel"). Otherwise, when the game starts, the cursor will appear even though the panel isn't visible.

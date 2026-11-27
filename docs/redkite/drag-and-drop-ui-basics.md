@@ -9,14 +9,14 @@ topic: UI
 content_type: Text
 tags: [razor, ui]
 rating: 0
-views: 167
+views: 169
 upvotes: 0
 downvotes: 0
 updated: 'Updated
 
   one month ago'
 summary: A beginner friendly walk through for making drag and drop-able cards.
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # 🧧 Drag and drop cards UI
@@ -63,11 +63,40 @@ Once created we want to build out our board which will hold both the drop zone a
         <HandCard />
     </div>
 </root>
+  
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+    <DropZone />
+    <div class="hand">
+        <HandCard />
+    </div>
+</root>
 ```
 
 Along with the following styles:
 
 ```
+BoardUI {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: all;
+  margin-top: 15rem;
+
+  .hand {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+}
+  
 BoardUI {
   width: 100%;
   height: 100%;
@@ -119,11 +148,51 @@ Next we will add the following code to our `DropZone.razor` component.
 
     }
 }
+  
+@using Sandbox;
+@using Sandbox.UI;
+@inherits Panel
+@namespace Sandbox
+
+<root></root>
+
+@code {
+    public static DropZone Hovered;
+    public static bool Dragging;
+
+    public override void Tick()
+    {
+        bool isHoveringOver = Dragging && Box.Rect.IsInside( Mouse.Position );
+
+        SetClass( "active", isHoveringOver );
+
+        if ( isHoveringOver )
+        {
+            Hovered = this;
+        }
+        else
+        {
+            Hovered = null;
+        }
+
+    }
+}
 ```
 
 And our styles to the `Dropzone.razor.scss`
 
 ```
+DropZone {
+  width: 150px;
+  height: 150px;
+  border: 2px dashed gray;
+
+  &.active {
+    border-color: yellow;
+    background-color: rgba(yellow, 0.2);
+  }
+}
+  
 DropZone {
   width: 150px;
   height: 150px;
@@ -187,11 +256,71 @@ Next we will add the following to our `PlayerCard.razor` component:
         }
     }
 }
+  
+@using Sandbox;
+@using Sandbox.UI;
+@inherits Panel
+@namespace Sandbox
+
+<root class="@(Held ? "held" : "")">
+    @(Held ? "Held" : "Idle")
+</root>
+
+@code {
+    bool Held;
+    Vector2 grabPosition;
+
+    protected override void OnMouseDown( MousePanelEvent e )
+    {
+        Held = true;
+        grabPosition = ScreenPositionToPanelPosition( Mouse.Position );
+        DropZone.Dragging = true;
+    }
+
+    protected override void OnMouseUp( MousePanelEvent e )
+    {
+        DropZone.Dragging = false;
+        Held = false;
+    }
+
+    public override void Tick()
+    {
+        if ( !Held )
+        {
+            return;
+        }
+        else
+        {
+            var local = Parent.ScreenPositionToPanelPosition( Mouse.Position ) * ScaleFromScreen;
+            Style.Left = Length.Pixels( local.x - grabPosition.x * ScaleFromScreen );
+            Style.Top = Length.Pixels( local.y - grabPosition.y * ScaleFromScreen );
+        }
+    }
+}
 ```
 
 And our styles to `PlayerCard.razor.scss`
 
 ```
+PlayerCard{
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+  font-size: large;
+  cursor: pointer;
+  pointer-events: all;
+
+  &.held {
+    z-index: 10;
+  }
+}
+  
 PlayerCard{
   position: absolute;
   width: 120px;

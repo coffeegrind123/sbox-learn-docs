@@ -9,7 +9,7 @@ topic: Gameplay
 content_type: Text
 tags: [2d, animation, camera, gameplay]
 rating: 2
-views: 289
+views: 300
 upvotes: 2
 downvotes: 0
 updated: 'Updated
@@ -17,7 +17,7 @@ updated: 'Updated
   one month ago'
 summary: A beginner friendly walk through for making simple 2D top down animated movement
   with camera following.
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # 🧧 Top down 2D Player movement and sprite animation tutorial
@@ -86,6 +86,20 @@ public sealed class CameraController : Component
         var desired = Target.WorldPosition + Offset;
         WorldPosition = WorldPosition.LerpTo( desired, FollowSpeed * Time.Delta );
     }
+}   
+using Sandbox;
+
+public sealed class CameraController : Component
+{
+    [Property] public GameObject Target { get; set; }
+    [Property] public Vector3 Offset { get; set; } = new Vector3( 0f, 0f, 500f );
+    [Property] public float FollowSpeed { get; set; } = 4f;
+
+    protected override void OnUpdate()
+    {
+        var desired = Target.WorldPosition + Offset;
+        WorldPosition = WorldPosition.LerpTo( desired, FollowSpeed * Time.Delta );
+    }
 }
 ```
 
@@ -98,6 +112,45 @@ Then in the inspector click and drag our **Player** object onto our **Camera's C
 Add a new component to our **Player** game object called **`PlayerController`** **.** Once create please open the file and add the following code:
 
 ```
+using Sandbox;
+
+public sealed class PlayerController : Component
+{
+    [Property] public float MoveSpeed { get; set; } = 200f;
+
+    private SpriteRenderer sprite;
+
+    protected override void OnStart()
+    {
+        sprite = Components.Get<SpriteRenderer>();
+    }
+
+    protected override void OnUpdate()
+    {
+        var input = Input.AnalogMove;
+
+        var moveDirection = new Vector3( -input.y, input.x, 0f );
+
+        var moving = !moveDirection.IsNearZeroLength;
+
+        if ( moving )
+        {
+            WorldPosition += moveDirection.Normal * MoveSpeed * Time.Delta;
+        }
+
+        if ( moveDirection.x < 0 )
+        {
+            sprite.FlipHorizontal = true;
+        }
+        else if ( moveDirection.x > 0 )
+        {
+            sprite.FlipHorizontal = false;
+        }
+
+        sprite.PlayAnimation( moving ? "Running" : "Idle" );
+    }
+}
+  
 using Sandbox;
 
 public sealed class PlayerController : Component

@@ -9,14 +9,14 @@ topic: Coding
 content_type: Text
 tags: [code, data, info, leaderboard]
 rating: 3
-views: 2450
+views: 2454
 upvotes: 4
 downvotes: 0
 updated: 'Updated
 
   5 months ago'
 summary: A brief insight on how to make use of s&box's stats service.
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # How do I use the Stats System?
@@ -41,7 +41,7 @@ There are two calls, depending on the kind of number:
 Both take an optional data dictionary as a final argument if you want to attach a small blob of JSON to the submission.
 
 ```
-Stats.SetValue("best-time", 42.3f, new Dictionary<string, object> { ["ReplayJson"] = json });
+Stats.SetValue("best-time", 42.3f, new Dictionary<string, object> { ["ReplayJson"] = json });Stats.SetValue("best-time", 42.3f, new Dictionary<string, object> { ["ReplayJson"] = json });
 ```
 
 Note: stats only count for the local player, so you'll have to use a RPC to make sure it's on the correct player.  
@@ -54,6 +54,7 @@ Refresh the local player, then read a value. A PlayerStat carries more than the 
 
 ```
 await Stats.LocalPlayer.Refresh();
+var stat = Stats.LocalPlayer.Get( "enemies-killed" );await Stats.LocalPlayer.Refresh();
 var stat = Stats.LocalPlayer.Get( "enemies-killed" );
 ```
 
@@ -71,6 +72,7 @@ Stats.Global works the same way but is summed across everyone who plays:
 
 ```
 await Stats.Global.Refresh();
+var killed = Stats.Global.Get( "enemies-killed" );await Stats.Global.Refresh();
 var killed = Stats.Global.Get( "enemies-killed" );
 ```
 
@@ -82,5 +84,6 @@ For per-map values there's a Stats.Map shortcut that keys everything to the curr
 
 ```
 Stats.Map.SetValue( "laps", 1 );
+var laps = Stats.Map.GetLocal( "laps" );Stats.Map.SetValue( "laps", 1 );
 var laps = Stats.Map.GetLocal( "laps" );
 ```

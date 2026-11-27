@@ -8,14 +8,14 @@ topic: Capable
 content_type: Text
 tags: [dedicated, dedicatedserver, guide, linux]
 rating: 2
-views: 1817
+views: 1821
 upvotes: 2
 downvotes: 0
 updated: 'Updated
 
   2 months ago'
 summary: Learn how to setup your own dediacted servers - no subscriptions needed
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # Setting up a Dedicated Server
@@ -51,6 +51,8 @@ Create a new root user for steamCmd:
 ```
 sudo useradd -m steam
 sudo passwd steam
+sudo usermod -aG sudo steamsudo useradd -m steam
+sudo passwd steam
 sudo usermod -aG sudo steam
 ```
 
@@ -58,6 +60,7 @@ Go to the  home folder:
 
 ```
 sudo -u steam -s
+cd ~sudo -u steam -s
 cd ~
 ```
 
@@ -65,56 +68,58 @@ Install Steamcmd on Ubuntu by pasting these commands in the terminal.
 
 ```
 sudo add-apt-repository multiverse; sudo dpkg --add-architecture i386; sudo apt update
+sudo apt install steamcmdsudo add-apt-repository multiverse; sudo dpkg --add-architecture i386; sudo apt update
 sudo apt install steamcmd
 ```
 
 You may need to agree to the license agreement. Then open steamCmd. Try these commands until your in steamCmd
 
 ```
-steamcmd
+steamcmdsteamcmd
 ```
 
 ```
-/usr/games/steamcmd
+/usr/games/steamcmd/usr/games/steamcmd
 ```
 
 ```
-~/Steam/steamcmd.sh
+~/Steam/steamcmd.sh~/Steam/steamcmd.sh
 ```
 
 ```
-~/.steam/steam/steamcmd/steamcmd.sh
+~/.steam/steam/steamcmd/steamcmd.sh~/.steam/steam/steamcmd/steamcmd.sh
 ```
 
 **If you see this text you succesfully started it:**
 
 ```
 Loading Steam API...OK
+Steam>Loading Steam API...OK
 Steam>
 ```
 
 Then create a directory for s&box:
 
 ```
-force_install_dir ~/.sbox
+force_install_dir ~/.sboxforce_install_dir ~/.sbox
 ```
 
 Then type this to login with a DIFFERENT steam account. You should never login with your main steam acoount, just create a new account. Then login with your password and type the verification code if needed
 
 ```
-login <username>
+login <username>login <username>
 ```
 
 Then wait for s&box to download after using this command:
 
 ```
-app_update 1892930 validate
+app_update 1892930 validateapp_update 1892930 validate
 ```
 
 ## Installing needed dependencies:
 
 ```
-sudo apt install -y libfontconfig1 fontconfig
+sudo apt install -y libfontconfig1 fontconfig sudo apt install -y libfontconfig1 fontconfig
 ```
 
 **Congratulations, you now have setup steamCmd. The only thing left is to publish the game and then start the server**
@@ -141,31 +146,31 @@ Now that your game is published, we will ony have to start the server.
 Use this command to start the dedicated server:
 
 ```
-~/.steam/steam/steamapps/common/sbox\ dedicated\ server/sbox-server +game <org>.<game> +hostname "Test Server"
+~/.steam/steam/steamapps/common/sbox\ dedicated\ server/sbox-server +game <org>.<game> +hostname "Test Server"~/.steam/steam/steamapps/common/sbox\ dedicated\ server/sbox-server +game <org>.<game> +hostname "Test Server"
 ```
 
 If you don't know your org or game name just go back to the game page in the browser. Look at the url. For exampe. <https://sbox.game/tobidev5/sweeper> is my url, so I have to do
 
 ```
-~/.steam/steam/steamapps/common/sbox\ dedicated\ server/sbox-server +game tobidev5.sweeper +hostname "Test Server"
+~/.steam/steam/steamapps/common/sbox\ dedicated\ server/sbox-server +game tobidev5.sweeper +hostname "Test Server"~/.steam/steam/steamapps/common/sbox\ dedicated\ server/sbox-server +game tobidev5.sweeper +hostname "Test Server"
 ```
 
 You will probably need to add port forwarding on your router. Use this command to see the port if you ned it. Typical ports are 27015 and 27016
 
 ```
-sudo ss -tulpn
+sudo ss -tulpnsudo ss -tulpn
 ```
 
 If  your firewall blocks the traffic, try disabling it to test if the firewall is the problem.
 
 ```
-sudo ufw disable
+sudo ufw disablesudo ufw disable
 ```
 
 But then it is highly recommende to turn it back on and only allow the ports s&box needs
 
 ```
-sudo ufw enable
+sudo ufw enablesudo ufw enable
 ```
 
 # **Tips:**
@@ -180,25 +185,26 @@ If the steamclient.so is missing, do this:
 
 ```
 mkdir -p /home/steam/.steam/sdk64
+ln -sf "/home/steam/.local/share/Steam/steamcmd/linux64/steamclient.so" \ /home/steam/.steam/sdk64/steamclient.somkdir -p /home/steam/.steam/sdk64
 ln -sf "/home/steam/.local/share/Steam/steamcmd/linux64/steamclient.so" \ /home/steam/.steam/sdk64/steamclient.so
 ```
 
 ```
-~/.steam/steam/steamapps/common/sbox dedicated server/sbox-server.sh: No such file or directory
+~/.steam/steam/steamapps/common/sbox dedicated server/sbox-server.sh: No such file or directory~/.steam/steam/steamapps/common/sbox dedicated server/sbox-server.sh: No such file or directory
 ```
 
 Try a few different paths. If none work, make sure you correctly installed the steam app.  
 Also try using the find command to see where the server is located
 
 ```
-find -name sbox-server*
+find -name sbox-server*find -name sbox-server*
 ```
 
 If the output is for exampe: ./.local/share/Steam/steamapps/common/sbox dedicated server/sbox-server.sh  
 just use that instead:
 
 ```
-~/.local/share/Steam/steamapps/common/sbox\ dedicated\ server/sbox-server +game tobidev5.sweeper +hostname "Test Server"
+~/.local/share/Steam/steamapps/common/sbox\ dedicated\ server/sbox-server +game tobidev5.sweeper +hostname "Test Server"~/.local/share/Steam/steamapps/common/sbox\ dedicated\ server/sbox-server +game tobidev5.sweeper +hostname "Test Server"
 ```
 
 Don't start 2 servers on one computer. It will just mess up the ports.

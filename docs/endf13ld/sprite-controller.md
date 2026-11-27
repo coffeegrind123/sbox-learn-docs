@@ -7,7 +7,7 @@ author_slug: endf13ld
 topic: Capable
 content_type: Text
 rating: 2
-views: 315
+views: 318
 upvotes: 2
 downvotes: 0
 updated: 'Updated
@@ -16,7 +16,7 @@ updated: 'Updated
 summary: The SpriteController in s&box uses C# to convert player input relative to
   the camera's perspective, drive horizontal and vertical movement via CharacterController,
   and trigger 4-way sprite animations.
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # Creating a Sprite Controller in s&box
@@ -56,6 +56,26 @@ protected override void OnStart()
 	{
 		SpriteRenderer.Sprite = ResourceLibrary.Get<Sprite>( "sprites/[name].sprite" );
 	}
+}[Property, Group( "Components" )] public CharacterController Controller { get; set; }
+[Property, Group( "Components" )] public SpriteRenderer SpriteRenderer { get; set; }
+[Property, Group( "Components" )] public CameraComponent TargetCamera { get; set; }
+
+[Property, Group( "Movement Settings" )] public float WalkSpeed { get; set; } = 150f;
+[Property, Group( "Movement Settings" )] public float RunSpeed { get; set; } = 250f;
+[Property, Group( "Movement Settings" )] public float Acceleration { get; set; } = 10f;
+
+protected override void OnStart()
+{
+	// Auto-acquire components if missing
+	Controller ??= Components.Get<CharacterController>();
+	SpriteRenderer ??= Components.Get<SpriteRenderer>();
+	TargetCamera ??= Scene.GetAllComponents<CameraComponent>().FirstOrDefault();
+
+	// Load fallback sprite resource if unassigned
+	if ( SpriteRenderer != null && SpriteRenderer.Sprite == null )
+	{
+		SpriteRenderer.Sprite = ResourceLibrary.Get<Sprite>( "sprites/[name].sprite" );
+	}
 }
 ```
 
@@ -73,6 +93,27 @@ Raw WASD input assumes fixed world coordinates. To ensure movement aligns with w
 
 ```
 private Vector3 CalculateWishDir()
+{
+	Vector3 moveInput = Input.AnalogMove;
+	Vector3 wishDir = Vector3.Zero;
+
+	if ( TargetCamera != null )
+	{
+		// Flatten camera directions onto the horizontal XY plane
+		Vector3 camForward = TargetCamera.WorldRotation.Forward.WithZ( 0 ).Normal;
+		Vector3 camRight = TargetCamera.WorldRotation.Right.WithZ( 0 ).Normal;
+
+		// Calculate world direction relative to camera facing angle
+		wishDir = (camForward * moveInput.x) - (camRight * moveInput.y);
+	}
+	else
+	{
+		// Fallback for fixed 2D world projection
+		wishDir = new Vector3( moveInput.x, -moveInput.y, 0f );
+	}
+
+	return wishDir.IsNearZeroLength ? Vector3.Zero : wishDir.Normal;
+}private Vector3 CalculateWishDir()
 {
 	Vector3 moveInput = Input.AnalogMove;
 	Vector3 wishDir = Vector3.Zero;
@@ -134,6 +175,32 @@ private void UpdateMovement( Vector3 wishDir )
 
 	Controller.Velocity = horizontalVel.WithZ( currentZ );
 	Controller.Move();
+}private void UpdateMovement( Vector3 wishDir )
+{
+	if ( Controller == null ) return;
+
+	// Determine target speed based on Sprint input
+	float targetSpeed = Input.Down( "Run" ) ? RunSpeed : WalkSpeed;
+	Vector3 targetVelocity = wishDir * targetSpeed;
+
+	// Smoothly interpolate horizontal movement
+	Vector3 currentVel = Controller.Velocity;
+	Vector3 horizontalVel = new Vector3( currentVel.x, currentVel.y, 0 );
+	horizontalVel = Vector3.Lerp( horizontalVel, targetVelocity, Time.Delta * Acceleration );
+
+	// Apply gravity when falling
+	float currentZ = currentVel.z;
+	if ( !Controller.IsOnGround )
+	{
+		currentZ += Scene.PhysicsWorld.Gravity.z * Time.Delta;
+	}
+	else
+	{
+		currentZ = 0;
+	}
+
+	Controller.Velocity = horizontalVel.WithZ( currentZ );
+	Controller.Move();
 }
 ```
 
@@ -149,6 +216,22 @@ To determine which direction the 2D sprite should face (`Up`, `Down`, `Left`, `R
 
 ```
 private enum Direction { Down, Up, Left, Right }
+private Direction currentDirection = Direction.Down;
+
+private void UpdateFacingDirection( Vector3 inputVector )
+{
+	if ( inputVector.LengthSquared < 0.001f ) return;
+
+	// Dominant Vertical vs Horizontal check
+	if ( MathF.Abs( inputVector.x ) > MathF.Abs( inputVector.y ) )
+	{
+		currentDirection = inputVector.x > 0 ? Direction.Up : Direction.Down;
+	}
+	else
+	{
+		currentDirection = inputVector.y < 0 ? Direction.Left : Direction.Right;
+	}
+}private enum Direction { Down, Up, Left, Right }
 private Direction currentDirection = Direction.Down;
 
 private void UpdateFacingDirection( Vector3 inputVector )
@@ -210,6 +293,38 @@ private void ChangeAnimation( string sequenceName )
 
 	activeSequence = sequenceName;
 	SpriteRenderer.PlayAnimation( sequenceName );
+}private string activeSequence = string.Empty;
+
+private void UpdateSpriteAnimation( Vector3 wishDir )
+{
+	if ( SpriteRenderer == null || SpriteRenderer.Sprite == null ) return;
+
+	bool isAttemptingToMove = !wishDir.IsNearZeroLength;
+	bool isSprinting = Input.Down( "Run" );
+
+	string targetSequence;
+
+	if ( isAttemptingToMove )
+	{
+		UpdateFacingDirection( wishDir );
+		string action = isSprinting ? "Run" : "Walk";
+		targetSequence = $"{action}{currentDirection}";
+	}
+	else
+	{
+		targetSequence = $"Idle{currentDirection}";
+	}
+
+	ChangeAnimation( targetSequence );
+}
+
+private void ChangeAnimation( string sequenceName )
+{
+	// Guard clause: avoid re-starting sequence if already playing
+	if ( activeSequence == sequenceName ) return;
+
+	activeSequence = sequenceName;
+	SpriteRenderer.PlayAnimation( sequenceName );
 }
 ```
 
@@ -229,6 +344,213 @@ The `SpriteController` implementation for s&box provides a foundation for top-do
 
 ```
 using Sandbox;
+using System;
+
+/// <summary>
+/// Handles 2D sprite movement, top-down camera projection, direction mapping,
+/// and automated state animation transitions for an sandbox character.
+/// </summary>
+public sealed class SpriteController : Component
+{
+    // =========================================================================
+    // COMPONENT REFERENCES & PROPERTIES
+    // =========================================================================
+
+    [Property, Group( "Components" )] public CharacterController Controller { get; set; }
+    [Property, Group( "Components" )] public SpriteRenderer SpriteRenderer { get; set; }
+    [Property, Group( "Components" )] public CameraComponent TargetCamera { get; set; }
+
+    [Property, Group( "Movement Settings" )] public float WalkSpeed { get; set; } = 150f;
+    [Property, Group( "Movement Settings" )] public float RunSpeed { get; set; } = 250f;
+    [Property, Group( "Movement Settings" )] public float Acceleration { get; set; } = 10f;
+
+    // Path to the primary .sprite asset containing sequences (WalkUp, IdleDown, etc.)
+    private const string SpriteResourcePath = "sprites/[name].sprite";
+
+    // Enum matching the cardinal direction suffix used in sprite animation sequences
+    private enum Direction { Down, Up, Left, Right }
+    private Direction currentDirection = Direction.Down;
+
+    // Animation state tracking
+    private string activeSequence = string.Empty;
+
+    // Expose current character velocity for external debug/HUD scripts
+    public Vector3 Velocity => Controller?.Velocity ?? Vector3.Zero;
+
+    // =========================================================================
+    // INITIALIZATION
+    // =========================================================================
+
+    protected override void OnStart()
+    {
+        // Automatically acquire necessary components on the same GameObject if unassigned in Inspector
+        Controller ??= Components.Get<CharacterController>();
+        SpriteRenderer ??= Components.Get<SpriteRenderer>();
+        TargetCamera ??= Scene.GetAllComponents<CameraComponent>().FirstOrDefault();
+
+        // Load default sprite resource if none is currently assigned
+        if ( SpriteRenderer != null && SpriteRenderer.Sprite == null )
+        {
+            SpriteRenderer.Sprite = ResourceLibrary.Get<Sprite>( SpriteResourcePath );
+        }
+    }
+
+    // =========================================================================
+    // ENGINE UPDATE LOOP
+    // =========================================================================
+
+    protected override void OnUpdate()
+    {
+        // 1. Calculate the player's intended direction in world/camera space
+        Vector3 wishDir = CalculateWishDir();
+
+        // 2. Apply movement physics to the CharacterController
+        UpdateMovement( wishDir );
+
+        // 3. Update active animation sequence based on input and facing direction
+        UpdateSpriteAnimation( wishDir );
+    }
+
+    // =========================================================================
+    // MOVEMENT CALCULATIONS
+    // =========================================================================
+
+    /// <summary>
+    /// Translates raw WASD/stick input into a normalized world-space vector relative to camera rotation.
+    /// </summary>
+    private Vector3 CalculateWishDir()
+    {
+        // Input.AnalogMove: X = W/S (Forward/Back), Y = A/D (Left/Right)
+        Vector3 moveInput = Input.AnalogMove;
+        Vector3 wishDir = Vector3.Zero;
+
+        if ( TargetCamera != null )
+        {
+            // Project camera directions onto the horizontal XY ground plane (ignoring Z elevation)
+            Vector3 camForward = TargetCamera.WorldRotation.Forward.WithZ( 0 ).Normal;
+            Vector3 camRight = TargetCamera.WorldRotation.Right.WithZ( 0 ).Normal;
+
+            // Construct movement relative to camera orientation
+            wishDir = (camForward * moveInput.x) - (camRight * moveInput.y);
+        }
+        else
+        {
+            // Direct world-space fallback if no camera component is linked
+            wishDir = new Vector3( moveInput.x, -moveInput.y, 0f );
+        }
+
+        // Return zero vector or normalized vector to ensure consistent movement speed diagonally
+        return wishDir.IsNearZeroLength ? Vector3.Zero : wishDir.Normal;
+    }
+
+    /// <summary>
+    /// Applies velocity, acceleration, and gravity to the s&amp;box CharacterController.
+    /// </summary>
+    private void UpdateMovement( Vector3 wishDir )
+    {
+        if ( Controller == null ) return;
+
+        // Select speed based on sprint key ("Run" action)
+        float targetSpeed = Input.Down( "Run" ) ? RunSpeed : WalkSpeed;
+        Vector3 targetVelocity = wishDir * targetSpeed;
+
+        // Smoothly interpolate horizontal movement velocity
+        Vector3 currentVel = Controller.Velocity;
+        Vector3 horizontalVel = new Vector3( currentVel.x, currentVel.y, 0 );
+        horizontalVel = Vector3.Lerp( horizontalVel, targetVelocity, Time.Delta * Acceleration );
+
+        // Apply gravity step when airborne
+        float currentZ = currentVel.z;
+        if ( !Controller.IsOnGround )
+        {
+            currentZ += Scene.PhysicsWorld.Gravity.z * Time.Delta;
+        }
+        else
+        {
+            currentZ = 0;
+        }
+
+        // Update physics velocity and execute CharacterController movement collision checks
+        Controller.Velocity = horizontalVel.WithZ( currentZ );
+        Controller.Move();
+    }
+
+    // =========================================================================
+    // SPRITE ANIMATION STATE MACHINE
+    // =========================================================================
+
+    /// <summary>
+    /// Selects and plays animation sequences based on intentional input (wishDir) rather than physical velocity.
+    /// This prevents sprite direction flipping when pushing into wall collisions.
+    /// </summary>
+    private void UpdateSpriteAnimation( Vector3 wishDir )
+    {
+        if ( SpriteRenderer == null ) return;
+
+        // Fallback check: ensure sprite asset is valid
+        if ( SpriteRenderer.Sprite == null )
+        {
+            SpriteRenderer.Sprite = ResourceLibrary.Get<Sprite>( SpriteResourcePath );
+            if ( SpriteRenderer.Sprite == null ) return;
+        }
+
+        // Check if player intends to move (prevents wall collision false-idles)
+        bool isAttemptingToMove = !wishDir.IsNearZeroLength;
+        bool isSprinting = Input.Down( "Run" );
+
+        string targetSequence;
+
+        if ( isAttemptingToMove )
+        {
+            // Determine cardinal direction using raw input vector
+            UpdateFacingDirection( wishDir );
+
+            string action = isSprinting ? "Run" : "Walk";
+            targetSequence = $"{action}{currentDirection}";
+        }
+        else
+        {
+            // Standstill state: Play simple Idle animation for the current facing direction
+            targetSequence = $"Idle{currentDirection}";
+        }
+
+        // Trigger sequence state change
+        ChangeAnimation( targetSequence );
+    }
+
+    /// <summary>
+    /// Evaluates input direction against camera projection axes to update cardinal facing direction.
+    /// </summary>
+    private void UpdateFacingDirection( Vector3 inputVector )
+    {
+        // 1. Ignore negligible input/stick drift to prevent unintentional direction flips
+        if ( inputVector.LengthSquared < 0.001f ) return;
+
+        // 2. Compare absolute X (Forward/Up) vs absolute Y (Lateral/Side) movement
+        if ( MathF.Abs( inputVector.x ) > MathF.Abs( inputVector.y ) )
+        {
+            // +X = Moving Up/Forward, -X = Moving Down/Backward
+            currentDirection = inputVector.x > 0 ? Direction.Up : Direction.Down;
+        }
+        else
+        {
+            // In camera space: -Y = Moving Left, +Y = Moving Right
+            currentDirection = inputVector.y < 0 ? Direction.Left : Direction.Right;
+        }
+    }
+
+    /// <summary>
+    /// Safely calls SpriteRenderer.PlayAnimation only when switching to a NEW sequence name.
+    /// Prevents resetting frame progression on every tick.
+    /// </summary>
+    private void ChangeAnimation( string sequenceName )
+    {
+        if ( activeSequence == sequenceName ) return;
+
+        activeSequence = sequenceName;
+        SpriteRenderer.PlayAnimation( sequenceName );
+    }
+} using Sandbox;
 using System;
 
 /// <summary>

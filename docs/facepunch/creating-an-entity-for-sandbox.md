@@ -9,14 +9,14 @@ topic: Coding
 content_type: Text
 tags: [code, entity, game, sandbox]
 rating: 4
-views: 3776
+views: 3782
 upvotes: 7
 downvotes: 0
 updated: 'Updated
 
   6 months ago'
 summary: A quick-guide on creating your first entity for our Sandbox game.
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # Creating an Entity for Sandbox
@@ -37,6 +37,50 @@ Create a new C# file for your bouncing behavior:
 
 ```
 public class BouncingEntity : Component
+{
+    /// <summary>
+    /// How strong each bounce impulse is.
+    /// </summary>
+    [Property, Range( 0, 5000 )]
+    public float BounceStrength { get; set; } = 1000f;
+
+    /// <summary>
+    /// How often (in seconds) the entity bounces.
+    /// </summary>
+    [Property]
+    public float BounceInterval { get; set; } = 5f;
+
+    /// <summary>
+    /// Tracks time since the last bounce.
+    /// </summary>
+    private TimeSince timeSinceBounce;
+
+    protected override void OnStart()
+    {
+        // Start the timer immediately
+        timeSinceBounce = 0f;
+    }
+
+    protected override void OnFixedUpdate()
+    {
+        // Only the authority should apply physics
+        if ( IsProxy ) return;
+
+        if ( timeSinceBounce < BounceInterval )
+            return;
+
+        // Reset the timer
+        timeSinceBounce = 0f;
+
+        // Get the Rigidbody to apply force
+        var rb = GetComponent<Rigidbody>();
+        if ( !rb.IsValid() ) return;
+
+        // Pick a random direction (normalized) and apply impulse
+        var randomDirection = Vector3.Random.Normal;
+        rb.ApplyImpulse( randomDirection * BounceStrength );
+    }
+}public class BouncingEntity : Component
 {
     /// <summary>
     /// How strong each bounce impulse is.
@@ -110,6 +154,16 @@ TimeSince is a lightweight struct that stores the time it was last set. Reading 
 
 ```
 TimeSince myTimer;
+
+// Start the timer
+myTimer = 0f;
+
+// Later...
+if ( myTimer > 5f )
+{
+    // 5 seconds have passed!
+    myTimer = 0f; // Reset
+}TimeSince myTimer;
 
 // Start the timer
 myTimer = 0f;

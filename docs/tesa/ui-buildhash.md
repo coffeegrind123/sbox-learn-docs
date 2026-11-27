@@ -8,14 +8,14 @@ difficulty: Beginner
 topic: UI
 tags: [hud, panel, razor, ui]
 rating: 4
-views: 5005
+views: 5009
 upvotes: 20
 downvotes: 1
 updated: 'Updated
 
   6 months ago'
 summary: A.K.A. "Why doesn't my panel update?"
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # Understanding the Razor's Reactivity
@@ -87,12 +87,64 @@ Copy the following code to your Panel Component:
             background-color: #46a1ff;
         }
     }
+</style>@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root class="root">
+    @* Empty for now! *@
+</root>
+
+<style>
+    .root {
+        /* Fill the whole screen */
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        /* Align the child elements in a row and put them in the middle of our screen */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        
+        color: black;
+        background-color: white;
+
+        /* Accept any mouse input */
+        pointer-events: all;
+    }
+
+    /* The common style that we will use for both counters */
+    .counter {
+        flex-direction: row;
+        gap: 8px;
+        font-size: 24px;
+    }
+
+    .button {
+        min-width: 32px;
+        height: 32px;
+        padding: 4px;
+        color: white;
+        font-weight: bold;
+        background-color: #3273eb;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: #46a1ff;
+        }
+    }
 </style>
 ```
 
 Now, the root panel is empty, but we will make a new panel for our counters. They will follow the same structure: (**DON'T COPY THIS CODE YET!**)
 
-# ``` <div class="counter"> <label class="button"> - </label> <label class="number"> 0 </label> <label class="button"> + </label> </div> ```
+# ``` <div class="counter"> <label class="button"> - </label> <label class="number"> 0 </label> <label class="button"> + </label> </div> <div class="counter"> <label class="button"> - </label> <label class="number"> 0 </label> <label class="button"> + </label> </div> ```
 
 The key difference will be in how we **create** the panel and how we **update** its state.
 
@@ -102,6 +154,41 @@ In order to fully appreciate the convenience of Razor, let's suffer together thr
 
 ```
 using Sandbox.UI;
+using Sandbox.UI.Construct;
+
+class ImperativeCounter : Panel
+{
+	Label buttonMinus;
+	Label buttonPlus;
+	Label counter;
+
+	int count = 0;
+
+	public ImperativeCounter()
+	{
+		AddClass( "counter" );
+
+		buttonMinus = Add.Label( "-", "button" );
+		buttonMinus.AddEventListener( "onclick", MinusOne );
+
+		counter = Add.Label( $"{count}" );
+
+		buttonPlus = Add.Label( "+", "button" );
+		buttonPlus.AddEventListener( "onclick", PlusOne );
+	}
+
+	void MinusOne()
+	{
+		count--;
+		Log.Info( $"New value: {count}" );
+	}
+
+	void PlusOne()
+	{
+		count++;
+		Log.Info( $"New value: {count}" );
+	}
+}using Sandbox.UI;
 using Sandbox.UI.Construct;
 
 class ImperativeCounter : Panel
@@ -150,6 +237,12 @@ Now add our new component to the root panel and start the scene by pressing the 
     <ImperativeCounter />
 </root>
 
+......
+
+<root class="root">
+    <ImperativeCounter />
+</root>
+
 ...
 ```
 
@@ -163,6 +256,49 @@ First, the **lazy** way. All the panels have a virtual method **Tick** that is b
 Copy the following code and restart the scene:
 
 ```
+using Sandbox.UI;
+using Sandbox.UI.Construct;
+
+class ImperativeCounter : Panel
+{
+	Label buttonMinus;
+	Label buttonPlus;
+	Label counter;
+
+	int count = 0;
+
+	public ImperativeCounter()
+	{
+		AddClass( "counter" );
+
+		buttonMinus = Add.Label( "-", "button" );
+		buttonMinus.AddEventListener( "onclick", MinusOne );
+
+		counter = Add.Label( $"{count}" );
+
+		buttonPlus = Add.Label( "+", "button" );
+		buttonPlus.AddEventListener( "onclick", PlusOne );
+	}
+
+	void MinusOne()
+	{
+		count--;
+		Log.Info( $"New value: {count}" );
+	}
+
+	void PlusOne()
+	{
+		count++;
+		Log.Info( $"New value: {count}" );
+	}
+
+	/* vvv NEW CODE BELOW vvv */
+	public override void Tick()
+	{
+		counter.Text = $"{count}";
+	}
+}
+  
 using Sandbox.UI;
 using Sandbox.UI.Construct;
 
@@ -250,11 +386,86 @@ class ImperativeCounter : Panel
 		counter.Text = $"{count}"; // <-- New code
 	}
 }
+  
+using Sandbox.UI;
+using Sandbox.UI.Construct;
+
+class ImperativeCounter : Panel
+{
+	Label buttonMinus;
+	Label buttonPlus;
+	Label counter;
+
+	int count = 0;
+
+	public ImperativeCounter()
+	{
+		AddClass( "counter" );
+
+		buttonMinus = Add.Label( "-", "button" );
+		buttonMinus.AddEventListener( "onclick", MinusOne );
+
+		counter = Add.Label( $"{count}" );
+
+		buttonPlus = Add.Label( "+", "button" );
+		buttonPlus.AddEventListener( "onclick", PlusOne );
+	}
+
+	void MinusOne()
+	{
+		count--;
+		counter.Text = $"{count}"; // <-- New code
+	}
+
+	void PlusOne()
+	{
+		count++;
+		counter.Text = $"{count}"; // <-- New code
+	}
+}
 ```
 
 Or, to avoid repeating the same code twice, let's make a **setter** that will be called automatically whenever anyone tries to modify the field:
 
 ```
+using Sandbox.UI;
+using Sandbox.UI.Construct;
+
+class ImperativeCounter : Panel
+{
+	Label buttonMinus;
+	Label buttonPlus;
+	Label counter;
+
+	// vvv Replace the old count variable with this code:
+	int count
+	{
+		get;
+		set
+		{
+			field = value;
+			if ( counter.IsValid() )
+			{
+				counter.Text = $"{count}";
+			}
+		}
+	} = 0;
+	// ^^^
+
+	public ImperativeCounter()
+	{
+		AddClass( "counter" );
+
+		buttonMinus = Add.Label( "-", "button" );
+		buttonMinus.AddEventListener( "onclick", () => count-- ); // <-- Now that the button's code fits in one line, let's make it an anonymous function
+
+		counter = Add.Label( $"{count}" );
+
+		buttonPlus = Add.Label( "+", "button" );
+		buttonPlus.AddEventListener( "onclick", () => count++ );
+	}
+}
+  
 using Sandbox.UI;
 using Sandbox.UI.Construct;
 
@@ -318,6 +529,17 @@ Let's make a new file called **ReactiveCounter.razor** and write the following c
 
 @code {
     int count = 0;
+}@using Sandbox.UI;
+@inherits Panel
+
+<root class="counter">
+    <label class="button" onclick=@(() => count--)>-</label>
+    <label class="number">@(count)</label>
+    <label class="button" onclick=@(() => count++)>+</label>
+</root>
+
+@code {
+    int count = 0;
 }
 ```
 
@@ -327,6 +549,15 @@ In our **root panel**, let's add both counters and give them the corresponding l
 
 ```
 ...
+
+<root class="root">
+    <label>Imperative counter:</label>
+    <ImperativeCounter />
+    <label>Reactive counter:</label>
+    <ReactiveCounter />
+</root>
+
+......
 
 <root class="root">
     <label>Imperative counter:</label>
@@ -361,6 +592,17 @@ First, change the code **ReactiveCounter** like so:
 
 @code {
     public int Count { get; set; } // <-- Notice the { get; set; } part - Razor's arguments only works with the *properties*, not *fields*!
+}@using Sandbox.UI;
+@inherits Panel
+
+<root class="counter">
+    <label class="button" onclick=@(() => Count--)>-</label>
+    <label class="number">@(Count)</label>
+    <label class="button" onclick=@(() => Count++)>+</label>
+</root>
+
+@code {
+    public int Count { get; set; } // <-- Notice the { get; set; } part - Razor's arguments only works with the *properties*, not *fields*!
 }
 ```
 
@@ -368,6 +610,20 @@ And for the **root panel**, let's remove the old **ImperativeCounter** panel and
 
 ```
 ...
+
+<root class="root">
+    <label>Reactive counter:</label>
+    <ReactiveCounter Count=@Count />
+</root>
+
+<style>
+...
+/* Keep the same styles as before! */
+</style>
+
+@code {
+    int Count { get; set; } = 10; // <-- Notice the { get; set; } part - Razor's arguments only works with the *properties*, not *fields*!
+}...
 
 <root class="root">
     <label>Reactive counter:</label>
@@ -397,6 +653,14 @@ Oh! Let's also add a button above that adds 100!
     <ReactiveCounter Count=@Count />
 </root>
 
+......
+
+<root class="root">
+    <label class="button" onclick=@(() => Count += 100)>Add 100!</label>
+    <label>Reactive counter:</label>
+    <ReactiveCounter Count=@Count />
+</root>
+
 ...
 ```
 
@@ -406,6 +670,14 @@ Let's add a **two-way** bind - Razor's way to let both the parent panel and its 
 
 ```
 ...
+
+<root class="root">
+    <label class="button" onclick=@(() => Count += 100)>Add 100!</label>
+    <label>Reactive counter:</label>
+    <ReactiveCounter Count:bind=@Count />
+</root>
+
+......
 
 <root class="root">
     <label class="button" onclick=@(() => Count += 100)>Add 100!</label>
@@ -428,6 +700,16 @@ You see, we got lucky the first time: every move or click of the pointer generat
 
 ```
 ...
+
+@code {
+    public int Count { get; set; }
+
+    public override void Tick()
+    {
+        // NEVER DO THIS!!! Every time you do StateHasChanged() in a Tick() function, God kills a kitten
+        StateHasChanged();
+    }
+}...
 
 @code {
     public int Count { get; set; }
@@ -466,6 +748,25 @@ That's an efficient way to do it, and it's much simpler than you think: all you 
         return HashCode.Combine(Count); // <-- New code
     }
 }
+  
+@using System;
+@using Sandbox.UI;
+@inherits Panel
+
+<root class="counter">
+    <label class="button" onclick=@(() => Count--)>-</label>
+    <label class="number">@(Count)</label>
+    <label class="button" onclick=@(() => Count++)>+</label>
+</root>
+
+@code {
+    public int Count { get; set; }
+
+    protected override int BuildHash()
+    {
+        return HashCode.Combine(Count); // <-- New code
+    }
+}
 ```
 
 Restart the scene (just in case), and our panel should work the same way as before - but this time, it doesn't do any extra work!   
@@ -473,6 +774,17 @@ Restart the scene (just in case), and our panel should work the same way as befo
 **HashCode.Combine** can process almost any type of field *(except some complex stuff like custom classes - you've got to implement the hash function for that yourself)*:
 
 ```
+@code {
+    public int N { get; set; }
+    public string S { get; set; }
+    public Action F { get; set; }
+
+    protected override int BuildHash()
+    {
+        return HashCode.Combine(N, S, F);
+    }
+}
+  
 @code {
     public int N { get; set; }
     public string S { get; set; }

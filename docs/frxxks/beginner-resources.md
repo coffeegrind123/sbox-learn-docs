@@ -17,7 +17,7 @@ updated: 'Updated
   6 months ago'
 summary: A comprehensive beginners resource collection helping you getting started
   with game development in s&box.
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # 🎓 Freaks Beginner Resources
@@ -135,6 +135,18 @@ There are currently 3 officially supported IDE's available: [Visual Studio](http
 > public partial class MyCustomComponent : Component
 > {
 > // Your component code goes here...
+> }/// <summary>
+> /// My cool custom component description here.
+> /// </summary>
+>
+> [Title( "My Custom Component" )]
+> [Category( "My Custom Category" )]
+> [Icon( "settings" )] // https://fonts.google.com/icons?icon.set=Material+Icons
+> [Alias( "Cool Component" )]
+>
+> public partial class MyCustomComponent : Component
+> {
+> // Your component code goes here...
 > }
 > ```
 
@@ -142,6 +154,11 @@ There are currently 3 officially supported IDE's available: [Visual Studio](http
 
 > ```
 > [Button, Title("Press Me!"), Description("This appears when you hover the button")]
+> public void TestButton()
+> {
+>   Log.Info( "Button Pressed!" );
+>   // Put the code for what the button should do here.
+> }[Button, Title("Press Me!"), Description("This appears when you hover the button")]
 > public void TestButton()
 > {
 >   Log.Info( "Button Pressed!" );
@@ -190,11 +207,7 @@ There are currently 3 officially supported IDE's available: [Visual Studio](http
 
 ## 🐧 **Linux**
 
-> - [s&box Linux Discord](https://discord.gg/haZt7xbmBT)[Discord
->
->   Join the Unofficial s&box Linux Community Discord Server!
->
->   Check out the Unofficial s&box Linux Community community on Discord - hang out with 150 other members and enjoy free voice and text chat.](https://discord.gg/haZt7xbmBT)
+> - [s&box Linux Discord](https://discord.gg/haZt7xbmBT)
 
 [![](https://cdn.sbox.game/upload/b/b419bcfb/f196/4044/b198/15cb7ada1ae3.png)](https://cdn.sbox.game/upload/b/b419bcfb/f196/4044/b198/15cb7ada1ae3.png)
 

@@ -9,14 +9,14 @@ topic: UI
 content_type: Text
 tags: [ui]
 rating: 2
-views: 183
+views: 186
 upvotes: 1
 downvotes: 0
 updated: 'Updated
 
   one month ago'
 summary: A beginner friendly walk through for making simple interactive game UI.
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # 🧧 Razor basics: text, buttons and events
@@ -77,6 +77,31 @@ Open `PlayerHUD.razor` and replace its content with the following
 
 		Health -= 25;
 	}
+}@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+	<div class="health">@HealthText</div>
+	<button onclick=@TakeDamage>take damage</button>
+</root>
+
+@code
+{
+	public int Health { get; set; } = 100;
+
+	string HealthText => Health <= 0 ? "u died" : $"Health {Health}";
+
+	void TakeDamage()
+	{
+		if ( Health <= 0 )
+		{
+			return;
+		}
+
+		Health -= 25;
+	}
 }
 ```
 
@@ -90,6 +115,32 @@ Open `PlayerHUD.razor.scss` and replace it with this:
 
 ```
 PlayerHUD
+{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(68, 68, 68, 0.35);
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	pointer-events: all;
+
+	.health
+	{
+		font-size: 64px;
+		color: #fff;
+	}
+
+	button
+	{
+		font-size: 24px;
+		color: #fff;
+		background-color: #222;
+		padding: 12px 24px;
+		margin-top: 16px;
+		cursor: pointer;
+	}
+}PlayerHUD
 {
 	width: 100%;
 	height: 100%;

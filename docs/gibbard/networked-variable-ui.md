@@ -9,14 +9,14 @@ topic: Networking
 content_type: Text
 tags: [beginner, networking, ui]
 rating: 4
-views: 3582
+views: 3586
 upvotes: 10
 downvotes: 0
 updated: 'Updated
 
   6 months ago'
 summary: How to show a networked variable in your UI, like a score or a timer.
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # Displaying networked variables in UI
@@ -40,6 +40,10 @@ To sync a variable across the network, add the [Sync] attribute above it:
 public int RedTeamScore { get; set; }
 
 [Sync] 
+public int BlueTeamScore { get; set; }[Sync] 
+public int RedTeamScore { get; set; }
+
+[Sync] 
 public int BlueTeamScore { get; set; }
 ```
 
@@ -53,6 +57,7 @@ For example:
 
 ```
 ScoreManager
+└── ScoreManager.csScoreManager
 └── ScoreManager.cs
 ```
 
@@ -95,6 +100,24 @@ Now we can display the synced scores on screen. In your scene:[![](https://cdn.s
 	[Property] public ScoreManager ScoreManager { get; set; }
 
 	protected override int BuildHash() => System.HashCode.Combine( ScoreManager.RedTeamScore, ScoreManager.BlueTeamScore );
+}@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+	<div>
+		<p>@ScoreManager.RedTeamScore</p>
+		<p>-</p>
+		<p>@ScoreManager.BlueTeamScore</p>
+	</div>
+</root>
+
+@code
+{
+	[Property] public ScoreManager ScoreManager { get; set; }
+
+	protected override int BuildHash() => System.HashCode.Combine( ScoreManager.RedTeamScore, ScoreManager.BlueTeamScore );
 }
 ```
 
@@ -103,6 +126,7 @@ Let's understand what is happening with this code.
 
 ```
 [Property]
+public ScoreManager ScoreManager { get; set; }[Property]
 public ScoreManager ScoreManager { get; set; }
 ```
 
@@ -113,7 +137,7 @@ After saving the script, don’t forget to assign the reference in the Inspector
 **Updating the UI when values change**
 
 ```
-protected override int BuildHash()
+protected override int BuildHash()protected override int BuildHash()
 ```
 
 BuildHash() tells Razor when the UI should refresh.  
@@ -124,6 +148,9 @@ By combining the synced score variables into the hash, the UI automatically upda
 System.HashCode.Combine(
     ScoreManager.RedTeamScore,
     ScoreManager.BlueTeamScore
+);System.HashCode.Combine(
+    ScoreManager.RedTeamScore,
+    ScoreManager.BlueTeamScore
 );
 ```
 
@@ -132,7 +159,7 @@ System.HashCode.Combine(
 Inside the <root> block, you can display C# values directly in HTML-like markup:
 
 ```
-<p>@ScoreManager.RedTeamScore</p>
+<p>@ScoreManager.RedTeamScore</p><p>@ScoreManager.RedTeamScore</p>
 ```
 
 The @ symbol lets you insert C# values into the UI.  

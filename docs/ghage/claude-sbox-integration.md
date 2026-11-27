@@ -8,7 +8,7 @@ topic: Expert
 content_type: Text
 tags: [agent, ai, automation, claude]
 rating: 1
-views: 5684
+views: 5698
 upvotes: 3
 downvotes: 6
 updated: 'Updated
@@ -16,7 +16,7 @@ updated: 'Updated
   6 months ago'
 summary: Wire a coding agent into the live editor — drive the scene, query the API,
   write C#, all over a localhost MCP server.
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # Claude Code (and any MCP client) inside sbox-dev
@@ -69,6 +69,9 @@ You need a working sbox-public checkout (`git clone --recursive https://github.c
 git clone https://github.com/coffeegrind123/claude-sbox-setup.git
 cd claude-sbox-setup
 .\Setup.bat
+.\Bootstrap-And-Capture.batgit clone https://github.com/coffeegrind123/claude-sbox-setup.git
+cd claude-sbox-setup
+.\Setup.bat
 .\Bootstrap-And-Capture.bat
 ```
 
@@ -79,13 +82,13 @@ cd claude-sbox-setup
 **Launch the editor + install the addon.** Then:
 
 ```
-..\..\sbox-dev.exe
+..\..\sbox-dev.exe..\..\sbox-dev.exe
 ```
 
 Open any project, open the developer console, and run **once, ever**:
 
 ```
-package_install ghage.claude-sbox tools
+package_install ghage.claude-sbox toolspackage_install ghage.claude-sbox tools
 ```
 
 Restart the editor. From here on, every editor restart on every project automatically mounts the latest addon from a global cache at `<sbox-public>/game/.sbox-global/cloud/.bin/` — no redownload, works offline. The MCP host comes up automatically on `http://127.0.0.1:6790`.
@@ -95,7 +98,7 @@ Restart the editor. From here on, every editor restart on every project automati
 **HTTP** (no bridge needed, easiest):
 
 ```
-claude mcp add --transport http -s user sbox http://127.0.0.1:6790/mcp
+claude mcp add --transport http -s user sbox http://127.0.0.1:6790/mcpclaude mcp add --transport http -s user sbox http://127.0.0.1:6790/mcp
 ```
 
 If you run Claude Code inside a devcontainer, swap to `http://host.docker.internal:6790/mcp`. On Linux Docker engines you'll need `--add-host=host.docker.internal:host-gateway` on your container.  
@@ -103,7 +106,7 @@ If you run Claude Code inside a devcontainer, swap to `http://host.docker.intern
 **Stdio bridge** (Claude Desktop, Cline, anything that doesn't speak HTTP MCP):
 
 ```
-claude mcp add --transport stdio -s user sbox node "$(pwd)/bridge/dist/bridge.js"
+claude mcp add --transport stdio -s user sbox node "$(pwd)/bridge/dist/bridge.js"claude mcp add --transport stdio -s user sbox node "$(pwd)/bridge/dist/bridge.js"
 ```
 
 The bridge ships pre-built at `game/addons/claude-sbox-setup/bridge/dist/bridge.js` — single self-contained file, Node 20+, no `node_modules` at runtime.  
@@ -118,6 +121,11 @@ From `<sbox-public>/game/addons/claude-sbox-setup/`:
 
 ```
 # Linux / Mac / WSL
+mkdir -p ~/.claude/skills && cp -r skill ~/.claude/skills/sbox-live
+
+# Windows PowerShell
+New-Item -ItemType Directory -Force "$HOME/.claude/skills" | Out-Null
+Copy-Item -Recurse skill "$HOME/.claude/skills/sbox-live"# Linux / Mac / WSL
 mkdir -p ~/.claude/skills && cp -r skill ~/.claude/skills/sbox-live
 
 # Windows PowerShell
@@ -170,6 +178,9 @@ Routine updates have a fixed order — engine → setup tooling → addon. The s
 cd <sbox-public>\game\addons\claude-sbox-setup
 git pull
 .\Safe-Pull.bat
+.\Bootstrap-And-Capture.batcd <sbox-public>\game\addons\claude-sbox-setup
+git pull
+.\Safe-Pull.bat
 .\Bootstrap-And-Capture.bat
 ```
 
@@ -181,6 +192,7 @@ If the `git pull` brought in `skill/` changes, refresh your installed skill:
 
 ```
 Copy-Item "skill\SKILL.md" "$HOME/.claude/skills/sbox-live/SKILL.md" -Force
+Copy-Item "skill\references\*" "$HOME/.claude/skills/sbox-live/references/" -Force -RecurseCopy-Item "skill\SKILL.md" "$HOME/.claude/skills/sbox-live/SKILL.md" -Force
 Copy-Item "skill\references\*" "$HOME/.claude/skills/sbox-live/references/" -Force -Recurse
 ```
 

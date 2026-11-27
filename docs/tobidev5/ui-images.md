@@ -9,14 +9,14 @@ topic: UI
 content_type: Text
 tags: [css, image, images, panel]
 rating: 3
-views: 1964
+views: 1966
 upvotes: 5
 downvotes: 0
 updated: 'Updated
 
   4 months ago'
 summary: How to add images to your razor ui
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # Adding images to UI
@@ -31,6 +31,21 @@ Adding images to s&box is harder than it seems, because they aren't automaticall
 
 ```
 @using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@namespace Sandbox
+
+<root>
+ <div class>
+ <img src=@IMAGE_PATH />
+ </div>
+</root>
+
+@code
+{
+ public const string IMAGE_PATH = $"Ui/Images/example.png";
+ protected override int BuildHash() => System.HashCode.Combine(IMAGE_PATH);
+}@using Sandbox;
 @using Sandbox.UI;
 @inherits PanelComponent
 @namespace Sandbox
@@ -63,6 +78,16 @@ public sealed class ImageComponent : Component
 		screenPanel = GameObject.Components.GetOrCreate<ScreenPanel>();
 		UiElement = GameObject.Components.GetOrCreate<ImageExample>();
 	}
+}using System;
+public sealed class ImageComponent : Component
+{
+	public ScreenPanel screenPanel;
+	public ImageExample UiElement;
+	protected override void OnAwake()
+	{
+		screenPanel = GameObject.Components.GetOrCreate<ScreenPanel>();
+		UiElement = GameObject.Components.GetOrCreate<ImageExample>();
+	}
 }
 ```
 
@@ -74,6 +99,25 @@ After saving the scene, you should see the image.
 
 ```
 root {
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+
+    border-radius: 16px;
+    object-fit: cover;
+}root {
     justify-content: center;
     align-items: center;
 }

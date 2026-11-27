@@ -8,7 +8,7 @@ topic: Capable
 content_type: Text
 tags: [code, data, ghost, maker]
 rating: 4
-views: 3037
+views: 3043
 upvotes: 7
 downvotes: 0
 updated: 'Updated
@@ -16,7 +16,7 @@ updated: 'Updated
   5 months ago'
 summary: How to leverage storing information in stats to make a ghost replay system
   powered by Movie Maker.
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # Ghost Replays via Movie Maker + Stats Data
@@ -49,6 +49,13 @@ var options = new MovieRecorderOptions()
 
 var recorder = new MovieRecorder( Scene, options );
 
+recorder.Start(); using Sandbox.MovieMaker;
+
+var options = new MovieRecorderOptions()
+    .WithCaptureGameObject( player, trackName: "Player" );
+
+var recorder = new MovieRecorder( Scene, options );
+
 recorder.Start();
 ```
 
@@ -59,6 +66,8 @@ When the run finishes, stop and pull the recording out as a clip.
 ```
 recorder.Stop();
 
+MovieClip clip = recorder.ToClip();recorder.Stop();
+
 MovieClip clip = recorder.ToClip();
 ```
 
@@ -67,7 +76,7 @@ MovieClip clip = recorder.ToClip();
 Serialize the clip to a JSON string so it can travel with a stat.
 
 ```
-var clipJson = Json.Serialize( clip.ToResource() );
+var clipJson = Json.Serialize( clip.ToResource() );var clipJson = Json.Serialize( clip.ToResource() );
 ```
 
 ## Send a stat
@@ -76,6 +85,11 @@ Submit the score (e.g. lap time) and attach the clip as data. The recording is n
 
 ```
 using Sandbox.Services;
+
+Stats.SetValue( "laptime-my-map", time, new Dictionary<string, object>
+{
+    ["ClipJson"] = clipJson
+} );using Sandbox.Services;
 
 Stats.SetValue( "laptime-my-map", time, new Dictionary<string, object>
 {
@@ -100,6 +114,18 @@ if ( string.IsNullOrEmpty( entry.DataUrl ) )
 
 var data     = await Http.RequestStringAsync( entry.DataUrl );
 var clipJson = Json.Deserialize<Dictionary<string, object>>( data )["ClipJson"].ToString();
+var resource = Json.Deserialize<EmbeddedMovieResource>( clipJson );var board = Leaderboards.GetFromStat( "laptime-my-map" );
+board.SetSortAscending();
+board.SetAggregationMin();
+board.MaxEntries = 10;
+await board.Refresh();
+
+var entry = board.Entries.First(); 
+if ( string.IsNullOrEmpty( entry.DataUrl ) )
+    return;
+
+var data     = await Http.RequestStringAsync( entry.DataUrl );
+var clipJson = Json.Deserialize<Dictionary<string, object>>( data )["ClipJson"].ToString();
 var resource = Json.Deserialize<EmbeddedMovieResource>( clipJson );
 ```
 
@@ -107,6 +133,14 @@ Play it on a ghost GameObject, not a real player. Rebind the recording's root tr
 
 ```
 var ghost  = ghostPrefab.Clone();
+var player = ghost.AddComponent<MoviePlayer>();
+
+var clip = resource.Compiled;
+var track = clip.GetReference<GameObject>( "Player" );
+
+player.Binder.Add( track, ghost ); 
+player.Play( clip );
+player.IsLooping = true;var ghost  = ghostPrefab.Clone();
 var player = ghost.AddComponent<MoviePlayer>();
 
 var clip = resource.Compiled;

@@ -9,7 +9,7 @@ topic: Gameplay
 content_type: Text
 tags: [basecombatweapon, viewmodel, weapon, worldmodel]
 rating: 2
-views: 382
+views: 386
 upvotes: 1
 downvotes: 0
 updated: 'Updated
@@ -17,7 +17,7 @@ updated: 'Updated
   one month ago'
 summary: Set up a pistol that can be added to the Inventory component's Loadout as
   a starting weapon. Works in first and third person.
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # Setting Up a Basic Weapon
@@ -102,6 +102,25 @@ Luckily, we can do this pretty easily with a custom component using [ICameraModi
 
 ```
 using Sandbox;
+
+public sealed class HideViewmodelThirdPerson : Component, ICameraModifier
+{
+	[RequireComponent]
+	PlayerController playerController { get; set; }
+
+	private const string firstPersonTag = "firstperson";
+
+	public void ModifyCamera( CameraComponent camera, ref CameraView view )
+	{
+		if ( playerController.IsValid() )
+		{
+			if ( playerController.ThirdPerson && !camera.RenderExcludeTags.Contains( firstPersonTag ) )
+				camera.RenderExcludeTags.Add( firstPersonTag );
+			else if ( !playerController.ThirdPerson && camera.RenderExcludeTags.Contains( firstPersonTag ) )
+				camera.RenderExcludeTags.Remove( firstPersonTag );
+		}
+	}
+}using Sandbox;
 
 public sealed class HideViewmodelThirdPerson : Component, ICameraModifier
 {

@@ -8,14 +8,14 @@ topic: Capable
 content_type: Text
 tags: [multiplayer, network, synchronize]
 rating: 2
-views: 3076
+views: 3080
 upvotes: 2
 downvotes: 0
 updated: 'Updated
 
   6 months ago'
 summary: A super-simple guide to make a multiplayer game quickly!
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # Multiplayer 101 - Easy as pie!
@@ -62,6 +62,10 @@ All you have to do is add an RPC attribute to the function that you want invoked
 public void OpenVaultDoor()
 {
 	// Open the door
+}[Rpc.Broadcast]
+public void OpenVaultDoor()
+{
+	// Open the door
 }
 ```
 
@@ -75,6 +79,9 @@ You can also sync component's properties:
 
 ```
 public class Tank : Component
+{
+  [Sync] public int Kills { get; set; }
+}public class Tank : Component
 {
   [Sync] public int Kills { get; set; }
 }

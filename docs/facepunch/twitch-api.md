@@ -8,14 +8,14 @@ topic: Capable
 content_type: Text
 tags: [gameplay, service, streamer, streaming]
 rating: 4
-views: 3029
+views: 3035
 upvotes: 9
 downvotes: 0
 updated: 'Updated
 
   5 months ago'
 summary: How to make a game that Twitch viewers can interact with
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # Introduction to the Streamer Api
@@ -48,6 +48,9 @@ From the game side you never see any of this. You just check:
 if ( Streamer.IsActive )
 {
     // we're connected to a service and reading chat
+}if ( Streamer.IsActive )
+{
+    // we're connected to a service and reading chat
 }
 ```
 
@@ -64,6 +67,12 @@ public class MyStreamThing : Component, Streamer.IEvents
     {
         Log.Info( $"{message.Viewer.DisplayName}: {message.Message}" );
     }
+}public class MyStreamThing : Component, Streamer.IEvents
+{
+    void Streamer.IEvents.OnStreamMessage( Streamer.ChatMessage message )
+    {
+        Log.Info( $"{message.Viewer.DisplayName}: {message.Message}" );
+    }
 }
 ```
 
@@ -73,6 +82,12 @@ These are the events you can implement from Streamer.IEvents
 
 ```
 void OnStreamJoin( Viewer viewer ); 
+void OnStreamLeave( Viewer viewer );
+void OnStreamMessage( ChatMessage message );
+void OnStreamSubscribe( SubscribeMessage message ); 
+void OnStreamGiftSubscribe( GiftSubscribeMessage message );  
+void OnStreamGiftSubscriptions( GiftSubscriptionsMessage message ); 
+void OnStreamRaid( RaidMessage message );                    void OnStreamJoin( Viewer viewer ); 
 void OnStreamLeave( Viewer viewer );
 void OnStreamMessage( ChatMessage message );
 void OnStreamSubscribe( SubscribeMessage message ); 
@@ -104,6 +119,16 @@ void Streamer.IEvents.OnStreamMessage( Streamer.ChatMessage message )
         case "go":    MoveForward( viewer );  break;
         case "poop":  Poop( viewer );         break;
     }
+}void Streamer.IEvents.OnStreamMessage( Streamer.ChatMessage message )
+{
+    var viewer = message.Viewer;
+
+    switch ( message.Message )
+    {
+        case "spawn": SpawnAvatar( viewer ); break;
+        case "go":    MoveForward( viewer );  break;
+        case "poop":  Poop( viewer );         break;
+    }
 }
 ```
 
@@ -111,6 +136,11 @@ void Streamer.IEvents.OnStreamMessage( Streamer.ChatMessage message )
 
 ```
 message.Viewer          // who sent it (see below)
+message.Message         // the text
+message.Channel         // which channel
+message.Bits            // bits cheered, or 0
+message.IsFirstMessage  // their first ever message in this chat
+message.Time            // when it arrivedmessage.Viewer          // who sent it (see below)
 message.Message         // the text
 message.Channel         // which channel
 message.Bits            // bits cheered, or 0
@@ -134,6 +164,15 @@ viewer.Badges        // raw badge strings
 viewer.IsBroadcaster // it's you
 viewer.IsModerator
 viewer.IsSubscriber
+viewer.IsVipviewer.Username      // login name, lowercase — but they can change it
+viewer.StreamerId    // stable numeric id — use THIS to persist anything
+viewer.DisplayName   // what to show on screen
+viewer.Color         // their chat colour (nullable)
+viewer.Badges        // raw badge strings
+
+viewer.IsBroadcaster // it's you
+viewer.IsModerator
+viewer.IsSubscriber
 viewer.IsVip
 ```
 
@@ -143,6 +182,7 @@ The badge helpers are handy for gating commands to mods:
 
 ```
 if ( message.Message == "reset" && message.Viewer.IsModerator )
+    ResetEverything();if ( message.Message == "reset" && message.Viewer.IsModerator )
     ResetEverything();
 ```
 
@@ -152,6 +192,7 @@ Every viewer has a `Data` bag you can stash gameplay state in.  You can store a
 
 ```
 // give them a point
+viewer.Data.Set( "score", viewer.Data.Get( "score", 0 ) + 1 );// give them a point
 viewer.Data.Set( "score", viewer.Data.Get( "score", 0 ) + 1 );
 ```
 
@@ -175,13 +216,26 @@ Streamer.Tags           // stream tags
 Streamer.IsMature       // mature flag
 
 Streamer.Username       // your name
+Streamer.UserId         // your idStreamer.IsActive       // connected to a service?
+Streamer.Service        // StreamService.Twitch
+
+Streamer.Viewers        // everyone currently in chat (IReadOnlyList<Viewer>)
+Streamer.ViewerCount    // concurrent viewer count on the stream
+
+Streamer.Title          // stream title
+Streamer.Game           // category / game
+Streamer.StartedAt      // when you went live (DateTimeOffset)
+Streamer.Tags           // stream tags
+Streamer.IsMature       // mature flag
+
+Streamer.Username       // your name
 Streamer.UserId         // your id
 ```
 
 So an uptime readout is just:
 
 ```
-var uptime = DateTime.UtcNow - Streamer.StartedAt
+var uptime = DateTime.UtcNow - Streamer.StartedAtvar uptime = DateTime.UtcNow - Streamer.StartedAt
 ```
 
 `Streamer.Viewers` is a **best-effort list of active chatters, not lurkers** .. silent viewers don't show up. It's a snapshot.. don't hold onto it across frames, just read it again when you need it.
@@ -189,6 +243,8 @@ var uptime = DateTime.UtcNow - Streamer.StartedAt
 A couple of things you can set, not just read:
 
 ```
+Streamer.Language = "en";   // set the stream language
+Streamer.Delay = 0;         // set stream delay  
 Streamer.Language = "en";   // set the stream language
 Streamer.Delay = 0;         // set stream delay
 ```

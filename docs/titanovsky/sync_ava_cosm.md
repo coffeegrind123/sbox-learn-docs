@@ -9,14 +9,14 @@ topic: Networking
 content_type: Text
 tags: [dress, dresser, rpc, sync]
 rating: 2
-views: 3609
+views: 3613
 upvotes: 6
 downvotes: 4
 updated: 'Updated
 
   6 months ago'
 summary: It's time for everyone to show off your clothing
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # 👗 Sync avatar's cosmetics
@@ -33,6 +33,8 @@ Ok, you probably already have a Player component. You need to be able to drag **
 ```
 // in Player.cs, it's custom component, just make it and you can name that how you want
 
+[Property] public Dresser Dresser { get; private set; }// in Player.cs, it's custom component, just make it and you can name that how you want
+
 [Property] public Dresser Dresser { get; private set; }
 ```
 
@@ -48,6 +50,13 @@ All that's left is to define a simple method. I remember having issues without D
 
 ```
 [Rpc.Broadcast]
+private void DressForAll(Dresser dresser)
+{
+    Log.Info($"[Dresser] Sync {dresser.Network.Owner.SteamId} ({Rpc.Caller.SteamId})");
+
+    Dresser.Clear(); //? probably not needed since we only dress on host and host should spawn with default clothes, but just in case
+    Dresser.Apply();
+}[Rpc.Broadcast]
 private void DressForAll(Dresser dresser)
 {
     Log.Info($"[Dresser] Sync {dresser.Network.Owner.SteamId} ({Rpc.Caller.SteamId})");
@@ -72,6 +81,12 @@ private void DressForHost(Dresser dresser)
     if (Rpc.Caller != dresser.Network.Owner) return;
 
     //todo logic
+} [Rpc.Host]
+private void DressForHost(Dresser dresser)
+{
+    if (Rpc.Caller != dresser.Network.Owner) return;
+
+    //todo logic
 }
 ```
 
@@ -83,6 +98,9 @@ You can take a look at [**Dresser source code yourself**](https://github.com/Fac
 
 ```
 Dresser.Source = Dresser.ClothingSource.Manual; //! it's really important, we make own releastion
+ClothingContainer container = ClothingContainer.CreateFromConnection(Rpc.Caller, false);
+Dresser.Clothing = container.Clothing;
+await Dresser.Apply();Dresser.Source = Dresser.ClothingSource.Manual; //! it's really important, we make own releastion
 ClothingContainer container = ClothingContainer.CreateFromConnection(Rpc.Caller, false);
 Dresser.Clothing = container.Clothing;
 await Dresser.Apply();

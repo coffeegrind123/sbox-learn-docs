@@ -9,7 +9,7 @@ topic: Editor
 content_type: Text
 tags: [editor, resources, ui]
 rating: 0
-views: 118
+views: 121
 upvotes: 0
 downvotes: 0
 updated: 'Updated
@@ -17,7 +17,7 @@ updated: 'Updated
   one month ago'
 summary: A beginner friendly walk through to defining and creating your own assets
   using resources.
-scraped_at: '2026-11-26T16:32:57Z'
+scraped_at: '2026-11-27T16:19:19Z'
 ---
 
 # 🧧 Basic resources tutorial
@@ -59,6 +59,18 @@ Inside our code folder lets create a file called `WeaponResource.cs`
 
 ```
 using Sandbox;
+
+[AssetType( Name = "Weapon definition", Extension = "weapon", Category = "Weapons" )]
+
+public class WeaponResource : GameResource {    
+
+    [Property] public string Name { get; set; } = "Weapon";    
+
+    [Property] public float Damage { get; set; } = 10f;    
+
+    [Property] public float Range { get; set; } = 500f;
+
+} using Sandbox;
 
 [AssetType( Name = "Weapon definition", Extension = "weapon", Category = "Weapons" )]
 
@@ -118,11 +130,61 @@ Add the following code to your `WeaponCards.razor` file
 {
     [Property] public List<WeaponResource> Weapons { get; set; } = new();
 }
+  
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+    @foreach ( var weapon in Weapons )
+    {
+        <div class="card">
+            <div class="name">@weapon.Name</div>
+            <div class="stat"><label>Damage</label><span>@weapon.Damage</span></div>
+            <div class="stat"><label>Range</label><span>@weapon.Range</span></div>
+        </div>
+    }
+</root>
+
+@code
+{
+    [Property] public List<WeaponResource> Weapons { get; set; } = new();
+}
 ```
 
 Then add this to your `WeaponCards.razor.scss` file.
 
 ```
+WeaponCards {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    .card {
+        flex-direction: column;
+        width: 220px;
+        padding: 24px;
+        gap: 12px;
+        background-color: #1f2430;
+        border: 2px solid #4a90e2;
+        color: white;
+
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            justify-content: center;
+        }
+
+        .stat {
+            justify-content: space-between;
+            font-size: 20px;
+        }
+    }
+}
+  
 WeaponCards {
     position: absolute;
     width: 100%;
