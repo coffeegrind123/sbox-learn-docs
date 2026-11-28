@@ -7,13 +7,13 @@ author_slug: brax
 topic: Capable
 content_type: Text
 rating: 2
-views: 133
+views: 135
 upvotes: 1
 downvotes: 0
 updated: 'Updated
 
-  26 days ago'
-scraped_at: '2026-11-27T16:19:19Z'
+  27 days ago'
+scraped_at: '2026-11-28T15:12:25Z'
 ---
 
 # Seperate viewmodel FOV rendering

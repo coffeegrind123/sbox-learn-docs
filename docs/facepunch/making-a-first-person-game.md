@@ -9,14 +9,14 @@ topic: Editor
 content_type: Text
 tags: [beginner, editor, game, guide]
 rating: 4
-views: 7198
+views: 7201
 upvotes: 7
 downvotes: 0
 updated: 'Updated
 
   6 months ago'
 summary: How to create a First Person game
-scraped_at: '2026-11-27T16:19:19Z'
+scraped_at: '2026-11-28T15:12:25Z'
 ---
 
 # Making a First Person Game

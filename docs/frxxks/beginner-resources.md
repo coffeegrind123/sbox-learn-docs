@@ -17,7 +17,7 @@ updated: 'Updated
   6 months ago'
 summary: A comprehensive beginners resource collection helping you getting started
   with game development in s&box.
-scraped_at: '2026-11-27T16:19:19Z'
+scraped_at: '2026-11-28T15:12:25Z'
 ---
 
 # 🎓 Freaks Beginner Resources
@@ -207,7 +207,11 @@ There are currently 3 officially supported IDE's available: [Visual Studio](http
 
 ## 🐧 **Linux**
 
-> - [s&box Linux Discord](https://discord.gg/haZt7xbmBT)
+> - [s&box Linux Discord](https://discord.gg/haZt7xbmBT)[Discord
+>
+>   Join the Unofficial s&box Linux Community Discord Server!
+>
+>   Check out the Unofficial s&box Linux Community community on Discord - hang out with 147 other members and enjoy free voice and text chat.](https://discord.gg/haZt7xbmBT)
 
 [![](https://cdn.sbox.game/upload/b/b419bcfb/f196/4044/b198/15cb7ada1ae3.png)](https://cdn.sbox.game/upload/b/b419bcfb/f196/4044/b198/15cb7ada1ae3.png)
 

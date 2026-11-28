@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-11-27T16:19:19Z",
+  "scraped_at": "2026-11-28T15:12:25Z",
   "count": 42,
   "tutorials": [
     {
@@ -260,19 +260,6 @@
       "url": "https://sbox.game/learn/titanovsky/cc-bton"
     },
     {
-      "path": "facepunch/creating-a-room",
-      "title": "Creating Your First Room",
-      "difficulty": "Beginner",
-      "topic": "Mapping",
-      "content_type": "Text",
-      "tags": [
-        "map",
-        "mapping"
-      ],
-      "author": "Facepunch",
-      "url": "https://sbox.game/learn/facepunch/creating-a-room"
-    },
-    {
       "path": "cseliot/sbox-resources",
       "title": "SBox Resources, An Open-Source \"Subway Map\" for all things S&Box",
       "difficulty": "Beginner",
@@ -406,6 +393,19 @@
       ],
       "author": "tobidev5",
       "url": "https://sbox.game/learn/tobidev5/dedicated-servers"
+    },
+    {
+      "path": "facepunch/creating-a-room",
+      "title": "Creating Your First Room",
+      "difficulty": "Beginner",
+      "topic": "Mapping",
+      "content_type": "Text",
+      "tags": [
+        "map",
+        "mapping"
+      ],
+      "author": "Facepunch",
+      "url": "https://sbox.game/learn/facepunch/creating-a-room"
     },
     {
       "path": "endf13ld/sprite-controller",

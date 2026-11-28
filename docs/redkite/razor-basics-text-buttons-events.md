@@ -9,14 +9,14 @@ topic: UI
 content_type: Text
 tags: [ui]
 rating: 2
-views: 186
+views: 187
 upvotes: 1
 downvotes: 0
 updated: 'Updated
 
   one month ago'
 summary: A beginner friendly walk through for making simple interactive game UI.
-scraped_at: '2026-11-27T16:19:19Z'
+scraped_at: '2026-11-28T15:12:25Z'
 ---
 
 # 🧧 Razor basics: text, buttons and events
